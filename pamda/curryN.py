@@ -1,21 +1,9 @@
-__version__ = '0.0.1'
-
-from socket import if_nameindex
-
-from inspect import getfullargspec, signature
 
 __ = {'@@functional/playceholder': True}
 
 # To support _arity, we need to do this tricky.
 # JavaScript support arguments keyword, but no in Python
 ___ = {'@@functional/custome_arguments_placeholder': True}
-
-def curry(fn):
-  sig = signature(fn)
-  n = len(sig.parameters)
-  if getfullargspec(fn).varargs is not None:
-    n -= 1
-  return inner_curryN(n, fn)
 
 
 def inner_curryN(n, fn):
