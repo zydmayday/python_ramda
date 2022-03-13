@@ -1,0 +1,6 @@
+{
+  "python.formatting.autopep8Args": [         // autopep8 の設定
+    "--indent-size=2",
+    "--ignore=E111, E114, E402, E501"
+  ]
+}
