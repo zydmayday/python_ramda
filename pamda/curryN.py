@@ -2,8 +2,6 @@ from pamda.private._curry1 import _curry1
 from pamda.private._curry2 import _curry2
 from pamda.private._curryN import _curryN
 
-__ = {'@@functional/playceholder': True}
-
 
 def inner_curryN(n, fn):
   if n == 1:
