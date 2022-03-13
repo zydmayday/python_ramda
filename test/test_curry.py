@@ -1,4 +1,4 @@
-from inspect import signature
+from inspect import getfullargspec
 import unittest
 
 import pamda as R
@@ -39,9 +39,8 @@ class TestCurry(unittest.TestCase):
     def e(a, b, c, d):
       return (a + b * c) / d
     f = R.curry(e)
-    sig_f = signature(f)
-    # FIXME: Because we need to support extract arguments, so there will always be one more parameters
-    # self.assertEqual(5 -> should be 4, len(sig_f.parameters))
+    fullargspec = getfullargspec(f)
+    self.assertEqual(4, len(fullargspec.args))
 
   # TODO: Add tests for placeholder
 
