@@ -1,6 +1,6 @@
+import unittest
 from inspect import getfullargspec
 from random import randint
-import unittest
 
 import pamda as R
 
