@@ -7,23 +7,23 @@ This is a repo try to copy <https://github.com/ramda/ramda> in python.
 For whom wants to use this package.
 
 ```bash
-$ pip install zydmayday-pamda
-$ pip install zydmayday-pamda -U # get the latest
+> pip install zydmayday-pamda
+> pip install zydmayday-pamda -U # get the latest
 ```
 
 ## Usage
 
 ```python
 >>> from pamda import curry
->>> def add(a, b, c): return a + b + c
->>> curry(add)(1)(2, 3)
+>>> def sum(a, b, c): return a + b + c
+>>> curry(sum)(1)(2, 3)
 6
 ```
 
 ```python
 >>> import pamda as R # similar to ramda syntax
->>> def add(a, b, c): return a + b + c
->>> R.curry(add)(1)(2, 3)
+>>> def sum(a, b, c): return a + b + c
+>>> R.curry(sum)(1)(2, 3)
 6
 ```
 
@@ -38,14 +38,20 @@ $ pre-commit install # install hooks
 
 Check the latest branch to be released in [here](https://github.com/zydmayday/pamda/branches).
 
-Checkout branch from that release branch and create PR.
+Checkout new branch from that release branch and create PR.
 
 ## CheckList
 
 Functions supported now.
 
-- [x] __
+- [x]
 - [ ] add
+
+```python
+  # different from ramda, ramda treat null as 0
+  >>> R.add(None, None) # float('nan)
+```
+
 - [ ] addIndex
 - [ ] adjust
 - [ ] all
