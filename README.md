@@ -215,7 +215,7 @@ Functions supported now.
 - [ ] pick
 - [ ] pickAll
 - [ ] pickBy
-- [ ] pipe
+- [x] pipe
 - [ ] pipeWith
 - [ ] pluck
 - [ ] prepend
@@ -229,7 +229,7 @@ Functions supported now.
 - [ ] props
 - [ ] propSatisfies
 - [ ] range
-- [ ] reduce
+- [x] reduce
 - [ ] reduceBy
 - [ ] reduced
 - [ ] reduceRight
@@ -242,7 +242,7 @@ Functions supported now.
 - [ ] scan
 - [ ] sequence
 - [ ] set
-- [ ] slice
+- [x] slice
 - [ ] sort
 - [ ] sortBy
 - [ ] sortWith
@@ -257,7 +257,7 @@ Functions supported now.
 - [ ] symmetricDifference
 - [ ] symmetricDifferenceWith
 - [ ] T
-- [ ] tail
+- [x] tail
 - [ ] take
 - [ ] takeLast
 - [ ] takeLastWhile

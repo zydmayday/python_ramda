@@ -1,7 +1,7 @@
+from pamda.private._arity import _arity
 from pamda.private._curry1 import _curry1
 from pamda.private._curry2 import _curry2
 from pamda.private._curryN import _curryN
-from pamda.private._arity import _arity
 
 
 def _inner_curryN(n, fn):

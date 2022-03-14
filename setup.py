@@ -1,5 +1,6 @@
-from setuptools import setup, find_packages
 from os.path import abspath, dirname, join
+
+from setuptools import find_packages, setup
 
 # Fetches the content from README.md
 # This will be used for the "long_description" field.
@@ -19,7 +20,7 @@ setup(
     # eg: 1.0.0, 1.0.1, 3.0.2, 5.0-beta, etc.
     # You CANNOT upload two versions of your package with the same version number
     # This field is REQUIRED
-    version="0.0.4",
+    version="0.0.5",
 
     # The packages that constitute your project.
     # For my project, I have only one - "pydash".
@@ -70,7 +71,7 @@ setup(
 
     # Keywords are tags that identify your project and help searching for it
     # This field is OPTIONAL
-    keywords="functional programming,ramda",
+    keywords="functional programming, ramda",
 
     # For additional fields, check:
     # https://github.com/pypa/sampleproject/blob/master/setup.py

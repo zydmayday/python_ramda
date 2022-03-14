@@ -1,5 +1,6 @@
 import pamda as R
 
+
 def _arity(n, fn):
   def f0(): return fn()
   def f1(a0=R.__, *____): return fn(a0, *____)
