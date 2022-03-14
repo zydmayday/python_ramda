@@ -1,6 +1,6 @@
 
-from random import randint
 import unittest
+from random import randint
 
 import pamda as R
 

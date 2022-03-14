@@ -11,20 +11,17 @@ def _curry2(fn):
       if _isPlaceholder(a):
         return f2
 
-      def f3(b):
-        return fn(args[0], b)
-      return _curry1(f3)
+      def f_b(_b): return fn(args[0], _b)
+      return _curry1(f_b)
     else:
       a, b = args[0], args[1]
       if _isPlaceholder(a) and _isPlaceholder(b):
         return f2
       elif _isPlaceholder(a):
-        def f4(_a):
-          return fn(_a, b)
-        return _curry1(f4)
+        def f_a(_a): return fn(_a, b)
+        return _curry1(f_a)
       elif _isPlaceholder(b):
-        def f5(_b):
-          return fn(a, _b)
-        return _curry1(f5)
+        def f_b(_b): return fn(a, _b)
+        return _curry1(f_b)
       return fn(a, b)
   return f2
