@@ -1,1 +1,1 @@
-__ = {'@@functional/playceholder': True}
+__ = {'@@functional/placeholder': True}

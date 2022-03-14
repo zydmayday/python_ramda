@@ -1,12 +1,26 @@
-from ._arity import (_arity, ___)
+from ._arity import _arity
+from ._isPlaceholder import _isPlaceholder
 
 
-def _curryN(n, saved, fn):
-  def f1(*rest):
-    newSaved = saved + [x for x in list(rest) if x != ___]
-    newSaved = newSaved[:]
-    if len(newSaved) >= n:
-      return fn(*newSaved)
+def _curryN(n, received, fn):
+  def f1(*arguments):
+    combined = []
+    argsIdx = 0
+    left = n
+    combinedIdx = 0
+    while combinedIdx < len(received) or argsIdx < len(arguments):
+      result = None
+      if combinedIdx < len(received) and ((not _isPlaceholder(received[combinedIdx])) or argsIdx >= len(arguments)):
+        result = received[combinedIdx]
+      else:
+        result = arguments[argsIdx]
+        argsIdx += 1
+      combined.append(result)
+      if not _isPlaceholder(result):
+        left -= 1
+      combinedIdx += 1
+    if left <= 0:
+      return fn(*combined)
     else:
-      return _arity(n, _curryN(n, newSaved, fn))
-  return _arity(n, f1)
+      return _arity(left, _curryN(n, combined, fn))
+  return f1

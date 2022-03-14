@@ -1,4 +1,5 @@
 from inspect import getfullargspec
+from random import randint
 import unittest
 
 import pamda as R
@@ -42,7 +43,65 @@ class TestCurry(unittest.TestCase):
     fullargspec = getfullargspec(f)
     self.assertEqual(4, len(fullargspec.args))
 
-  # TODO: Add tests for placeholder
+  def test_supports_R_placeholder(self):
+    def f(a, b, c):
+      return [a, b, c]
+    g = R.curry(f)
+    _ = R.__
+
+    self.assertEqual([1, 2, 3], g(1)(2)(3))
+    self.assertEqual([1, 2, 3], g(1)(2, 3))
+    self.assertEqual([1, 2, 3], g(1, 2)(3))
+    self.assertEqual([1, 2, 3], g(1, 2, 3))
+
+    self.assertEqual([1, 2, 3], g(_, 2, 3)(1))
+    self.assertEqual([1, 2, 3], g(1, _, 3)(2))
+    self.assertEqual([1, 2, 3], g(1, 2, _)(3))
+
+    self.assertEqual([1, 2, 3], g(1, _, _)(2)(3))
+    self.assertEqual([1, 2, 3], g(_, 2, _)(1)(3))
+    self.assertEqual([1, 2, 3], g(_, _, 3)(1)(2))
+
+    self.assertEqual([1, 2, 3], g(1, _, _)(2, 3))
+    self.assertEqual([1, 2, 3], g(_, 2, _)(1, 3))
+    self.assertEqual([1, 2, 3], g(_, _, 3)(1, 2))
+
+    self.assertEqual([1, 2, 3], g(1, _, _)(_, 3)(2))
+    self.assertEqual([1, 2, 3], g(_, 2, _)(_, 3)(1))
+    self.assertEqual([1, 2, 3], g(_, _, 3)(_, 2)(1))
+
+    self.assertEqual([1, 2, 3], g(_, _, _)(_, _)(_)(1, 2, 3))
+    self.assertEqual([1, 2, 3], g(_, _, _)(1, _, _)(_, _)(2, _)(_)(3))
+
+  def test_supports_functional_placeholder(self):
+    def f(a, b, c):
+      return [a, b, c]
+    g = R.curry(f)
+    _ = {'@@functional/placeholder': True, 'x': randint(0, 100)}
+
+    self.assertEqual([1, 2, 3], g(1)(2)(3))
+    self.assertEqual([1, 2, 3], g(1)(2, 3))
+    self.assertEqual([1, 2, 3], g(1, 2)(3))
+    self.assertEqual([1, 2, 3], g(1, 2, 3))
+
+    self.assertEqual([1, 2, 3], g(_, 2, 3)(1))
+    self.assertEqual([1, 2, 3], g(1, _, 3)(2))
+    self.assertEqual([1, 2, 3], g(1, 2, _)(3))
+
+    self.assertEqual([1, 2, 3], g(1, _, _)(2)(3))
+    self.assertEqual([1, 2, 3], g(_, 2, _)(1)(3))
+    self.assertEqual([1, 2, 3], g(_, _, 3)(1)(2))
+
+    self.assertEqual([1, 2, 3], g(1, _, _)(2, 3))
+    self.assertEqual([1, 2, 3], g(_, 2, _)(1, 3))
+    self.assertEqual([1, 2, 3], g(_, _, 3)(1, 2))
+
+    self.assertEqual([1, 2, 3], g(1, _, _)(_, 3)(2))
+    self.assertEqual([1, 2, 3], g(_, 2, _)(_, 3)(1))
+    self.assertEqual([1, 2, 3], g(_, _, 3)(_, 2)(1))
+
+    self.assertEqual([1, 2, 3], g(_, _, _)(_, _)(_)(1, 2, 3))
+    self.assertEqual([1, 2, 3], g(_, _, _)(1, _, _)(_, _)(2, _)(_)(3))
 
   def test_forwads_extra_arguments(self):
     def f(a, b, c, *args):
