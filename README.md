@@ -1,8 +1,10 @@
 # pamda
 
-This is a repo try to copy https://github.com/ramda/ramda in python.
+This is a repo try to copy <https://github.com/ramda/ramda> in python.
 
 ## install
+
+For whom wants to use this package.
 
 ```bash
 $ pip install zydmayday-pamda
@@ -24,6 +26,19 @@ $ pip install zydmayday-pamda -U # get the latest
 >>> R.curry(add)(1)(2, 3)
 6
 ```
+
+## Contribute
+
+For whom wants to contribute to this repo.
+
+```bash
+# see: https://pre-commit.com/ for more details
+$ pre-commit install # install hooks
+```
+
+Check the latest branch to be released in [here](https://github.com/zydmayday/pamda/branches).
+
+Checkout branch from that release branch and create PR.
 
 ## CheckList
 
