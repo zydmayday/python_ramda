@@ -6,3 +6,4 @@ from ._curryN import _curryN
 from ._helper import funcArgsLength, toNumber
 from ._isPlaceholder import _isPlaceholder
 from ._pipe import _pipe
+from ._xwrap import _xwrap
