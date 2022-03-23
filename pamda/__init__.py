@@ -1,5 +1,6 @@
 from .__ import __
 from .add import add
+from .all import all
 from .compose import compose
 from .curry import curry
 from .curryN import curryN
