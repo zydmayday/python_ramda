@@ -52,9 +52,12 @@ Functions supported now.
   >>> R.add(None, None) # float('nan)
 ```
 
+- [x] __
+- [x] add
 - [ ] addIndex
 - [ ] adjust
-- [ ] all
+- [x] all
+  - Transducer part is not fully tested.
 - [ ] allPass
 - [ ] always
 - [ ] and
@@ -80,7 +83,7 @@ Functions supported now.
 - [ ] collectBy
 - [ ] comparator
 - [ ] complement
-- [ ] compose
+- [x] compose
 - [ ] composeWith
 - [ ] concat
 - [ ] cond
@@ -244,7 +247,7 @@ Functions supported now.
 - [ ] remove
 - [ ] repeat
 - [ ] replace
-- [ ] reverse
+- [x] reverse
 - [ ] scan
 - [ ] sequence
 - [ ] set
