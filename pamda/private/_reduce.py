@@ -1,5 +1,7 @@
 from typing import Iterable
 
+from pamda.private._helper import getAttribute
+
 from ._xwrap import _xwrap
 
 
@@ -23,21 +25,21 @@ def _arrayReduce(xf, acc, arr):
   idx = 0
   n = len(arr)
   while idx < n:
-    acc = xf.get('@@transducer/step')(acc, arr[idx])
-    if acc and isinstance(acc, dict) and acc.get('@@transducer/reduced', False):
-      acc = acc.get('@@transducer/value')
+    acc = getAttribute(xf, '@@transducer/step')(acc, arr[idx])
+    if acc and isinstance(acc, dict) and getAttribute(acc, '@@transducer/reduced'):
+      acc = getAttribute(acc, '@@transducer/value')
       break
     idx += 1
-  return xf.get('@@transducer/result')(acc)
+  return getAttribute(xf, '@@transducer/result')(acc)
 
 
 def _iterableReduce(xf, acc, iter):
   while True:
     try:
-      acc = xf.get('@@transducer/step')(acc, next(iter))
-      if acc and isinstance(acc, dict) and acc.get('@@transducer/reduced', False):
-        acc = acc.get('@@transducer/value')
+      acc = getAttribute(xf, '@@transducer/step')(acc, next(iter))
+      if acc and isinstance(acc, dict) and getAttribute(acc, '@@transducer/reduced'):
+        acc = getAttribute(acc, '@@transducer/value')
         break
     except StopIteration:
       break
-  return xf.get('@@transducer/result')(acc)
+  return getAttribute(xf, '@@transducer/result')(acc)
