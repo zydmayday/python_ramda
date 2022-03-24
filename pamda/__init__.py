@@ -2,6 +2,7 @@ from .__ import __
 from .add import add
 from .all import all
 from .always import always
+from .And import And
 from .compose import compose
 from .curry import curry
 from .curryN import curryN
