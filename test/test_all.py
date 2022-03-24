@@ -15,7 +15,7 @@ def isFalse(x): return x == False
 
 
 class TestAll(unittest.TestCase):
-  def test_returns_true_if_all_elements_asatisfy_the_predicate(self):
+  def test_returns_true_if_all_elements_satisfy_the_predicate(self):
     self.assertEqual(True, R.all(even, [2, 4, 6, 8, 10, 12]))
     self.assertEqual(True, R.all(isFalse, [False, False, False]))
 
