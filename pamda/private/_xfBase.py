@@ -1,11 +1,11 @@
-class X:
+class XfBase:
   """
   This is a class which not included in Ramda.
   For extracting the common part to deal with transducer related logic.
   """
 
   def init(self):
-    raise Exception('Child class should implement this')
+    return self.get('@@transducer/init')
 
   def result(self, result):
     raise Exception('Child class should implement this')
