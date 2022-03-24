@@ -1,3 +1,5 @@
+from pamda.private._helper import getAttribute
+
 from ._reduced import _reduced
 from ._xfBase import XfBase
 
@@ -10,13 +12,13 @@ class XAll(XfBase):
 
   def result(self, result):
     if self.all:
-      result = self.xf.get('@@transducer/step')(result, True)
+      result = getAttribute(self.xf, '@@transducer/step')(result, True)
     return self.xf.get('@@transducer/result')(result)
 
   def step(self, result, input):
     if not self.f(input):
       self.all = False
-      result = _reduced(self.xf.get('@@transducer/step')(result, False))
+      result = _reduced(getAttribute(self.xf, '@@transducer/step')(result, False))
     return result
 
 

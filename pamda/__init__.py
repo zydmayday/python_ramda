@@ -5,6 +5,7 @@ from .always import always
 from .And import And
 from .any import any
 from .compose import compose
+from .concat import concat
 from .curry import curry
 from .curryN import curryN
 from .pipe import pipe
