@@ -9,12 +9,12 @@ def inner_concat(a, b):
   if _isArray(a):
     if _isArray(b):
       return a + b
-    # Change to R.toString method
+    # TODO: Change to R.toString method
     raise Exception(f"{b} is not an array")
   if _isString(a):
     if _isString(b):
       return a + b
-    # Change to R.toString method
+    # TODO: Change to R.toString method
     raise Exception(f"{b} is not a string")
   if a is not None and _isFunction(getAttribute(a, 'fantasy-land/concat')):
     return a.get('fantasy-land/concat')(b)
