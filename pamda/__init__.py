@@ -13,4 +13,5 @@ from .pipe import pipe
 from .reduce import reduce
 from .reverse import reverse
 from .slice import slice
+from .sort import sort
 from .tail import tail
