@@ -7,8 +7,8 @@ This is a repo try to copy <https://github.com/ramda/ramda> in python.
 For whom wants to use this package.
 
 ```bash
-> pip install zydmayday-pamda
-> pip install zydmayday-pamda -U # get the latest
+> pip install py-ramda
+> pip install py-ramda -U # get the latest
 ```
 
 ## Usage
@@ -59,14 +59,14 @@ Functions supported now.
 - [x] all
   - Transducer part is not fully tested.
 - [ ] allPass
-- [ ] always
-- [ ] and
+- [x] always
+- [x] and
 - [ ] andThen
-- [ ] any
+- [x] any
 - [ ] anyPass
 - [ ] ap
 - [ ] aperture
-- [ ] append
+- [x] append
 - [ ] apply
 - [ ] applySpec
 - [ ] applyTo
@@ -85,7 +85,7 @@ Functions supported now.
 - [ ] complement
 - [x] compose
 - [ ] composeWith
-- [ ] concat
+- [x] concat
 - [ ] cond
 - [ ] construct
 - [ ] constructN
@@ -252,7 +252,7 @@ Functions supported now.
 - [ ] sequence
 - [ ] set
 - [x] slice
-- [ ] sort
+- [x] sort
 - [ ] sortBy
 - [ ] sortWith
 - [ ] split
