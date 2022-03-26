@@ -12,7 +12,7 @@ setup(
     # In my case it will be:
     # pip install pydash-arnu515
     # This field is REQUIRED
-    name="py-ramda",
+    name="zydmayday-pamda",
 
     # The version of your project.
     # Usually, it would be in the form of:
