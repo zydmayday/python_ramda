@@ -12,7 +12,7 @@ setup(
     # In my case it will be:
     # pip install pydash-arnu515
     # This field is REQUIRED
-    name="zydmayday-pamda",
+    name="py-ramda",
 
     # The version of your project.
     # Usually, it would be in the form of:
@@ -20,7 +20,7 @@ setup(
     # eg: 1.0.0, 1.0.1, 3.0.2, 5.0-beta, etc.
     # You CANNOT upload two versions of your package with the same version number
     # This field is REQUIRED
-    version="0.0.6",
+    version="0.0.7",
 
     # The packages that constitute your project.
     # For my project, I have only one - "pydash".
