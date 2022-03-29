@@ -156,7 +156,19 @@ Functions supported now.
 - [ ] isNil
 - [ ] join
 - [ ] juxt
-- [ ] keys
+- [x] keys
+
+```python
+# When using R.keys(obj) and obj is a class instance, we use obj.__dict__ as keys.
+class A:
+  c = 'not included'
+  def __init__(self):
+    self.a = 1
+    self.b = 2
+a = A()
+R.keys(a) # ['a', 'b']
+```
+
 - [ ] keysIn
 - [ ] last
 - [ ] lastIndexOf
