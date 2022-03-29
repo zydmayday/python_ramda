@@ -9,6 +9,7 @@ from .compose import compose
 from .concat import concat
 from .curry import curry
 from .curryN import curryN
+from .keys import keys
 from .pipe import pipe
 from .reduce import reduce
 from .reverse import reverse
