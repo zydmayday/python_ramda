@@ -1,6 +1,6 @@
-from pamda.private._curry2 import _curry2
-from pamda.private._dispatchable import _dispatchable
-from pamda.private._xall import _xall
+from .private._curry2 import _curry2
+from .private._dispatchable import _dispatchable
+from .private._xall import _xall
 
 
 def inner_all(fn, arr):

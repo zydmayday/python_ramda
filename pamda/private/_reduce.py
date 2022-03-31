@@ -1,7 +1,6 @@
 from typing import Iterable
 
-from pamda.private._helper import getAttribute
-
+from ._helper import getAttribute
 from ._xwrap import _xwrap
 
 

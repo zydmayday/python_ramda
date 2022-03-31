@@ -1,5 +1,5 @@
-from pamda.private._curry1 import _curry1
-from pamda.private._isFunction import _isFunction
+from .private._curry1 import _curry1
+from .private._isFunction import _isFunction
 
 
 def inner_keys(obj):
