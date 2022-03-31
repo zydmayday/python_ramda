@@ -181,7 +181,7 @@ R.keys(a) # ['a', 'b']
 - [ ] liftN
 - [ ] lt
 - [ ] lte
-- [ ] map
+- [x] map
 - [ ] mapAccum
 - [ ] mapAccumRight
 - [ ] mapObjIndexed
