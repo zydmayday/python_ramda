@@ -21,7 +21,4 @@ class XAny(XfBase):
     return result
 
 
-def _xany(f):
-  def inner(xf):
-    return XAny(f, xf)
-  return inner
+def _xany(f): return lambda xf: XAny(f, xf)

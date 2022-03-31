@@ -8,25 +8,19 @@ class XfBase:
   """
 
   def init(self):
-    _init = getAttribute(self.xf, '@@transducer/init')
-    if _init:
-      return _init()
-    return None
+    return getAttribute(self.xf, '@@transducer/init')
 
   def result(self, result):
-    _result = getAttribute(self.xf, '@@transducer/result')
-    if _result:
-      return _result(result)
-    return None
+    return getAttribute(self.xf, '@@transducer/result')
 
   def step(self, result, input):
     raise Exception('Child class should implement this')
 
-  def get(self, name):
+  def get(self, name, default=None):
     if name == '@@transducer/init':
       return self.init
     if name == '@@transducer/result':
       return self.result
     if name == '@@transducer/step':
       return self.step
-    return None
+    return default
