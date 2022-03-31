@@ -60,7 +60,7 @@ Functions supported now.
   - Transducer part is not fully tested.
 - [ ] allPass
 - [x] always
-- [x] and
+- [x] And (`and` is a keyword in python)
 - [ ] andThen
 - [x] any
 - [ ] anyPass
@@ -181,7 +181,7 @@ R.keys(a) # ['a', 'b']
 - [ ] liftN
 - [ ] lt
 - [ ] lte
-- [x] map
+- [x] Map (`map` is a keyword in python)
 - [ ] mapAccum
 - [ ] mapAccumRight
 - [ ] mapObjIndexed
