@@ -1,6 +1,6 @@
 from functools import cmp_to_key
 
-from pamda.private._curry2 import _curry2
+from .private._curry2 import _curry2
 
 
 def inner_sort(comparator, arr):

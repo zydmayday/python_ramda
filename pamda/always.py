@@ -1,4 +1,4 @@
-from pamda.private._curry1 import _curry1
+from .private._curry1 import _curry1
 
 
 def inner_always(val):

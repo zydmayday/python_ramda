@@ -1,3 +1,6 @@
+from ._helper import getAttribute
+
+
 class XfBase:
   """
   This is a class which not included in Ramda.
@@ -5,10 +8,16 @@ class XfBase:
   """
 
   def init(self):
-    return self.get('@@transducer/init')
+    _init = getAttribute(self.xf, '@@transducer/init')
+    if _init:
+      return _init()
+    return None
 
   def result(self, result):
-    raise Exception('Child class should implement this')
+    _result = getAttribute(self.xf, '@@transducer/result')
+    if _result:
+      return _result(result)
+    return None
 
   def step(self, result, input):
     raise Exception('Child class should implement this')
@@ -20,4 +29,4 @@ class XfBase:
       return self.result
     if name == '@@transducer/step':
       return self.step
-    raise Exception('Undefined transducer name, please provide one of the following: [@@transducer/init, @@transducer/result, @@transducer/step]')
+    return None

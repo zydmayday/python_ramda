@@ -1,6 +1,6 @@
-from pamda.private._curry2 import _curry2
-from pamda.private._dispatchable import _dispatchable
-from pamda.private._xany import _xany
+from .private._curry2 import _curry2
+from .private._dispatchable import _dispatchable
+from .private._xany import _xany
 
 
 def inner_any(fn, arr):

@@ -1,7 +1,6 @@
-from pamda.private._arity import _arity
-from pamda.private._helper import funcArgsLength
-from pamda.private._pipe import _pipe
-
+from .private._arity import _arity
+from .private._helper import funcArgsLength
+from .private._pipe import _pipe
 from .reduce import reduce
 from .tail import tail
 

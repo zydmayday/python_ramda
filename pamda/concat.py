@@ -1,8 +1,8 @@
-from pamda.private._curry2 import _curry2
-from pamda.private._helper import getAttribute
-from pamda.private._isArray import _isArray
-from pamda.private._isFunction import _isFunction
-from pamda.private._isString import _isString
+from .private._curry2 import _curry2
+from .private._helper import getAttribute
+from .private._isArray import _isArray
+from .private._isFunction import _isFunction
+from .private._isString import _isString
 
 
 def inner_concat(a, b):

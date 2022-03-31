@@ -1,4 +1,4 @@
-from pamda.private._helper import getAttribute
+from ._helper import getAttribute
 
 
 def _reduced(x):
