@@ -13,6 +13,7 @@ from .keys import keys
 from .map import Map
 from .pipe import pipe
 from .reduce import reduce
+from .reduced import reduced
 from .reverse import reverse
 from .slice import slice
 from .sort import sort

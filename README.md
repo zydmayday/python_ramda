@@ -252,7 +252,7 @@ R.keys(a) # ['a', 'b']
 - [ ] range
 - [x] reduce
 - [ ] reduceBy
-- [ ] reduced
+- [x] reduced
 - [ ] reduceRight
 - [ ] reduceWhile
 - [ ] reject
