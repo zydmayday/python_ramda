@@ -8,7 +8,7 @@ https://github.com/ramda/ramda/blob/master/test/reduced.js
 """
 
 
-class TestReduceD(unittest.TestCase):
+class TestReduced(unittest.TestCase):
   def test_wraps_a_value(self):
     v = {}
     self.assertEqual(v, R.reduced(v)['@@transducer/value'])
