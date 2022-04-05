@@ -5,6 +5,7 @@ from .always import always
 from .And import And
 from .any import any
 from .append import append
+from .comparator import comparator
 from .compose import compose
 from .concat import concat
 from .curry import curry
