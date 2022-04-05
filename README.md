@@ -81,7 +81,7 @@ Functions supported now.
 - [ ] clamp
 - [ ] clone
 - [ ] collectBy
-- [ ] comparator
+- [x] comparator
 - [ ] complement
 - [x] compose
 - [ ] composeWith
