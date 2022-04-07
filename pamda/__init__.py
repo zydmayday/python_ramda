@@ -10,6 +10,8 @@ from .compose import compose
 from .concat import concat
 from .curry import curry
 from .curryN import curryN
+from .find import find
+from .identity import identity
 from .keys import keys
 from .map import Map
 from .pipe import pipe

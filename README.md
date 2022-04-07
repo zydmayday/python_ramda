@@ -117,7 +117,7 @@ Functions supported now.
 - [ ] evolve
 - [ ] F
 - [ ] filter
-- [ ] find
+- [x] find
 - [ ] findIndex
 - [ ] findLast
 - [ ] findLastIndex
@@ -135,7 +135,7 @@ Functions supported now.
 - [ ] hasPath
 - [ ] head
 - [ ] identical
-- [ ] identity
+- [x] identity
 - [ ] ifElse
 - [ ] inc
 - [ ] includes
