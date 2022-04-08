@@ -20,11 +20,8 @@ def inner_map(fn, functor):
     """
     if isinstance(functor, dict) or hasattr(functor, 'get'):
       acc[key] = fn(functor.get(key))
-      return acc
-    if acc == {}:
-      acc = copy.deepcopy(functor)
-    result = fn(getattr(acc, key, None))
-    setattr(acc, key, result)
+    else:
+      setattr(acc, key, fn(getattr(acc, key, None)))
     return acc
 
   if functor is None:
@@ -33,7 +30,7 @@ def inner_map(fn, functor):
     return curryN(funcArgsLength(functor), lambda *arguments: fn(functor(*arguments)))
   if isinstance(functor, (list, tuple)):
     return _map(fn, functor)
-  return _reduce(inner_reduce, {}, keys(functor))
+  return _reduce(inner_reduce, {} if isinstance(functor, dict) or hasattr(functor, 'get') else copy.deepcopy(functor), keys(functor))
 
 
 Map = _curry2(_dispatchable(['fantasy-land/map', 'map'], _xmap, inner_map))

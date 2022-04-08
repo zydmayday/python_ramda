@@ -116,7 +116,7 @@ Functions supported now.
 - [ ] equals
 - [ ] evolve
 - [ ] F
-- [ ] filter
+- [x] filter
 - [x] find
 - [ ] findIndex
 - [ ] findLast

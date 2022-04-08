@@ -10,6 +10,7 @@ from .compose import compose
 from .concat import concat
 from .curry import curry
 from .curryN import curryN
+from .filter import filter
 from .find import find
 from .identity import identity
 from .keys import keys
