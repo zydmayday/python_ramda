@@ -1,5 +1,4 @@
 import unittest
-from test.helpers.listXf import listXf
 
 import pamda as R
 
@@ -23,10 +22,10 @@ class TestFilter(unittest.TestCase):
   def test_reduces_an_array_to_those_matching_a_filter(self):
     self.assertEqual([2, 4], R.filter(even, [1, 2, 3, 4, 5]))
 
-  def test_reduces_an_empty_array_if_no_element_matches(self):
+  def test_returns_an_empty_array_if_no_element_matches(self):
     self.assertEqual([], R.filter(lambda x: x > 100, [1, 9, 99]))
 
-  def test_reduces_an_empty_array_if_asked_to_filter_an_empty_array(self):
+  def test_returnsreduces_an_empty_array_if_asked_to_filter_an_empty_array(self):
     self.assertEqual([], R.filter(lambda x: x > 100, []))
 
   def test_filter_dict(self):

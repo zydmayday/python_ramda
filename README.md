@@ -255,7 +255,7 @@ R.keys(a) # ['a', 'b']
 - [x] reduced
 - [ ] reduceRight
 - [ ] reduceWhile
-- [ ] reject
+- [x] reject
 - [ ] remove
 - [ ] repeat
 - [ ] replace
