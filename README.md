@@ -44,16 +44,14 @@ Checkout new branch from that release branch and create PR.
 
 Functions supported now.
 
-- [x]
-- [ ] add
+- [x] __
+- [x] add
 
 ```python
   # different from ramda, ramda treat null as 0
   >>> R.add(None, None) # float('nan)
 ```
 
-- [x] __
-- [x] add
 - [ ] addIndex
 - [ ] adjust
 - [x] all
