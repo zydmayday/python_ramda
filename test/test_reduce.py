@@ -18,13 +18,19 @@ def gen_int():
   yield 3
   yield 4
 
+class ReduceObj:
+  def reduce(self, step, acc):
+    return 'override'
 
 class TestReduce(unittest.TestCase):
   def test_folds_simple_functions_over_arrays_with_the_supplied_accumulator(self):
     self.assertEqual(10, R.reduce(add, 0, [1, 2, 3, 4]))
     self.assertEqual(24, R.reduce(mult, 1, [1, 2, 3, 4]))
 
-    # TODO: dispatches_to_objects_that_implement_reduce
+  def test_dispatches_to_objects_that_implement_reduce(self):
+    obj = ReduceObj()
+    self.assertEqual('override', R.reduce(add, 0, obj))
+    self.assertEqual('override', R.reduce(add, 10, obj))
 
   def test_returns_the_accumulator_for_an_empty_array(self):
     self.assertEqual(0, R.reduce(add, 0, []))

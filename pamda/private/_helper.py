@@ -44,12 +44,16 @@ def getAttribute(v, key):
     t = T()
     init_fn = getAttribute(t, '@@transducer/init')
 
+  method case:
+    class Mapper:
+      def map(fn):
+        return fn
+    m = Mapper()
+    map_fn = getAttribute(m, 'map')
+
   return: function got from key, otherwise None
   """
-  if isinstance(v, dict):
-    if key in v:
-      return v[key]
-  getter = getattr(v, 'get', None)
-  if getter:
-    return getter(key)
-  return None
+  if hasattr(v, key):
+    return getattr(v, key, None)
+  if hasattr(v, 'get'):
+    return v.get(key, None)

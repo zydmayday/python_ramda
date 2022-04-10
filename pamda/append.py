@@ -1,5 +1,5 @@
-from pamda.private._concat import _concat
-from pamda.private._curry2 import _curry2
+from .private._concat import _concat
+from .private._curry2 import _curry2
 
 
 def inner_append(el, arr):

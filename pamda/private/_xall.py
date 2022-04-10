@@ -1,5 +1,4 @@
-from pamda.private._helper import getAttribute
-
+from ._helper import getAttribute
 from ._reduced import _reduced
 from ._xfBase import XfBase
 
@@ -22,8 +21,4 @@ class XAll(XfBase):
     return result
 
 
-
-def _xall(f):
-  def inner(xf):
-    return XAll(f, xf)
-  return inner
+def _xall(f): return lambda xf: XAll(f, xf)

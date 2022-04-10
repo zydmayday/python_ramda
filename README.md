@@ -60,7 +60,7 @@ Functions supported now.
   - Transducer part is not fully tested.
 - [ ] allPass
 - [x] always
-- [x] and
+- [x] And (`and` is a keyword in python)
 - [ ] andThen
 - [x] any
 - [ ] anyPass
@@ -81,7 +81,7 @@ Functions supported now.
 - [ ] clamp
 - [ ] clone
 - [ ] collectBy
-- [ ] comparator
+- [x] comparator
 - [ ] complement
 - [x] compose
 - [ ] composeWith
@@ -116,8 +116,8 @@ Functions supported now.
 - [ ] equals
 - [ ] evolve
 - [ ] F
-- [ ] filter
-- [ ] find
+- [x] filter
+- [x] find
 - [ ] findIndex
 - [ ] findLast
 - [ ] findLastIndex
@@ -135,7 +135,7 @@ Functions supported now.
 - [ ] hasPath
 - [ ] head
 - [ ] identical
-- [ ] identity
+- [x] identity
 - [ ] ifElse
 - [ ] inc
 - [ ] includes
@@ -156,7 +156,19 @@ Functions supported now.
 - [ ] isNil
 - [ ] join
 - [ ] juxt
-- [ ] keys
+- [x] keys
+
+```python
+# When using R.keys(obj) and obj is a class instance, we use obj.__dict__ as keys.
+class A:
+  c = 'not included'
+  def __init__(self):
+    self.a = 1
+    self.b = 2
+a = A()
+R.keys(a) # ['a', 'b']
+```
+
 - [ ] keysIn
 - [ ] last
 - [ ] lastIndexOf
@@ -169,7 +181,7 @@ Functions supported now.
 - [ ] liftN
 - [ ] lt
 - [ ] lte
-- [ ] map
+- [x] Map (`map` is a keyword in python)
 - [ ] mapAccum
 - [ ] mapAccumRight
 - [ ] mapObjIndexed
@@ -240,10 +252,10 @@ Functions supported now.
 - [ ] range
 - [x] reduce
 - [ ] reduceBy
-- [ ] reduced
+- [x] reduced
 - [ ] reduceRight
 - [ ] reduceWhile
-- [ ] reject
+- [x] reject
 - [ ] remove
 - [ ] repeat
 - [ ] replace

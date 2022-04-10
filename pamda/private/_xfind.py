@@ -3,22 +3,22 @@ from ._reduced import _reduced
 from ._xfBase import XfBase
 
 
-class XAny(XfBase):
+class XFind(XfBase):
   def __init__(self, f, xf):
     self.xf = xf
     self.f = f
-    self.any = False
+    self.found = False
 
   def result(self, result):
-    if not self.any:
-      result = getAttribute(self.xf, '@@transducer/step')(result, False)
+    if not self.found:
+      result = getAttribute(self.xf, '@@transducer/step')(result, 0)
     return self.xf.get('@@transducer/result')(result)
 
   def step(self, result, input):
     if self.f(input):
-      self.any = True
-      result = _reduced(getAttribute(self.xf, '@@transducer/step')(result, True))
+      self.found = True
+      result = _reduced(getAttribute(self.xf, '@@transducer/step')(result, input))
     return result
 
 
-def _xany(f): return lambda xf: XAny(f, xf)
+def _xfind(f): return lambda xf: XFind(f, xf)
