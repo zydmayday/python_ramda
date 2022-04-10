@@ -147,7 +147,7 @@ Functions supported now.
 - [ ] insertAll
 - [ ] intersection
 - [ ] intersperse
-- [ ] into
+- [x] into
 - [ ] invert
 - [ ] invertObj
 - [ ] invoker
@@ -215,7 +215,7 @@ R.keys(a) # ['a', 'b']
 - [ ] nth
 - [ ] nthArg
 - [ ] o
-- [ ] objOf
+- [x] objOf
 - [ ] of
 - [ ] omit
 - [ ] on

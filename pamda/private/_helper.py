@@ -53,6 +53,8 @@ def getAttribute(v, key):
 
   return: function got from key, otherwise None
   """
+  if isinstance(v, dict) and key in v:
+    return v[key]
   if hasattr(v, key):
     return getattr(v, key, None)
   if hasattr(v, 'get'):

@@ -13,8 +13,10 @@ from .curryN import curryN
 from .filter import filter
 from .find import find
 from .identity import identity
+from .into import into
 from .keys import keys
 from .map import Map
+from .objOf import objOf
 from .pipe import pipe
 from .reduce import reduce
 from .reduced import reduced

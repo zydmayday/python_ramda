@@ -1,5 +1,3 @@
-from typing import Iterable
-
 from ._arrayReduce import _arrayReduce
 from ._createReduce import _createReduce
 from ._helper import getAttribute
