@@ -14,7 +14,7 @@ def times2(x): return x * 2
 def add1(x): return x + 1
 def dec(x): return x - 1
 
-# TODO: intoArray
+intoArray = R.into([])
 
 
 class A:
@@ -41,8 +41,7 @@ class TestMap(unittest.TestCase):
     self.assertEqual([2, 4, 6, 8], R.Map(times2, [1, 2, 3, 4]))
 
   def test_maps_simple_functions_into_array(self):
-    # TODO: intoArray
-    pass
+    self.assertEqual([2, 4, 6, 8], intoArray(R.Map(times2), [1, 2, 3, 4]))
 
   def test_maps_over_objects(self):
     a, b = A(), B()

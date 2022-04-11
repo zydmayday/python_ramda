@@ -10,7 +10,7 @@ https://github.com/ramda/ramda/blob/master/test/any.js
 
 def odd(n): return n % 2 == 1
 def T(): return True
-# TODO: intoArray
+intoArray = R.into([])
 
 
 class TestAny(unittest.TestCase):
@@ -20,7 +20,11 @@ class TestAny(unittest.TestCase):
   def test_returns_false_if_all_elements_fails_to_satisfy_the_predicate(self):
     self.assertEqual(False, R.any(odd, [2, 4, 6, 8, 10, 12]))
 
-  # TODO: intoArray
+  def test_returns_true_into_array_if_any_elements_satisfy_the_predicate(self):
+    self.assertEqual([True], intoArray(R.any(odd), [2, 4, 6, 8, 10, 11, 12]))
+
+  def test_returns_false_if_all_elements_fails_to_satisfy_the_predicate(self):
+    self.assertEqual([False], intoArray(R.any(odd), [2, 4, 6, 8, 10, 12]))
 
   def test_works_with_more_complex_objects(self):
     people = [{'first': 'Paul', 'last': 'Grenier'}, {'first': 'Mike', 'last': 'Hurley'}, {'first': 'Will', 'last': 'Klein'}]
@@ -31,6 +35,9 @@ class TestAny(unittest.TestCase):
 
   def test_returns_false_for_an_empty_list(self):
     self.assertEqual(False, R.any(T, []))
+
+  def test_returns_false_into_array_for_an_empty_list(self):
+    self.assertEqual([False], intoArray(R.any(T), []))
 
   def test_dispatches_when_given_a_transformer_in_list_position(self):
     res = R.any(odd, listXf)
