@@ -18,9 +18,11 @@ def gen_int():
   yield 3
   yield 4
 
+
 class ReduceObj:
   def reduce(self, step, acc):
     return 'override'
+
 
 class TestReduce(unittest.TestCase):
   def test_folds_simple_functions_over_arrays_with_the_supplied_accumulator(self):
@@ -41,7 +43,10 @@ class TestReduce(unittest.TestCase):
     self.assertEqual(0, R.reduce(add, 0, None))
     # TODO: add test case for concat
 
-  # TODO: short_circuits_with_reduced
+  def test_short_circuits_with_reduced(self):
+    def addWithMaxOf10(acc, val): return R.reduced(acc) if acc + val > 10 else acc + val
+    self.assertEqual(10, R.reduce(addWithMaxOf10, 0, [1, 2, 3, 4]))
+    self.assertEqual(6, R.reduce(addWithMaxOf10, 0, [2, 4, 6, 8]))
 
 
 class TestPythonStyleReduce(unittest.TestCase):

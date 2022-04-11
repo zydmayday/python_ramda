@@ -11,7 +11,7 @@ class XFind(XfBase):
 
   def result(self, result):
     if not self.found:
-      result = getAttribute(self.xf, '@@transducer/step')(result, 0)
+      result = getAttribute(self.xf, '@@transducer/step')(result, None)
     return self.xf.get('@@transducer/result')(result)
 
   def step(self, result, input):
