@@ -2,6 +2,7 @@ import unittest
 from test.helpers.listXf import listXf
 
 import pamda as R
+from pamda.private._has import _has
 
 """
 https://github.com/ramda/ramda/blob/master/test/find.js
@@ -13,7 +14,7 @@ a = [11, 10, 9, 'cow', obj1, 8, 7, 100, 200, 300, obj2, 4, 3, 2, 1, 0]
 def even(x): return x % 2 == 0 if isinstance(x, int) else False
 def gt100(x): return x > 100 if isinstance(x, int) else False
 def isStr(x): return isinstance(x, str)
-def xGt100(o): return o.get('x') > 100 if hasattr(o, 'get') else False
+def xGt100(o): return o.get('x') > 100 if _has(o, 'get') else False
 intoArray = R.into([])
 
 

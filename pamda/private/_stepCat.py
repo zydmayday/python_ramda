@@ -6,7 +6,6 @@ from ._isTransformer import _isTransformer
 
 
 def _array_step(xs, x):
-  print(xs, x)
   return xs + [x]
 
 
