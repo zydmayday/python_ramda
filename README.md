@@ -53,7 +53,7 @@ Functions supported now.
 ```
 
 - [ ] addIndex
-- [ ] adjust
+- [x] adjust
 - [x] all
   - Transducer part is not fully tested.
 - [ ] allPass
@@ -205,12 +205,12 @@ R.keys(a) # ['a', 'b']
 - [ ] modifyPath
 - [ ] modulo
 - [ ] move
-- [ ] multiply
+- [x] multiply
 - [ ] nAry
 - [ ] negate
 - [ ] none
 - [ ] not
-- [ ] nth
+- [x] nth
 - [ ] nthArg
 - [ ] o
 - [x] objOf
@@ -241,7 +241,7 @@ R.keys(a) # ['a', 'b']
 - [ ] product
 - [ ] project
 - [ ] promap
-- [ ] prop
+- [x] prop
 - [ ] propEq
 - [ ] propIs
 - [ ] propOr
@@ -249,7 +249,7 @@ R.keys(a) # ['a', 'b']
 - [ ] propSatisfies
 - [ ] range
 - [x] reduce
-- [ ] reduceBy
+- [x] reduceBy
 - [x] reduced
 - [ ] reduceRight
 - [ ] reduceWhile
