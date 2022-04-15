@@ -9,6 +9,7 @@ from .append import append
 from .comparator import comparator
 from .compose import compose
 from .concat import concat
+from .countBy import countBy
 from .curry import curry
 from .curryN import curryN
 from .filter import filter

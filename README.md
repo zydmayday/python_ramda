@@ -89,7 +89,7 @@ Functions supported now.
 - [ ] constructN
 - [ ] converge
 - [ ] count
-- [ ] countBy
+- [x] countBy
 - [x] curry
 - [x] curryN
 - [ ] dec
