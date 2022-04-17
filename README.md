@@ -95,7 +95,7 @@ Functions supported now.
 - [ ] dec
 - [ ] defaultTo
 - [ ] descend
-- [ ] difference
+- [x] difference
 - [ ] differenceWith
 - [ ] dissoc
 - [ ] dissocPath
@@ -111,7 +111,7 @@ Functions supported now.
 - [ ] endsWith
 - [ ] eqBy
 - [ ] eqProps
-- [ ] equals
+- [x] equals
 - [ ] evolve
 - [ ] F
 - [x] filter
