@@ -1,4 +1,4 @@
-# pamda
+# python_ramda
 
 This is a repo try to copy <https://github.com/ramda/ramda> in python.
 
@@ -7,21 +7,21 @@ This is a repo try to copy <https://github.com/ramda/ramda> in python.
 For whom wants to use this package.
 
 ```bash
-> pip install py_ramda
-> pip install py_ramda -U # get the latest
+> pip install python_ramda
+> pip install python_ramda -U # get the latest
 ```
 
 ## Usage
 
 ```python
->>> from pamda import curry
+>>> from ramda import curry
 >>> def sum(a, b, c): return a + b + c
 >>> curry(sum)(1)(2, 3)
 6
 ```
 
 ```python
->>> import pamda as R # similar to ramda syntax
+>>> import ramda as R # similar to ramda syntax
 >>> def sum(a, b, c): return a + b + c
 >>> R.curry(sum)(1)(2, 3)
 6
@@ -36,7 +36,7 @@ For whom wants to contribute to this repo.
 $ pre-commit install # install hooks
 ```
 
-Check the latest branch to be released in [here](https://github.com/zydmayday/pamda/branches).
+Check the latest branch to be released in [here](https://github.com/zydmayday/python_ramda/branches).
 
 Checkout new branch from that release branch and create PR.
 

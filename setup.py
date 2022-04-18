@@ -12,7 +12,7 @@ setup(
     # In my case it will be:
     # pip install pydash-arnu515
     # This field is REQUIRED
-    name="py_ramda",
+    name="python_ramda",
 
     # The version of your project.
     # Usually, it would be in the form of:
@@ -52,7 +52,7 @@ setup(
     # The url field should contain a link to a git repository, the project's website
     # or the project's documentation. I'll leave a link to this project's Github repository.
     # This field is OPTIONAL
-    url="https://github.com/zydmayday/pamda",
+    url="https://github.com/zydmayday/python_ramda",
 
     # The author name and email fields are self explanatory.
     # These fields are OPTIONAL
