@@ -1,4 +1,5 @@
 from .private._curry1 import _curry1
+from .private._has import _has
 from .private._isFunction import _isFunction
 
 
@@ -20,9 +21,9 @@ def inner_keys(obj):
   b = B()
   keys(b) # ['d'], only attribute d will be included.
   """
-  if hasattr(obj, 'keys') and _isFunction(obj.keys):
+  if _has(obj, 'keys') and _isFunction(obj.keys):
     return list(obj.keys())
-  elif hasattr(obj, '__dict__'):
+  elif _has(obj, '__dict__'):
     return list(obj.__dict__)
   else:
     return []

@@ -1,5 +1,7 @@
 from inspect import getfullargspec
 
+from ._has import _has
+
 
 def funcArgsLength(fn):
   """
@@ -53,7 +55,9 @@ def getAttribute(v, key):
 
   return: function got from key, otherwise None
   """
-  if hasattr(v, key):
+  if isinstance(v, dict) and key in v:
+    return v[key]
+  if _has(v, key):
     return getattr(v, key, None)
-  if hasattr(v, 'get'):
+  if _has(v, 'get'):
     return v.get(key, None)

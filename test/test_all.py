@@ -11,7 +11,9 @@ https://github.com/ramda/ramda/blob/master/test/all.js
 def even(n): return n % 2 == 0
 def T(): return True
 def isFalse(x): return x == False
-# TODO: intoArray
+
+
+intoArray = R.into([])
 
 
 class TestAll(unittest.TestCase):
@@ -25,7 +27,15 @@ class TestAll(unittest.TestCase):
   def test_true_for_an_empty_list(self):
     self.assertEqual(True, R.all(T, []))
 
-  # TODO: intoArray
+  def test_true_into_array_if_all_elements_satisfy_the_predicate(self):
+    self.assertEqual([True], intoArray(R.all(even), [2, 4, 6, 8, 10, 12]))
+    self.assertEqual([True], intoArray(R.all(isFalse), [False, False, False]))
+
+  def test_false_into_array_if_any_element_failes_to_satisfy_the_predicate(self):
+    self.assertEqual([False], intoArray(R.all(even), [2, 4, 6, 8, 9, 10]))
+
+  def test_true_into_array_for_an_empty_list(self):
+    self.assertEqual([True], intoArray(R.all(T), []))
 
   def test_works_with_more_complex_objects(self):
     xs = [{'x': 'abc'}, {'x': 'ade'}, {'x': 'fghiajk'}]

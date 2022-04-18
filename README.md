@@ -44,18 +44,16 @@ Checkout new branch from that release branch and create PR.
 
 Functions supported now.
 
-- [x]
-- [ ] add
+- [x] __
+- [x] add
 
 ```python
   # different from ramda, ramda treat null as 0
   >>> R.add(None, None) # float('nan)
 ```
 
-- [x] __
-- [x] add
 - [ ] addIndex
-- [ ] adjust
+- [x] adjust
 - [x] all
   - Transducer part is not fully tested.
 - [ ] allPass
@@ -91,17 +89,17 @@ Functions supported now.
 - [ ] constructN
 - [ ] converge
 - [ ] count
-- [ ] countBy
+- [x] countBy
 - [x] curry
 - [x] curryN
 - [ ] dec
 - [ ] defaultTo
 - [ ] descend
-- [ ] difference
-- [ ] differenceWith
+- [x] difference
+- [x] differenceWith
 - [ ] dissoc
 - [ ] dissocPath
-- [ ] divide
+- [x] divide
 - [ ] drop
 - [ ] dropLast
 - [ ] dropLastWhile
@@ -113,7 +111,7 @@ Functions supported now.
 - [ ] endsWith
 - [ ] eqBy
 - [ ] eqProps
-- [ ] equals
+- [x] equals
 - [ ] evolve
 - [ ] F
 - [x] filter
@@ -147,7 +145,7 @@ Functions supported now.
 - [ ] insertAll
 - [ ] intersection
 - [ ] intersperse
-- [ ] into
+- [x] into
 - [ ] invert
 - [ ] invertObj
 - [ ] invoker
@@ -207,15 +205,15 @@ R.keys(a) # ['a', 'b']
 - [ ] modifyPath
 - [ ] modulo
 - [ ] move
-- [ ] multiply
+- [x] multiply
 - [ ] nAry
 - [ ] negate
 - [ ] none
 - [ ] not
-- [ ] nth
+- [x] nth
 - [ ] nthArg
 - [ ] o
-- [ ] objOf
+- [x] objOf
 - [ ] of
 - [ ] omit
 - [ ] on
@@ -243,7 +241,7 @@ R.keys(a) # ['a', 'b']
 - [ ] product
 - [ ] project
 - [ ] promap
-- [ ] prop
+- [x] prop
 - [ ] propEq
 - [ ] propIs
 - [ ] propOr
@@ -251,7 +249,7 @@ R.keys(a) # ['a', 'b']
 - [ ] propSatisfies
 - [ ] range
 - [x] reduce
-- [ ] reduceBy
+- [x] reduceBy
 - [x] reduced
 - [ ] reduceRight
 - [ ] reduceWhile
