@@ -1,7 +1,7 @@
 import unittest
 from functools import cmp_to_key
 
-import pamda as R
+import ramda as R
 
 """
 https://github.com/ramda/ramda/blob/master/test/comparator.js

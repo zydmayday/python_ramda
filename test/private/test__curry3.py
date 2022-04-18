@@ -1,8 +1,8 @@
 
 import unittest
 
-import pamda as R
-from pamda.private._curry3 import _curry3
+import ramda as R
+from ramda.private._curry3 import _curry3
 
 """
 https://github.com/ramda/ramda/blob/master/test/internal/_curry3.js

@@ -2,7 +2,7 @@ import unittest
 from inspect import getfullargspec
 from random import randint
 
-import pamda as R
+import ramda as R
 
 """
 https://github.com/ramda/ramda/blob/master/test/curry.js

@@ -1,4 +1,4 @@
-import pamda as R
+import ramda as R
 
 
 def _arity(n, fn):

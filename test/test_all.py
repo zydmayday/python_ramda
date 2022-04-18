@@ -1,7 +1,7 @@
 import unittest
 from test.helpers.listXf import listXf
 
-import pamda as R
+import ramda as R
 
 """
 https://github.com/ramda/ramda/blob/master/test/all.js

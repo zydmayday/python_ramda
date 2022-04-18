@@ -2,7 +2,7 @@
 import unittest
 from random import randint
 
-import pamda as R
+import ramda as R
 
 
 def source(a, b, c):
