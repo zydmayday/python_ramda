@@ -66,7 +66,7 @@ setup(
     classifiers=[
         "License :: OSI Approved :: MIT License",
         "Intended Audience :: Developers",
-        "Programming Language :: Python :: 3.9 :: Only"
+        "Programming Language :: Python :: 3.9"
     ],
 
     # Keywords are tags that identify your project and help searching for it
