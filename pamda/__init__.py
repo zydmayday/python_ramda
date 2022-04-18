@@ -13,6 +13,7 @@ from .countBy import countBy
 from .curry import curry
 from .curryN import curryN
 from .difference import difference
+from .differenceWith import differenceWith
 from .equals import equals
 from .filter import filter
 from .find import find

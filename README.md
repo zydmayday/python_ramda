@@ -96,7 +96,7 @@ Functions supported now.
 - [ ] defaultTo
 - [ ] descend
 - [x] difference
-- [ ] differenceWith
+- [x] differenceWith
 - [ ] dissoc
 - [ ] dissocPath
 - [ ] divide
