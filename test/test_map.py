@@ -1,7 +1,7 @@
 
 import unittest
 
-import pamda as R
+import ramda as R
 
 from .helpers import listXf
 

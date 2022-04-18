@@ -1,7 +1,7 @@
 
 import unittest
 
-import pamda as R
+import ramda as R
 
 """
 https://github.com/ramda/ramda/blob/master/test/reduced.js

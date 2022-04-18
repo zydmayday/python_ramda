@@ -1,8 +1,8 @@
 import unittest
 from test.helpers.listXf import listXf
 
-import pamda as R
-from pamda.private._has import _has
+import ramda as R
+from ramda.private._has import _has
 
 """
 https://github.com/ramda/ramda/blob/master/test/find.js

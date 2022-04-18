@@ -1,4 +1,4 @@
-import pamda as R
+import ramda as R
 
 from ._isPlaceholder import _isPlaceholder
 

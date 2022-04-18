@@ -1,4 +1,4 @@
-import pamda as R
+import ramda as R
 
 from ._identity import _identity
 from ._isArrayLike import _isArrayLike

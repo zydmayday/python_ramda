@@ -7,8 +7,8 @@ This is a repo try to copy <https://github.com/ramda/ramda> in python.
 For whom wants to use this package.
 
 ```bash
-> pip install zydmayday-pamda
-> pip install zydmayday-pamda -U # get the latest
+> pip install py_ramda
+> pip install py_ramda -U # get the latest
 ```
 
 ## Usage

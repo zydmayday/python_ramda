@@ -1,8 +1,8 @@
 import types
 import unittest
 
-import pamda as R
-from pamda.private._helper import funcArgsLength
+import ramda as R
+from ramda.private._helper import funcArgsLength
 
 """
 https://github.com/ramda/ramda/blob/master/test/pipe.js
