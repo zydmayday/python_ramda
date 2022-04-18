@@ -99,7 +99,7 @@ Functions supported now.
 - [x] differenceWith
 - [ ] dissoc
 - [ ] dissocPath
-- [ ] divide
+- [x] divide
 - [ ] drop
 - [ ] dropLast
 - [ ] dropLastWhile
