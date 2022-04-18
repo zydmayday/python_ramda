@@ -14,6 +14,7 @@ from .curry import curry
 from .curryN import curryN
 from .difference import difference
 from .differenceWith import differenceWith
+from .divide import divide
 from .equals import equals
 from .filter import filter
 from .find import find
