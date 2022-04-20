@@ -37,11 +37,11 @@ class TestReduce(unittest.TestCase):
   def test_returns_the_accumulator_for_an_empty_array(self):
     self.assertEqual(0, R.reduce(add, 0, []))
     self.assertEqual(1, R.reduce(mult, 1, []))
-    # TODO: add test case for concat
+    self.assertEqual([], R.reduce(R.concat, [], []))
 
   def test_returns_the_accumulator_for_an_None_list(self):
     self.assertEqual(0, R.reduce(add, 0, None))
-    # TODO: add test case for concat
+    self.assertEqual([], R.reduce(R.concat, [], None))
 
   def test_short_circuits_with_reduced(self):
     def addWithMaxOf10(acc, val): return R.reduced(acc) if acc + val > 10 else acc + val
