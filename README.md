@@ -113,7 +113,7 @@ Functions supported now.
 - [ ] eqProps
 - [x] equals
 - [ ] evolve
-- [ ] F
+- [x] F
 - [x] filter
 - [x] find
 - [ ] findIndex
@@ -275,7 +275,7 @@ R.keys(a) # ['a', 'b']
 - [ ] sum
 - [ ] symmetricDifference
 - [ ] symmetricDifferenceWith
-- [ ] T
+- [x] T
 - [x] tail
 - [ ] take
 - [ ] takeLast
