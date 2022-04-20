@@ -16,6 +16,7 @@ from .difference import difference
 from .differenceWith import differenceWith
 from .divide import divide
 from .equals import equals
+from .F import F
 from .filter import filter
 from .find import find
 from .identity import identity
@@ -34,4 +35,5 @@ from .reject import reject
 from .reverse import reverse
 from .slice import slice
 from .sort import sort
+from .T import T
 from .tail import tail

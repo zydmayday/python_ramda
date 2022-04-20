@@ -14,13 +14,15 @@ class FilterObject:
   def filter(self, f):
     return f('called f.filter')
 
+
 class Obj:
   def fn(self):
     return 'called fn'
 
+
 class TestReject(unittest.TestCase):
   def test_reduces_an_array_to_those_not_matching_a_filter(self):
-    self.assertEqual([1,3,5], R.reject(even, [1, 2, 3, 4, 5]))
+    self.assertEqual([1, 3, 5], R.reject(even, [1, 2, 3, 4, 5]))
 
   def test_reduces_an_empty_array_if_no_element_matches(self):
     self.assertEqual([], R.reject(lambda x: x < 100, [1, 9, 99]))
@@ -77,9 +79,24 @@ class TestReject(unittest.TestCase):
     o_filtered = R.reject(lambda x: x > 0, o)
     self.assertEqual('called fn', o_filtered.fn())
 
-  def test_correctly_uses_fantasy_land_implementations(self):
-    # TODO: add Maybe
-    pass
+  def test_dispatches_to_filter_method(self):
+    class Nothing:
+      def filter(self):
+        return self
+    Nothing.value = Nothing()
+
+    class Just:
+      def __init__(self, x):
+        self.value = x
+
+      def filter(self, pred):
+        return self if pred(self.value) else Nothing.value
+
+    m = Just(42)
+    self.assertEqual(m, R.filter(R.T, m))
+    self.assertEqual(Nothing.value, R.filter(R.F, m))
+    self.assertEqual(Nothing.value, R.reject(R.T, m))
+    self.assertEqual(m, R.reject(R.F, m))
 
 
 if __name__ == '__main__':
