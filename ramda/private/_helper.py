@@ -60,4 +60,8 @@ def getAttribute(v, key):
   if _has(v, key):
     return getattr(v, key, None)
   if _has(v, 'get'):
-    return v.get(key, None)
+    try:
+      return v.get(key, None)
+    except TypeError:
+      # in case v has get method but with different signature
+      return None

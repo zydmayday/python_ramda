@@ -77,7 +77,32 @@ Functions supported now.
 - [ ] call
 - [ ] chain
 - [ ] clamp
-- [ ] clone
+- [x] clone
+
+**we are simply using python `copy` module**
+So with no specific reason, we suggest you to use python origin `copy` module as your first choice.
+
+```python
+class Obj:
+  def __init__(self, x):
+    self.value = x
+obj = Obj(42)
+clone = R.clone(obj)
+obj == clone # False, obj and clone have different references
+isinstance(clone, Obj) # True
+
+class Obj:
+  def __init__(self, x):
+    self.value = x
+
+  def __eq__(self, other):
+    return self.value == other.value
+obj = Obj(42)
+clone = R.clone(obj)
+obj == clone # True, if Obj override __eq__ function
+isinstance(clone, Obj) # True
+```
+
 - [ ] collectBy
 - [x] comparator
 - [ ] complement
