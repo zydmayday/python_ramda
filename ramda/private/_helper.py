@@ -1,6 +1,7 @@
 from inspect import getfullargspec
 
 from ._has import _has
+from ._isArrayLike import _isArrayLike
 
 
 def funcArgsLength(fn):
@@ -26,6 +27,7 @@ def toNumber(a):
       return float(a)
     except:
       return float('nan')
+
 
 def getAttribute(v, key):
   """
@@ -65,3 +67,10 @@ def getAttribute(v, key):
     except TypeError:
       # in case v has get method but with different signature
       return None
+
+
+def safeLen(x):
+  if _isArrayLike(x):
+    return len(x)
+  else:
+    return 0

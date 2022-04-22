@@ -22,6 +22,7 @@ from .equals import equals
 from .F import F
 from .filter import filter
 from .find import find
+from .flatten import flatten
 from .identity import identity
 from .into import into
 from .keys import keys
@@ -31,6 +32,7 @@ from .nth import nth
 from .objOf import objOf
 from .pipe import pipe
 from .prop import prop
+from .range import range
 from .reduce import reduce
 from .reduceBy import reduceBy
 from .reduced import reduced
