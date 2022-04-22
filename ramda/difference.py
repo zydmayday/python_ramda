@@ -1,9 +1,9 @@
 from math import isnan
-from numbers import Number
 
 from .equals import equals
 from .find import find
 from .private._curry2 import _curry2
+from .private._isNumber import _isNumber
 
 
 def inner_difference(first, second):
@@ -14,7 +14,7 @@ def inner_difference(first, second):
     toFilterOut.add(item)
   firstLen = len(first)
   while idx < firstLen:
-    if isinstance(first[idx], Number) and isnan(first[idx]):
+    if _isNumber(first[idx]) and isnan(first[idx]):
       if not find(isnan, list(toFilterOut)):
         toFilterOut.add(first[idx])
         out.append(first[idx])

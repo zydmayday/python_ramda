@@ -156,7 +156,7 @@ R.eqProps('v', {'v': 1}, {'v': 1}) # True
 - [ ] findIndex
 - [ ] findLast
 - [ ] findLastIndex
-- [ ] flatten
+- [x] flatten
 - [ ] flip
 - [ ] forEach
 - [ ] forEachObjIndexed
@@ -284,7 +284,7 @@ R.keys(a) # ['a', 'b']
 - [ ] propOr
 - [ ] props
 - [ ] propSatisfies
-- [ ] range
+- [x] range
 - [x] reduce
 - [x] reduceBy
 - [x] reduced
