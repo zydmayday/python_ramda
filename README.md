@@ -125,7 +125,7 @@ isinstance(clone, Obj) # True
 - [ ] dissoc
 - [ ] dissocPath
 - [x] divide
-- [ ] drop
+- [x] drop
 - [ ] dropLast
 - [ ] dropLastWhile
 - [ ] dropRepeats
