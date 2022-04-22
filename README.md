@@ -136,6 +136,18 @@ isinstance(clone, Obj) # True
 - [ ] endsWith
 - [ ] eqBy
 - [x] eqProps
+
+```python
+# works for both dict and object
+class Obj:
+  def __init__(self, v):
+    self.v = v
+obj1 = Obj(1)
+obj2 = Obj(1)
+R.eqProps('v', obj1, obj2) # True
+R.eqProps('v', {'v': 1}, {'v': 1}) # True
+```
+
 - [x] equals
 - [ ] evolve
 - [x] F
