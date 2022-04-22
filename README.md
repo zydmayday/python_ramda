@@ -135,7 +135,7 @@ isinstance(clone, Obj) # True
 - [ ] empty
 - [ ] endsWith
 - [ ] eqBy
-- [ ] eqProps
+- [x] eqProps
 - [x] equals
 - [ ] evolve
 - [x] F
