@@ -17,6 +17,7 @@ from .difference import difference
 from .differenceWith import differenceWith
 from .divide import divide
 from .drop import drop
+from .eqProps import eqProps
 from .equals import equals
 from .F import F
 from .filter import filter
