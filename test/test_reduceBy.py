@@ -98,6 +98,7 @@ class TestReduceBy(unittest.TestCase):
         'C': ['Brad'],
         'F': ['Eddy']
     }, R.reduceBy(collectNames, [], byGrade, students))
+    # TODO: R.transduce
 
 
 if __name__ == '__main__':

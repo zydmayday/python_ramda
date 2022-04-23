@@ -14,9 +14,11 @@ class FilterObject:
   def filter(self, f):
     return f('called f.filter')
 
+
 class Obj:
   def fn(self):
     return 'called fn'
+
 
 class TestFilter(unittest.TestCase):
   def test_reduces_an_array_to_those_matching_a_filter(self):
@@ -81,9 +83,11 @@ class TestFilter(unittest.TestCase):
     f = FilterObject()
     self.assertEqual('called f.filter', R.filter(lambda s: s, f))
 
-  def test_correctly_uses_fantasy_land_implementations(self):
-    # TODO: add Maybe
-    pass
+  def test_can_act_as_a_transducer(self):
+    input = [1, 2, 3, 4]
+    expected = [2, 4]
+    self.assertEqual(expected, R.into([], R.filter(even), input))
+    # TODO: R.transduce
 
 
 if __name__ == '__main__':
