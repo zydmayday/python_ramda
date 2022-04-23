@@ -157,7 +157,7 @@ R.eqProps('v', {'v': 1}, {'v': 1}) # True
 - [ ] findLast
 - [ ] findLastIndex
 - [x] flatten
-- [ ] flip
+- [x] flip
 - [ ] forEach
 - [ ] forEachObjIndexed
 - [ ] fromPairs
