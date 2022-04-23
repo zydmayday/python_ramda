@@ -24,6 +24,7 @@ from .filter import filter
 from .find import find
 from .flatten import flatten
 from .flip import flip
+from .groupBy import groupBy
 from .identity import identity
 from .into import into
 from .keys import keys
