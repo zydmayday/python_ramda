@@ -161,7 +161,7 @@ R.eqProps('v', {'v': 1}, {'v': 1}) # True
 - [ ] forEach
 - [ ] forEachObjIndexed
 - [ ] fromPairs
-- [ ] groupBy
+- [x] groupBy
 - [ ] groupWith
 - [ ] gt
 - [ ] gte
