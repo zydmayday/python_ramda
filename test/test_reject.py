@@ -98,6 +98,12 @@ class TestReject(unittest.TestCase):
     self.assertEqual(Nothing.value, R.reject(R.T, m))
     self.assertEqual(m, R.reject(R.F, m))
 
+  def test_can_act_as_a_transducer(self):
+    input = [1, 2, 3, 4]
+    expected = [1, 3]
+    self.assertEqual(expected, R.into([], R.reject(even), input))
+    # TODO: R.transduce
+
 
 if __name__ == '__main__':
   unittest.main()

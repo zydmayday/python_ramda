@@ -50,6 +50,12 @@ class TestAll(unittest.TestCase):
     self.assertEqual(res.f, even)
     self.assertEqual(res.xf, listXf)
 
+  def test_can_act_as_a_transducer(self):
+    input = [2, 4, 6, 8, 9, 10]
+    expected = [False]
+    self.assertEqual(expected, R.into([], R.all(even), input))
+    # TODO: R.transduce
+
 
 if __name__ == '__main__':
   unittest.main()

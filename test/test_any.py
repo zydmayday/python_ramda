@@ -45,6 +45,12 @@ class TestAny(unittest.TestCase):
     self.assertEqual(res.f, odd)
     self.assertEqual(res.xf, listXf)
 
+  def test_can_act_as_a_transducer(self):
+    input = [2, 4, 6, 8, 10]
+    expected = [False]
+    self.assertEqual(expected, R.into([], R.any(odd), input))
+    # TODO: R.transduce
+
 
 if __name__ == '__main__':
   unittest.main()

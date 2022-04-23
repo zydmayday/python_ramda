@@ -15,7 +15,6 @@ def even(x): return x % 2 == 0 if isinstance(x, int) else False
 def gt100(x): return x > 100 if isinstance(x, int) else False
 def isStr(x): return isinstance(x, str)
 def xGt100(o): return o.get('x') > 100 if _has(o, 'get') else False
-intoArray = R.into([])
 
 
 class TestFind(unittest.TestCase):
@@ -25,30 +24,21 @@ class TestFind(unittest.TestCase):
     self.assertEqual('cow', R.find(isStr, a))
     self.assertEqual(obj2, R.find(xGt100, a))
 
-  def test_transduces_the_first_element_that_satisfies_the_predicate_into_an_array(self):
-    self.assertEqual([10], intoArray(R.find(even), a))
-    self.assertEqual([200], intoArray(R.find(gt100), a))
-    self.assertEqual(['cow'], intoArray(R.find(isStr), a))
-    self.assertEqual([obj2], intoArray(R.find(xGt100), a))
-
   def test_returns_None_when_no_element_statisfies_the_predicate(self):
     self.assertEqual(None, R.find(even, ['zing']))
 
-  def test_returns_None_in_array_when_no_element_statisfies_the_predicate(self):
-    self.assertEqual([None], intoArray(R.find(even), ['zing']))
-
   def test_returns_None_when_given_an_empty_list(self):
     self.assertEqual(None, R.find(even, []))
-
-  def test_returns_None_into_an_array_when_given_an_empty_list(self):
-    self.assertEqual([None], intoArray(R.find(even), []))
-
 
   def test_dispatches_to_transformer_objects(self):
     res = R.find(R.identity, listXf)
     self.assertEqual(res.f, R.identity)
     self.assertEqual(res.found, False)
     self.assertEqual(res.xf, listXf)
+
+  def test_can_act_as_a_transducer(self):
+    self.assertEqual([10], R.into([], R.find(even), a))
+    # TODO: R.transduce
 
 
 if __name__ == '__main__':

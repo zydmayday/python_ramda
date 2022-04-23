@@ -14,8 +14,6 @@ def times2(x): return x * 2
 def add1(x): return x + 1
 def dec(x): return x - 1
 
-intoArray = R.into([])
-
 
 class A:
   def __init__(self):
@@ -39,9 +37,6 @@ class C:
 class TestMap(unittest.TestCase):
   def test_maps_simple_functions_over_array(self):
     self.assertEqual([2, 4, 6, 8], R.Map(times2, [1, 2, 3, 4]))
-
-  def test_maps_simple_functions_into_array(self):
-    self.assertEqual([2, 4, 6, 8], intoArray(R.Map(times2), [1, 2, 3, 4]))
 
   def test_maps_over_objects(self):
     a, b = A(), B()
@@ -92,9 +87,9 @@ class TestMap(unittest.TestCase):
     self.assertEqual(listXf, xcomp.xf.xf)
     self.assertEqual(times2, xcomp.xf.f)
 
-  def test_correctly_users_fantasy_land_implementations(self):
-    # TODO: fantasy-land
-    pass
+  def test_can_act_as_a_transducer(self):
+    self.assertEqual([2, 4, 6, 8], R.into([], R.Map(times2), [1, 2, 3, 4]))
+    # TODO: R.transduce
 
 
 if __name__ == '__main__':

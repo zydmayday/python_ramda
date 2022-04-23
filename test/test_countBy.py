@@ -62,10 +62,9 @@ class TestCountBy(unittest.TestCase):
         R.countBy(R.prop('genre')),
         R.Map(R.adjust(1, lambda x: -x))
     )
-    self.assertEqual(
-        {"Baroque": -2, "Rock": -2, "Jazz": -2, "Romantic": -1, "Metal": -1, "Modern": -1, "Broadway": -1, "Folk": -1, "Classical": -1},
-        R.into({}, transducer, albums)
-    )
+    expected = {"Baroque": -2, "Rock": -2, "Jazz": -2, "Romantic": -1, "Metal": -1, "Modern": -1, "Broadway": -1, "Folk": -1, "Classical": -1}
+    self.assertEqual(expected, R.into({}, transducer, albums))
+    # TODO: R.transduce
 
 
 if __name__ == '__main__':
