@@ -23,6 +23,7 @@ from .F import F
 from .filter import filter
 from .find import find
 from .flatten import flatten
+from .flip import flip
 from .identity import identity
 from .into import into
 from .keys import keys
