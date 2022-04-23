@@ -27,18 +27,24 @@ For whom wants to use this package.
 6
 ```
 
+## Doc
+
+Because the usage of `python_ramda` is almostly same to `ramda`,
+so we don't create any extra doc.
+
+If you feel any behaviour is different from what is should be in `ramda`,
+please check below `CheckList` for more details.
+
 ## Contribute
 
 For whom wants to contribute to this repo.
 
 ```bash
 # see: https://pre-commit.com/ for more details
-$ pre-commit install # install hooks
+$ pre-commit install # please install hooks first
 ```
 
-Check the latest branch to be released in [here](https://github.com/zydmayday/python_ramda/branches).
-
-Checkout new branch from that release branch and create PR.
+Checkout new branch from `main` branch directly and create PR.
 
 ## CheckList
 
