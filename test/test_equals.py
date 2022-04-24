@@ -197,6 +197,8 @@ class TestEquals(unittest.TestCase):
     pass
     #TODO: clone
 
+  def test_nan(self):
+    self.assertEqual(True, R.equals(float('nan'), float('nan')))
 
 if __name__ == '__main__':
   unittest.main()

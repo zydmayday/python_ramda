@@ -29,6 +29,7 @@ from .gt import gt
 from .gte import gte
 from .head import head
 from .identity import identity
+from .indexOf import indexOf
 from .into import into
 from .keys import keys
 from .lt import lt

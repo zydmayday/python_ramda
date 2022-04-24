@@ -155,6 +155,11 @@ R.eqProps('v', {'v': 1}, {'v': 1}) # True
 ```
 
 - [x] equals
+
+```python
+R.equals(float('nan'), float('nan')) # True
+```
+
 - [ ] evolve
 - [x] F
 - [x] filter
@@ -181,7 +186,7 @@ R.eqProps('v', {'v': 1}, {'v': 1}) # True
 - [ ] inc
 - [ ] includes
 - [ ] indexBy
-- [ ] indexOf
+- [x] indexOf
 - [ ] init
 - [ ] innerJoin
 - [ ] insert
