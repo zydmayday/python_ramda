@@ -1,9 +1,14 @@
+from math import isnan
+
 from ._helper import getAttribute
 from ._isArrayLike import _isArrayLike
 from ._isFunction import _isFunction
+from ._isNumber import _isNumber
 
 
 def _equals(a, b):
+  if _isNumber(a) and isnan(a) and _isNumber(b) and isnan(b):
+    return True
   if type(a) != type(b):
     return False
   if isinstance(a, BaseException):
