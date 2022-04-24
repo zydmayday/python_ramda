@@ -38,6 +38,19 @@ class TestSlice(unittest.TestCase):
     self.assertEqual(R.slice(-2, -1, 'abc'), 'b')
     self.assertEqual(R.slice(-2, -0, 'abc'), '')
 
+class TestSliceDifferentFromRamda(unittest.TestCase):
+  def test_support_None_for_second_param(self):
+    self.assertEqual(R.slice(0, None, ['a', 'b', 'c']), ['a', 'b', 'c'])
+    self.assertEqual(R.slice(1, None, ['a', 'b', 'c']), ['b', 'c'])
+    self.assertEqual(R.slice(2, None, ['a', 'b', 'c']), ['c'])
+    self.assertEqual(R.slice(3, None, ['a', 'b', 'c']), [])
+    self.assertEqual(R.slice(4, None, ['a', 'b', 'c']), [])
+
+    self.assertEqual(R.slice(0, None, 'abc'), 'abc')
+    self.assertEqual(R.slice(1, None, 'abc'), 'bc')
+    self.assertEqual(R.slice(2, None, 'abc'), 'c')
+    self.assertEqual(R.slice(3, None, 'abc'), '')
+    self.assertEqual(R.slice(4, None, 'abc'), '')
 
 if __name__ == '__main__':
   unittest.main()

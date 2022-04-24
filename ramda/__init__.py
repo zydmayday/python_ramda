@@ -27,6 +27,7 @@ from .flip import flip
 from .groupBy import groupBy
 from .gt import gt
 from .gte import gte
+from .head import head
 from .identity import identity
 from .into import into
 from .keys import keys
