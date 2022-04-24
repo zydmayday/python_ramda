@@ -169,8 +169,8 @@ R.eqProps('v', {'v': 1}, {'v': 1}) # True
 - [ ] fromPairs
 - [x] groupBy
 - [ ] groupWith
-- [ ] gt
-- [ ] gte
+- [x] gt
+- [x] gte
 - [ ] has
 - [ ] hasIn
 - [ ] hasPath
@@ -220,8 +220,8 @@ R.keys(a) # ['a', 'b']
 - [ ] lensProp
 - [ ] lift
 - [ ] liftN
-- [ ] lt
-- [ ] lte
+- [x] lt
+- [x] lte
 - [x] Map (`map` is a keyword in python)
 - [ ] mapAccum
 - [ ] mapAccumRight
