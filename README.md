@@ -174,7 +174,7 @@ R.eqProps('v', {'v': 1}, {'v': 1}) # True
 - [ ] has
 - [ ] hasIn
 - [ ] hasPath
-- [ ] head
+- [x] head
 - [ ] identical
 - [x] identity
 - [ ] ifElse
@@ -305,6 +305,12 @@ R.keys(a) # ['a', 'b']
 - [ ] sequence
 - [ ] set
 - [x] slice
+
+```python
+R.slice(1, 3, ['a', 'b', 'c', 'd']) # ['b', 'c']
+R.slice(1, None, ['a', 'b', 'c', 'd']) # ['b', 'c', 'd']
+```
+
 - [x] sort
 - [ ] sortBy
 - [ ] sortWith
