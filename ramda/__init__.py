@@ -25,9 +25,13 @@ from .find import find
 from .flatten import flatten
 from .flip import flip
 from .groupBy import groupBy
+from .gt import gt
+from .gte import gte
 from .identity import identity
 from .into import into
 from .keys import keys
+from .lt import lt
+from .lte import lte
 from .map import Map
 from .multiply import multiply
 from .nth import nth
