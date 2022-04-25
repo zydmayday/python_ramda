@@ -22,7 +22,7 @@ class TestDifference(unittest.TestCase):
     self.assertEqual([1, 2], R.difference(M2, N2))
 
   def test_has_R_equals_semantics(self):
-    class Just():
+    class Just:
       def __init__(self, x):
         self.value = x
 

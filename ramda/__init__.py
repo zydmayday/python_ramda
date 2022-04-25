@@ -30,6 +30,7 @@ from .gte import gte
 from .head import head
 from .identity import identity
 from .indexOf import indexOf
+from .intersection import intersection
 from .into import into
 from .keys import keys
 from .lt import lt
@@ -50,3 +51,5 @@ from .slice import slice
 from .sort import sort
 from .T import T
 from .tail import tail
+from .uniq import uniq
+from .uniqBy import uniqBy

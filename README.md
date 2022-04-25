@@ -191,7 +191,7 @@ R.equals(float('nan'), float('nan')) # True
 - [ ] innerJoin
 - [ ] insert
 - [ ] insertAll
-- [ ] intersection
+- [x] intersection
 - [ ] intersperse
 - [x] into
 - [ ] invert
@@ -356,8 +356,8 @@ R.slice(1, None, ['a', 'b', 'c', 'd']) # ['b', 'c', 'd']
 - [ ] unfold
 - [ ] union
 - [ ] unionWith
-- [ ] uniq
-- [ ] uniqBy
+- [x] uniq
+- [x] uniqBy
 - [ ] uniqWith
 - [ ] unless
 - [ ] unnest
