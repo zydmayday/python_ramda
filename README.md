@@ -50,7 +50,7 @@ Checkout new branch from `main` branch directly and create PR.
 
 Functions supported now.
 
-- [x] __
+- [x] \_\_
 - [x] add
 
 ```python
@@ -138,7 +138,26 @@ isinstance(clone, Obj) # True
 - [ ] dropRepeatsWith
 - [ ] dropWhile
 - [ ] either
-- [ ] empty
+- [x] empty
+
+```python
+# We don't support empty object in python
+class Obj:
+  def __init__(self, value):
+    self.value = value
+o = Obj(42)
+o == R.empty(o) # True, we will return the original cloned object
+```
+
+What we support for now:
+
+1. dict()
+2. set()
+3. list()
+4. str()
+5. any instance with empty() method
+6. any instance with 'fantasy-land/empty' property
+
 - [ ] endsWith
 - [ ] eqBy
 - [x] eqProps
@@ -198,7 +217,16 @@ R.equals(float('nan'), float('nan')) # True
 - [ ] invertObj
 - [ ] invoker
 - [ ] is
-- [ ] isEmpty
+- [x] isEmpty
+
+```python
+class Obj:
+  pass
+# Any custom object will be treated as non-empty
+R.isEmpty(Obj()) # False
+R.isEmpty(None) # False
+```
+
 - [ ] isNil
 - [ ] join
 - [ ] juxt
