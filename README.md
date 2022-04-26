@@ -215,7 +215,7 @@ R.equals(float('nan'), float('nan')) # True
 - [x] into
 - [ ] invert
 - [ ] invertObj
-- [ ] invoker
+- [x] invoker
 - [ ] is
 - [x] isEmpty
 
@@ -228,7 +228,7 @@ R.isEmpty(None) # False
 ```
 
 - [ ] isNil
-- [ ] join
+- [x] join
 - [ ] juxt
 - [x] keys
 
@@ -370,7 +370,13 @@ R.slice(1, None, ['a', 'b', 'c', 'd']) # ['b', 'c', 'd']
 - [ ] toLower
 - [ ] toPairs
 - [ ] toPairsIn
-- [ ] toString
+- [x] toString
+
+Partially supported
+
+- String type, supported
+- for others, just use str(x) instead
+
 - [ ] toUpper
 - [ ] transduce
 - [ ] transpose
