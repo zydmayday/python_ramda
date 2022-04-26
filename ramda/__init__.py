@@ -33,7 +33,9 @@ from .identity import identity
 from .indexOf import indexOf
 from .intersection import intersection
 from .into import into
+from .invoker import invoker
 from .isEmpty import isEmpty
+from .join import join
 from .keys import keys
 from .lt import lt
 from .lte import lte
@@ -53,5 +55,6 @@ from .slice import slice
 from .sort import sort
 from .T import T
 from .tail import tail
+from .toString import toString
 from .uniq import uniq
 from .uniqBy import uniqBy
