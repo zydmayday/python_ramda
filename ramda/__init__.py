@@ -37,6 +37,7 @@ from .invoker import invoker
 from .isEmpty import isEmpty
 from .join import join
 from .keys import keys
+from .lastIndexOf import lastIndexOf
 from .lt import lt
 from .lte import lte
 from .map import Map

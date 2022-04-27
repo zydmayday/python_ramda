@@ -2,6 +2,8 @@ import unittest
 
 import ramda as R
 
+from .helpers.Maybe import Just
+
 """
 https://github.com/ramda/ramda/blob/master/test/eqProps.js
 """
@@ -27,13 +29,6 @@ class TestEqProps(unittest.TestCase):
     self.assertEqual(False, R.eqProps('name', fred1, franny))
 
   def test_has_R_equals_semantics(self):
-    class Just:
-      def __init__(self, x):
-        self.value = x
-
-      def equals(self, x):
-        return isinstance(x, Just) and R.equals(x.value, self.value)
-
     self.assertEqual(True, R.eqProps('value', {'value': Just([42])}, {'value': Just([42])}))
 
 

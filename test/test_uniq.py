@@ -2,6 +2,8 @@ import unittest
 
 import ramda as R
 
+from .helpers.Maybe import Just
+
 """
 https://github.com/ramda/ramda/blob/master/test/uniq.js
 """
@@ -18,13 +20,6 @@ class TestUniq(unittest.TestCase):
     self.assertEqual([], R.uniq([]))
 
   def test_has_R_equals_semantics(self):
-    class Just:
-      def __init__(self, x):
-        self.value = x
-
-      def equals(self, x):
-        return isinstance(x, Just) and R.equals(x.value, self.value)
-
     # TODO: ignore neg-zero and pos-zero check for now, due to simlicity
     # self.assertEqual(2, len(R.uniq([0], [-0])))
     self.assertEqual(1, len(R.uniq([float('nan'), float('nan')])))

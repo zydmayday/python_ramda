@@ -2,6 +2,8 @@ import unittest
 
 import ramda as R
 
+from .helpers.Maybe import Just, Nothing
+
 """
 https://github.com/ramda/ramda/blob/master/test/reject.js
 """
@@ -80,22 +82,10 @@ class TestReject(unittest.TestCase):
     self.assertEqual('called fn', o_filtered.fn())
 
   def test_dispatches_to_filter_method(self):
-    class Nothing:
-      def filter(self):
-        return self
-    Nothing.value = Nothing()
-
-    class Just:
-      def __init__(self, x):
-        self.value = x
-
-      def filter(self, pred):
-        return self if pred(self.value) else Nothing.value
-
     m = Just(42)
     self.assertEqual(m, R.filter(R.T, m))
-    self.assertEqual(Nothing.value, R.filter(R.F, m))
-    self.assertEqual(Nothing.value, R.reject(R.T, m))
+    self.assertTrue(R.filter(R.F, m).isNothing)
+    self.assertTrue(R.reject(R.T, m).isNothing)
     self.assertEqual(m, R.reject(R.F, m))
 
   def test_can_act_as_a_transducer(self):

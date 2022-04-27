@@ -2,6 +2,8 @@ import unittest
 
 import ramda as R
 
+from .helpers.Maybe import Just
+
 """
 https://github.com/ramda/ramda/blob/master/test/filter.js
 """
@@ -82,6 +84,11 @@ class TestFilter(unittest.TestCase):
   def test_dispatches_to_passedin_nonArray_object_with_a_filter_method(self):
     f = FilterObject()
     self.assertEqual('called f.filter', R.filter(lambda s: s, f))
+
+  def test_correctly_uses_fantasy_land_implementation(self):
+    m1 = Just(-1)
+    m2 = R.filter(lambda x: x > 0, m1)
+    self.assertEqual(True, m2.isNothing)
 
   def test_can_act_as_a_transducer(self):
     input = [1, 2, 3, 4]

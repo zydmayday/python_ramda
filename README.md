@@ -245,7 +245,7 @@ R.keys(a) # ['a', 'b']
 
 - [ ] keysIn
 - [ ] last
-- [ ] lastIndexOf
+- [x] lastIndexOf
 - [ ] length
 - [ ] lens
 - [ ] lensIndex
