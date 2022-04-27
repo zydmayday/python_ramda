@@ -1,6 +1,9 @@
 import unittest
+from tkinter.messagebox import NO
 
 import ramda as R
+
+from .helpers.Maybe import Just, Nothing
 
 """
 https://github.com/ramda/ramda/blob/master/test/empty.js
@@ -9,15 +12,8 @@ https://github.com/ramda/ramda/blob/master/test/empty.js
 
 class TestEmpty(unittest.TestCase):
   def test_dispatches_to_empty_method(self):
-    class Nothing:
-      def empty(self):
-        return Nothing()
-
-    class Just:
-      def empty(self):
-        return Nothing()
-    self.assertTrue(isinstance(R.empty(Nothing()), Nothing))
-    self.assertTrue(isinstance(R.empty(Just()), Nothing))
+    self.assertTrue(R.empty(Nothing()).isNothing)
+    self.assertTrue(R.empty(Just([42])).isNothing)
 
   def test_returns_empty_dict_given_dict(self):
     self.assertEqual({}, R.empty({'x': 1, 'y': 2}))

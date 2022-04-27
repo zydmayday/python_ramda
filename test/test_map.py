@@ -3,7 +3,7 @@ import unittest
 
 import ramda as R
 
-from .helpers import listXf
+from .helpers.listXf import listXf
 
 """
 https://github.com/ramda/ramda/blob/master/test/map.js

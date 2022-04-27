@@ -2,6 +2,8 @@ import unittest
 
 import ramda as R
 
+from .helpers.Maybe import Just
+
 """
 https://github.com/ramda/ramda/blob/master/test/intersection.js
 """
@@ -26,13 +28,6 @@ class TestIntersection(unittest.TestCase):
     self.assertEqual([3, 4], R.intersection(M, N2))
 
   def test_has_R_equals_semantics(self):
-    class Just:
-      def __init__(self, x):
-        self.value = x
-
-      def equals(self, x):
-        return isinstance(x, Just) and R.equals(x.value, self.value)
-
     # TODO: ignore neg-zero and pos-zero check for now, due to simplicity
     self.assertEqual(1, len(R.intersection([float('nan')], [float('nan')])))
     self.assertEqual(1, len(R.intersection([Just([42])], [Just([42])])))
