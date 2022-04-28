@@ -41,6 +41,7 @@ from .lastIndexOf import lastIndexOf
 from .lt import lt
 from .lte import lte
 from .map import Map
+from .match import match
 from .multiply import multiply
 from .nth import nth
 from .objOf import objOf
