@@ -261,7 +261,12 @@ R.keys(a) # ['a', 'b']
 - [ ] mapObjIndexed
 - [x] match
 - [ ] mathMod
-- [ ] max
+- [x] Max (`max` is a keyword in python)
+
+If R.Max(a, b)
+`a` and `b` are with different types,
+we will compare with str(a) and str(b).
+
 - [ ] maxBy
 - [ ] mean
 - [ ] median
