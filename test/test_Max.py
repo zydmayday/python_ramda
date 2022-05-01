@@ -18,6 +18,7 @@ class TestMax(unittest.TestCase):
     d1 = datetime.date(2001, 1, 1)
     d2 = datetime.date(2002, 2, 2)
     self.assertEqual(d2, R.Max(d1, d2))
+    self.assertEqual(d2, R.Max(d2, d1))
 
     self.assertEqual('b', R.Max('a', 'b'))
     self.assertEqual('b', R.Max('b', 'a'))

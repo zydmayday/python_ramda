@@ -19,10 +19,6 @@ def inner_max(a, b):
   if maxByValue is not None:
     return maxByValue
 
-  # maxByType = safeMax(type(a), type(b))
-  # if maxByType is not None:
-  #   return a if maxByType == type(a) else b
-
   stringA = toString(a)
   maxByStringValue = safeMax(stringA, toString(b))
   if maxByStringValue is not None:

@@ -267,6 +267,10 @@ If R.Max(a, b)
 `a` and `b` are with different types,
 we will compare with str(a) and str(b).
 
+```python
+R.Max('A', None) # None, 'A' < 'None'
+```
+
 - [ ] maxBy
 - [ ] mean
 - [ ] median
@@ -280,7 +284,16 @@ we will compare with str(a) and str(b).
 - [ ] mergeRight
 - [ ] mergeWith
 - [ ] mergeWithKey
-- [ ] min
+- [x] Min (`min` is a keyword in python)
+
+If R.Min(a, b)
+`a` and `b` are with different types,
+we will compare with str(a) and str(b).
+
+```python
+R.Min('A', None) # 'A', 'A' < 'None'
+```
+
 - [ ] minBy
 - [ ] modify
 - [ ] modifyPath
