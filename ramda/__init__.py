@@ -45,6 +45,7 @@ from .match import match
 from .Max import Max
 from .Min import Min
 from .multiply import multiply
+from .Not import Not
 from .nth import nth
 from .objOf import objOf
 from .pipe import pipe
