@@ -303,7 +303,7 @@ R.Min('A', None) # 'A', 'A' < 'None'
 - [ ] nAry
 - [ ] negate
 - [ ] none
-- [ ] not
+- [x] not
 - [x] nth
 - [ ] nthArg
 - [ ] o
