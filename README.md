@@ -309,7 +309,19 @@ R.Min('A', None) # 'A', 'A' < 'None'
 - [ ] o
 - [x] objOf
 - [ ] of
-- [ ] omit
+- [x] omit
+
+we support both `dict` type and `object` type.
+
+```python
+class Obj:
+  def __init__(self, v1, v2):
+    self.v1 = v1
+    self.v2 = v2
+obj = Obj(1, 2)
+R.omit('v1', obj) # {'v2': 2}
+```
+
 - [ ] on
 - [ ] once
 - [ ] or
