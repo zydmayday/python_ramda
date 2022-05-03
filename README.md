@@ -319,7 +319,8 @@ class Obj:
     self.v1 = v1
     self.v2 = v2
 obj = Obj(1, 2)
-R.omit('v1', obj) # {'v2': 2}
+R.omit(['v1'], obj) # {'v2': 2}
+R.omit(['v1', 'v3'], obj) # {'v2': 2}
 ```
 
 - [ ] on
@@ -337,8 +338,21 @@ R.omit('v1', obj) # {'v2': 2}
 - [ ] pathOr
 - [ ] paths
 - [ ] pathSatisfies
-- [ ] pick
-- [ ] pickAll
+- [x] pick
+- [x] pickAll
+
+both `pick` and `pickAll` support both `dict` and `object` type.
+
+```python
+class Obj:
+  def __init__(self, v1, v2):
+    self.v1 = v1
+    self.v2 = v2
+obj = Obj(1, 2)
+R.pick(['v1'], obj) # {'v1': 1}
+R.pickAll(['v1', 'v3'], obj) # {'v1': 1, 'v3': None}
+```
+
 - [ ] pickBy
 - [x] pipe
 - [ ] pipeWith
