@@ -49,6 +49,8 @@ from .Not import Not
 from .nth import nth
 from .objOf import objOf
 from .omit import omit
+from .pick import pick
+from .pickAll import pickAll
 from .pipe import pipe
 from .prop import prop
 from .range import range
