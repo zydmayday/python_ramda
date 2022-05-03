@@ -1,5 +1,3 @@
-from inspect import getfullargspec
-
 from ._has import _has
 from ._isArrayLike import _isArrayLike
 
@@ -9,8 +7,7 @@ def funcArgsLength(fn):
   Get the number of args for function fn
   Not count *args and **kwargs
   """
-  fullargspec = getfullargspec(fn)
-  return len(fullargspec.args)
+  return fn.__code__.co_argcount
 
 
 def toNumber(a):
