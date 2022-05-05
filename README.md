@@ -325,7 +325,7 @@ R.omit(['v1', 'v3'], obj) # {'v2': 2}
 
 - [ ] on
 - [x] once
-- [ ] or
+- [x] or
 - [ ] otherwise
 - [ ] over
 - [ ] pair
