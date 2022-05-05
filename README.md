@@ -357,7 +357,7 @@ R.pickAll(['v1', 'v3'], obj) # {'v1': 1, 'v3': None}
 - [x] pipe
 - [ ] pipeWith
 - [ ] pluck
-- [ ] prepend
+- [x] prepend
 - [ ] product
 - [ ] project
 - [ ] promap
