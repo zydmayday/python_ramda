@@ -54,6 +54,7 @@ from .Or import Or
 from .pick import pick
 from .pickAll import pickAll
 from .pipe import pipe
+from .prepend import prepend
 from .prop import prop
 from .range import range
 from .reduce import reduce

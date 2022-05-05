@@ -9,7 +9,7 @@ https://github.com/ramda/ramda/blob/master/test/or.js
 
 
 class TestOr(unittest.TestCase):
-  def test_compares_two_values_with_python_and(self):
+  def test_compares_two_values_with_python_or(self):
     self.assertEqual(True, R.Or(True, True))
     self.assertEqual(True, R.Or(True, False))
     self.assertEqual(True, R.Or(False, True))
