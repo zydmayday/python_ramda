@@ -50,6 +50,7 @@ from .nth import nth
 from .objOf import objOf
 from .omit import omit
 from .once import once
+from .Or import Or
 from .pick import pick
 from .pickAll import pickAll
 from .pipe import pipe
