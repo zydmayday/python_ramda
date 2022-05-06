@@ -357,9 +357,33 @@ R.pickAll(['v1', 'v3'], obj) # {'v1': 1, 'v3': None}
 - [x] pipe
 - [ ] pipeWith
 - [x] pluck
+
+```python
+# works for both dict and object
+class Obj:
+  def __init__(self, v1, v2):
+    self.v1 = v1
+    self.v2 = v2
+obj1 = Obj(1, 2)
+obj2 = Obj(3, 4)
+R.pluck('v1', [obj1, obj2]) # [1, 3]
+```
+
 - [x] prepend
 - [ ] product
-- [ ] project
+- [x] project
+
+```python
+# works for both dict and object
+class Obj:
+  def __init__(self, v1, v2):
+    self.v1 = v1
+    self.v2 = v2
+obj1 = Obj(1, 2)
+obj2 = Obj(3, 4)
+R.project(['v1'], [obj1, obj2]) # [{'v1': 1}, {'v1': 3}]
+```
+
 - [ ] promap
 - [x] prop
 - [ ] propEq
@@ -442,7 +466,7 @@ Partially supported
 - [ ] until
 - [ ] unwind
 - [ ] update
-- [ ] useWith
+- [x] useWith
 - [ ] values
 - [ ] valuesIn
 - [ ] view

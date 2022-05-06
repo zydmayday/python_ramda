@@ -56,6 +56,7 @@ from .pickAll import pickAll
 from .pipe import pipe
 from .pluck import pluck
 from .prepend import prepend
+from .project import project
 from .prop import prop
 from .range import range
 from .reduce import reduce
@@ -70,3 +71,4 @@ from .tail import tail
 from .toString import toString
 from .uniq import uniq
 from .uniqBy import uniqBy
+from .useWith import useWith
