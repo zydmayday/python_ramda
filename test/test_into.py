@@ -19,12 +19,12 @@ addXf = {
 
 class TestInto(unittest.TestCase):
   def test_transduces_into_arrays(self):
-    self.assertEqual([2, 3, 4, 5], R.into([], R.Map(add(1)), [1, 2, 3, 4]))
+    self.assertEqual([2, 3, 4, 5], R.into([], R.map(add(1)), [1, 2, 3, 4]))
     self.assertEqual([1, 3], R.into([], R.filter(isOdd), [1, 2, 3, 4]))
     # TODO: take
 
   def test_transduces_into_strings(self):
-    self.assertEqual('2345', R.into('', R.Map(add(1)), [1, 2, 3, 4]))
+    self.assertEqual('2345', R.into('', R.map(add(1)), [1, 2, 3, 4]))
     self.assertEqual('13', R.into('', R.filter(isOdd), [1, 2, 3, 4]))
     # TODO: take
 
@@ -38,7 +38,7 @@ class TestInto(unittest.TestCase):
 
   def test_allows_custom_transformer(self):
     intoSum = R.into(addXf)
-    add2 = R.Map(add(2))
+    add2 = R.map(add(2))
     result = intoSum(add2)
     self.assertEqual(18, result([1, 2, 3, 4]))
 

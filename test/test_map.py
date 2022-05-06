@@ -36,12 +36,12 @@ class C:
 
 class TestMap(unittest.TestCase):
   def test_maps_simple_functions_over_array(self):
-    self.assertEqual([2, 4, 6, 8], R.Map(times2, [1, 2, 3, 4]))
+    self.assertEqual([2, 4, 6, 8], R.map(times2, [1, 2, 3, 4]))
 
   def test_maps_over_objects(self):
     a, b = A(), B()
-    mappedA = R.Map(dec, a)
-    mappedB = R.Map(dec, b)
+    mappedA = R.map(dec, a)
+    mappedB = R.map(dec, b)
     self.assertEqual(0, mappedA.a)
     self.assertEqual(0, mappedB.a)
     self.assertEqual(1, mappedB.b)
@@ -52,43 +52,43 @@ class TestMap(unittest.TestCase):
     self.assertEqual(2, b.b)
 
   def test_maps_over_dicts(self):
-    self.assertEqual({}, R.Map(dec, {}))
-    self.assertEqual({'x': 3, 'y': 4, 'z': 5}, R.Map(dec, {'x': 4, 'y': 5, 'z': 6}))
+    self.assertEqual({}, R.map(dec, {}))
+    self.assertEqual({'x': 3, 'y': 4, 'z': 5}, R.map(dec, {'x': 4, 'y': 5, 'z': 6}))
 
   def test_interprets_as_a_functor(self):
     def f(a): return a - 1
     def g(b): return b * 2
-    h = R.Map(f, g)
+    h = R.map(f, g)
     self.assertEqual((10 * 2) - 1, h(10))
 
   def test_dispatches_to_objects_that_implement_map(self):
     c = C(42)
-    self.assertEqual(41, R.Map(dec, c))
+    self.assertEqual(41, R.map(dec, c))
 
   def test_dispatches_to_transformer_objects(self):
-    o = R.Map(add1, listXf)
+    o = R.map(add1, listXf)
     self.assertEqual(add1, o.f)
     self.assertEqual(listXf, o.xf)
 
   def test_throws_an_Exception_on_None(self):
     with self.assertRaises(Exception):
-      R.Map(times2, None)
+      R.map(times2, None)
 
   def test_composes(self):
-    mdouble = R.Map(times2)
-    mdec = R.Map(dec)
+    mdouble = R.map(times2)
+    mdec = R.map(dec)
     self.assertEqual([19, 39, 59], mdec(mdouble([10, 20, 30])))
 
   def test_can_compose_transducer_style(self):
-    mdouble = R.Map(times2)
-    mdec = R.Map(dec)
+    mdouble = R.map(times2)
+    mdec = R.map(dec)
     xcomp = mdec(mdouble(listXf))
     self.assertEqual(dec, xcomp.f)
     self.assertEqual(listXf, xcomp.xf.xf)
     self.assertEqual(times2, xcomp.xf.f)
 
   def test_can_act_as_a_transducer(self):
-    self.assertEqual([2, 4, 6, 8], R.into([], R.Map(times2), [1, 2, 3, 4]))
+    self.assertEqual([2, 4, 6, 8], R.into([], R.map(times2), [1, 2, 3, 4]))
     # TODO: R.transduce
 
 

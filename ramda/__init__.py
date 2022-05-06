@@ -40,7 +40,7 @@ from .keys import keys
 from .lastIndexOf import lastIndexOf
 from .lt import lt
 from .lte import lte
-from .map import Map
+from .map import map
 from .match import match
 from .Max import Max
 from .Min import Min
@@ -54,6 +54,7 @@ from .Or import Or
 from .pick import pick
 from .pickAll import pickAll
 from .pipe import pipe
+from .pluck import pluck
 from .prepend import prepend
 from .prop import prop
 from .range import range

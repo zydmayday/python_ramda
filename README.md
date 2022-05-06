@@ -255,7 +255,7 @@ R.keys(a) # ['a', 'b']
 - [ ] liftN
 - [x] lt
 - [x] lte
-- [x] Map (`map` is a keyword in python)
+- [x] map
 - [ ] mapAccum
 - [ ] mapAccumRight
 - [ ] mapObjIndexed
@@ -356,7 +356,7 @@ R.pickAll(['v1', 'v3'], obj) # {'v1': 1, 'v3': None}
 - [ ] pickBy
 - [x] pipe
 - [ ] pipeWith
-- [ ] pluck
+- [x] pluck
 - [x] prepend
 - [ ] product
 - [ ] project
