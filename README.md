@@ -333,10 +333,10 @@ R.omit(['v1', 'v3'], obj) # {'v2': 2}
 - [ ] partialObject
 - [ ] partialRight
 - [ ] partition
-- [ ] path
+- [x] path
 - [ ] pathEq
 - [ ] pathOr
-- [ ] paths
+- [x] paths
 - [ ] pathSatisfies
 - [x] pick
 - [x] pickAll
@@ -389,7 +389,7 @@ R.project(['v1'], [obj1, obj2]) # [{'v1': 1}, {'v1': 3}]
 - [ ] propEq
 - [ ] propIs
 - [ ] propOr
-- [ ] props
+- [x] props
 - [ ] propSatisfies
 - [x] range
 - [x] reduce

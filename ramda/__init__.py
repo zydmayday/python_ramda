@@ -51,6 +51,8 @@ from .objOf import objOf
 from .omit import omit
 from .once import once
 from .Or import Or
+from .path import path
+from .paths import paths
 from .pick import pick
 from .pickAll import pickAll
 from .pipe import pipe
@@ -58,6 +60,7 @@ from .pluck import pluck
 from .prepend import prepend
 from .project import project
 from .prop import prop
+from .props import props
 from .range import range
 from .reduce import reduce
 from .reduceBy import reduceBy

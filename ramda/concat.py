@@ -3,19 +3,18 @@ from .private._helper import getAttribute
 from .private._isArray import _isArray
 from .private._isFunction import _isFunction
 from .private._isString import _isString
+from .toString import toString
 
 
 def inner_concat(a, b):
   if _isArray(a):
     if _isArray(b):
       return a + b
-    # TODO: Change to R.toString method
-    raise Exception(f"{b} is not an array")
+    raise Exception(f"{toString(b)} is not an array")
   if _isString(a):
     if _isString(b):
       return a + b
-    # TODO: Change to R.toString method
-    raise Exception(f"{b} is not a string")
+    raise Exception(f"{toString(b)} is not a string")
   if a is not None and _isFunction(getAttribute(a, 'fantasy-land/concat')):
     return a.get('fantasy-land/concat')(b)
   if a is not None and _isFunction(a.concat):

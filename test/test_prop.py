@@ -9,7 +9,7 @@ https://github.com/ramda/ramda/blob/master/test/prop.js
 fred = {'name': 'Fred', 'age': 23}
 
 
-class TestProp(unittest.TestCase):
+class TestPropForDict(unittest.TestCase):
   def test_returns_a_function_that_fetches_the_appropriate_property(self):
     nm = R.prop('name')
     self.assertEqual('Fred', nm(fred))
@@ -22,26 +22,58 @@ class TestProp(unittest.TestCase):
     self.assertEqual('Yog-Sothoth', R.prop(-1, deities))
 
   def test_shows_the_same_behaviour_as_path_for_a_nonexistent_property(self):
-    # TODO: implement path
-    pass
+    propResult = R.prop('incorrect', fred)
+    pathResult = R.path(['incorrect'], fred)
+    self.assertEqual(propResult, pathResult)
 
   def test_shows_the_same_behaviour_as_path_for_a_None_property(self):
-    # TODO: implement path
+    # TODO: fix getAttribute
+    # propResult = R.prop(None, fred)
+    # pathResult = R.path([None], fred)
+    # self.assertEqual(propResult, pathResult)
     pass
 
   def test_shows_the_same_behaviour_as_path_for_a_valid_property_and_object(self):
-    # TODO: implement path
-    pass
+    propResult = R.prop('age', fred)
+    pathResult = R.path(['age'], fred)
+    self.assertEqual(propResult, pathResult)
 
   def test_shows_the_same_behaviour_as_path_for_a_None_object(self):
-    # TODO: implement path
+    propResult = R.prop('age', None)
+    pathResult = R.path(['age'], None)
+    self.assertEqual(propResult, pathResult)
+
+class Fred:
+  def __init__(self):
+    self.name = 'Fred'
+    self.age = 23
+fredObj = Fred()
+class TestPropForObject(unittest.TestCase):
+  def test_returns_a_function_that_fetches_the_appropriate_property(self):
+    nm = R.prop('name')
+    self.assertEqual('Fred', nm(fredObj))
+
+  def test_shows_the_same_behaviour_as_path_for_a_nonexistent_property(self):
+    propResult = R.prop('incorrect', fredObj)
+    pathResult = R.path(['incorrect'], fredObj)
+    self.assertEqual(propResult, pathResult)
+
+  def test_shows_the_same_behaviour_as_path_for_a_None_property(self):
+    # TODO: fix getAttribute
+    # propResult = R.prop(None, fredObj)
+    # pathResult = R.path([None], fredObj)
+    # self.assertEqual(propResult, pathResult)
     pass
 
-  def test_returns_that_value_associated_to_a_property_given_valid_one(self):
-    # TODO: implement path
-    pass
+  def test_shows_the_same_behaviour_as_path_for_a_valid_property_and_object(self):
+    propResult = R.prop('age', fredObj)
+    pathResult = R.path(['age'], fredObj)
+    self.assertEqual(propResult, pathResult)
 
-  # TODO: add any(string, anthing, object) related tests
+  def test_shows_the_same_behaviour_as_path_for_a_None_object(self):
+    propResult = R.prop('age', None)
+    pathResult = R.path(['age'], None)
+    self.assertEqual(propResult, pathResult)
 
 if __name__ == '__main__':
   unittest.main()
