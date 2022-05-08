@@ -255,7 +255,7 @@ R.keys(a) # ['a', 'b']
 - [ ] liftN
 - [x] lt
 - [x] lte
-- [x] Map (`map` is a keyword in python)
+- [x] map
 - [ ] mapAccum
 - [ ] mapAccumRight
 - [ ] mapObjIndexed
@@ -333,10 +333,10 @@ R.omit(['v1', 'v3'], obj) # {'v2': 2}
 - [ ] partialObject
 - [ ] partialRight
 - [ ] partition
-- [ ] path
+- [x] path
 - [ ] pathEq
 - [ ] pathOr
-- [ ] paths
+- [x] paths
 - [ ] pathSatisfies
 - [x] pick
 - [x] pickAll
@@ -356,16 +356,40 @@ R.pickAll(['v1', 'v3'], obj) # {'v1': 1, 'v3': None}
 - [ ] pickBy
 - [x] pipe
 - [ ] pipeWith
-- [ ] pluck
+- [x] pluck
+
+```python
+# works for both dict and object
+class Obj:
+  def __init__(self, v1, v2):
+    self.v1 = v1
+    self.v2 = v2
+obj1 = Obj(1, 2)
+obj2 = Obj(3, 4)
+R.pluck('v1', [obj1, obj2]) # [1, 3]
+```
+
 - [x] prepend
 - [ ] product
-- [ ] project
+- [x] project
+
+```python
+# works for both dict and object
+class Obj:
+  def __init__(self, v1, v2):
+    self.v1 = v1
+    self.v2 = v2
+obj1 = Obj(1, 2)
+obj2 = Obj(3, 4)
+R.project(['v1'], [obj1, obj2]) # [{'v1': 1}, {'v1': 3}]
+```
+
 - [ ] promap
 - [x] prop
 - [ ] propEq
 - [ ] propIs
 - [ ] propOr
-- [ ] props
+- [x] props
 - [ ] propSatisfies
 - [x] range
 - [x] reduce
@@ -442,7 +466,7 @@ Partially supported
 - [ ] until
 - [ ] unwind
 - [ ] update
-- [ ] useWith
+- [x] useWith
 - [ ] values
 - [ ] valuesIn
 - [ ] view

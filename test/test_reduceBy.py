@@ -86,7 +86,7 @@ class TestReduceBy(unittest.TestCase):
         {'A': 800, 'B': 800, 'C': 500},
         R.into(
             {},
-            R.compose(sumByType, R.Map(R.adjust(1, R.multiply(10)))),
+            R.compose(sumByType, R.map(R.adjust(1, R.multiply(10)))),
             sumInput)
     )
 

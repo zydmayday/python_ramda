@@ -34,4 +34,4 @@ def inner_map(fn, functor):
   return _reduce(inner_reduce, {} if isinstance(functor, dict) or _has(functor, 'get') else copy.deepcopy(functor), keys(functor))
 
 
-Map = _curry2(_dispatchable(['fantasy-land/map', 'map'], _xmap, inner_map))
+map = _curry2(_dispatchable(['fantasy-land/map', 'map'], _xmap, inner_map))

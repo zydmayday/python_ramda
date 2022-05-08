@@ -60,7 +60,7 @@ class TestCountBy(unittest.TestCase):
   def test_can_act_as_transducer(self):
     transducer = R.compose(
         R.countBy(R.prop('genre')),
-        R.Map(R.adjust(1, lambda x: -x))
+        R.map(R.adjust(1, lambda x: -x))
     )
     expected = {"Baroque": -2, "Rock": -2, "Jazz": -2, "Romantic": -1, "Metal": -1, "Modern": -1, "Broadway": -1, "Folk": -1, "Classical": -1}
     self.assertEqual(expected, R.into({}, transducer, albums))
