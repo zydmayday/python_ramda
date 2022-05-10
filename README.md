@@ -370,7 +370,7 @@ R.pluck('v1', [obj1, obj2]) # [1, 3]
 ```
 
 - [x] prepend
-- [ ] product
+- [x] product
 - [x] project
 
 ```python
@@ -422,7 +422,7 @@ R.slice(1, None, ['a', 'b', 'c', 'd']) # ['b', 'c', 'd']
 - [ ] splitWhenever
 - [ ] startsWith
 - [ ] subtract
-- [ ] sum
+- [x] sum
 - [ ] symmetricDifference
 - [ ] symmetricDifferenceWith
 - [x] T
