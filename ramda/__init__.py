@@ -58,6 +58,7 @@ from .pickAll import pickAll
 from .pipe import pipe
 from .pluck import pluck
 from .prepend import prepend
+from .product import product
 from .project import project
 from .prop import prop
 from .props import props
@@ -69,6 +70,7 @@ from .reject import reject
 from .reverse import reverse
 from .slice import slice
 from .sort import sort
+from .sum import sum
 from .T import T
 from .tail import tail
 from .toString import toString
