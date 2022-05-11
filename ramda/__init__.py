@@ -67,6 +67,7 @@ from .range import range
 from .reduce import reduce
 from .reduceBy import reduceBy
 from .reduced import reduced
+from .reduceRight import reduceRight
 from .reject import reject
 from .reverse import reverse
 from .slice import slice
