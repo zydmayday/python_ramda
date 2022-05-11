@@ -410,7 +410,7 @@ R.propEq(1, 'v1', {'v1': 1}) # True
 - [x] reduce
 - [x] reduceBy
 - [x] reduced
-- [ ] reduceRight
+- [x] reduceRight
 - [ ] reduceWhile
 - [x] reject
 - [ ] remove
