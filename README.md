@@ -386,7 +386,22 @@ R.project(['v1'], [obj1, obj2]) # [{'v1': 1}, {'v1': 3}]
 
 - [ ] promap
 - [x] prop
-- [ ] propEq
+- [x] propEq
+
+```python
+# works for both dict and object
+class Obj:
+  def __init__(self, v1, v2):
+    self.v1 = v1
+    self.v2 = v2
+obj1 = Obj(1, 2)
+R.propEq(1, 'v1', obj1) # True
+R.propEq(2, 'v2', obj1) # True
+R.propEq(1, 'v2', obj1) # False
+
+R.propEq(1, 'v1', {'v1': 1}) # True
+```
+
 - [ ] propIs
 - [ ] propOr
 - [x] props
