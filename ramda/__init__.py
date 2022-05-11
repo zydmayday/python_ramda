@@ -72,6 +72,7 @@ from .reject import reject
 from .reverse import reverse
 from .slice import slice
 from .sort import sort
+from .sortBy import sortBy
 from .sum import sum
 from .T import T
 from .tail import tail
