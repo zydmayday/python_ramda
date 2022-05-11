@@ -61,6 +61,7 @@ from .prepend import prepend
 from .product import product
 from .project import project
 from .prop import prop
+from .propEq import propEq
 from .props import props
 from .range import range
 from .reduce import reduce
