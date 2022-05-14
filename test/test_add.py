@@ -1,5 +1,6 @@
-import math
 import unittest
+from datetime import date
+from math import isnan
 
 import ramda as R
 
@@ -16,7 +17,8 @@ class TestAdd(unittest.TestCase):
     self.assertEqual(3, R.add('1', '2'))
     self.assertEqual(3, R.add(1, '2'))
     self.assertEqual(1, R.add(True, False))
-    self.assertTrue(math.isnan(R.add(None, None)))
+    self.assertTrue(isnan(R.add(None, None)))
+    self.assertTrue(isnan(R.add(date(1, 1, 1), date(2, 1, 1))))
 
   def test_float(self):
     self.assertEqual(4.2, R.add(1.1, 3.1))

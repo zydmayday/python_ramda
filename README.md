@@ -54,8 +54,9 @@ Functions supported now.
 - [x] add
 
 ```python
-  # different from ramda, ramda treat null as 0
-  >>> R.add(None, None) # float('nan)
+# different from ramda
+R.add(None, None) # float('nan)
+R.add(date(1,2,3), date(1,2,3)) # float('nan)
 ```
 
 - [ ] addIndex
@@ -430,13 +431,20 @@ R.slice(1, None, ['a', 'b', 'c', 'd']) # ['b', 'c', 'd']
 - [x] sort
 - [x] sortBy
 - [ ] sortWith
-- [ ] split
+- [x] split
 - [ ] splitAt
 - [ ] splitEvery
 - [ ] splitWhen
 - [ ] splitWhenever
 - [ ] startsWith
-- [ ] subtract
+- [x] subtract
+
+```python
+# different from ramda
+R.subtract(None, None) # float('nan)
+R.subtract(date(1,2,3), date(1,2,3)) # float('nan)
+```
+
 - [x] sum
 - [ ] symmetricDifference
 - [ ] symmetricDifferenceWith
@@ -457,8 +465,8 @@ R.slice(1, None, ['a', 'b', 'c', 'd']) # ['b', 'c', 'd']
 
 Partially supported
 
-- String type, supported
-- for others, just use str(x) instead
+1. String type, supported
+1. for others, just use str(x) instead
 
 - [ ] toUpper
 - [ ] transduce
