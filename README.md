@@ -430,7 +430,7 @@ R.slice(1, None, ['a', 'b', 'c', 'd']) # ['b', 'c', 'd']
 - [x] sort
 - [x] sortBy
 - [ ] sortWith
-- [ ] split
+- [x] split
 - [ ] splitAt
 - [ ] splitEvery
 - [ ] splitWhen
