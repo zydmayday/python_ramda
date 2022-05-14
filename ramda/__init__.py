@@ -74,6 +74,7 @@ from .slice import slice
 from .sort import sort
 from .sortBy import sortBy
 from .split import split
+from .subtract import subtract
 from .sum import sum
 from .T import T
 from .tail import tail
