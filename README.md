@@ -437,7 +437,7 @@ R.slice(1, None, ['a', 'b', 'c', 'd']) # ['b', 'c', 'd']
 - [ ] splitWhen
 - [ ] splitWhenever
 - [ ] startsWith
-- [ ] subtract
+- [x] subtract
 
 ```python
 # different from ramda
