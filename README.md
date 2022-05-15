@@ -40,6 +40,7 @@ please check below `CheckList` for more details.
 For whom wants to contribute to this repo.
 
 ```bash
+$ pip install -U pylint
 # see: https://pre-commit.com/ for more details
 $ pre-commit install # please install hooks first
 ```
