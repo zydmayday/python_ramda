@@ -79,6 +79,7 @@ from .sum import sum
 from .T import T
 from .tail import tail
 from .take import take
+from .takeWhile import takeWhile
 from .toString import toString
 from .uniq import uniq
 from .uniqBy import uniqBy

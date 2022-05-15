@@ -1,6 +1,5 @@
 from ._helper import getAttribute
 from ._reduced import _reduced
-from ._Set import _Set
 from ._xfBase import XfBase
 
 
