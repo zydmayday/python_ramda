@@ -33,7 +33,6 @@ load-plugins=
     pylint.extensions.code_style,
     pylint.extensions.overlapping_exceptions,
     pylint.extensions.typing,
-    pylint.extensions.redefined_variable_type,
     pylint.extensions.comparison_placement,
 
 # Use multiple processes to speed up Pylint. Specifying 0 will auto-detect the
@@ -190,7 +189,7 @@ callbacks=cb_,_cb
 allow-global-unused-variables=yes
 
 # List of names allowed to shadow builtins
-allowed-redefined-builtins=
+allowed-redefined-builtins=all
 
 # Argument names that match this expression will be ignored. Default to name
 # with leading underscore.
