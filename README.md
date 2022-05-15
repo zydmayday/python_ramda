@@ -450,7 +450,7 @@ R.subtract(date(1,2,3), date(1,2,3)) # float('nan)
 - [ ] symmetricDifferenceWith
 - [x] T
 - [x] tail
-- [ ] take
+- [x] take
 - [ ] takeLast
 - [ ] takeLastWhile
 - [ ] takeWhile
