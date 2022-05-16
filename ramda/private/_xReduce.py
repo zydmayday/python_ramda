@@ -3,10 +3,10 @@ from ._helper import getAttribute
 from ._xArrayReduce import _xArrayReduce
 
 
-def _xIterableReduce(xf, acc, iter):
+def _xIterableReduce(xf, acc, _iter):
   while True:
     try:
-      acc = getAttribute(xf, '@@transducer/step')(acc, next(iter))
+      acc = getAttribute(xf, '@@transducer/step')(acc, next(_iter))
       if acc and getAttribute(acc, '@@transducer/reduced'):
         acc = getAttribute(acc, '@@transducer/value')
         break

@@ -15,12 +15,11 @@ def inner_pick(names, obj):
       if name in obj:
         res[name] = obj[name]
     return res
-  else:
-    res = copy.copy(obj)
-    for key in keys(obj):
-      if key not in names:
-        delattr(res, key)
-    return res
+  res = copy.copy(obj)
+  for key in keys(obj):
+    if key not in names:
+      delattr(res, key)
+  return res
 
 
 pick = _curry2(inner_pick)

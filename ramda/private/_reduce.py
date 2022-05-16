@@ -1,14 +1,13 @@
 from ._arrayReduce import _arrayReduce
 from ._createReduce import _createReduce
 from ._helper import getAttribute
-from ._xwrap import _xwrap
 
 
-def _iterableReduce(reducer, acc, iter):
+def _iterableReduce(reducer, acc, _iter):
 
   while True:
     try:
-      value = next(iter)
+      value = next(_iter)
       acc = reducer(acc, value)
     except StopIteration:
       break

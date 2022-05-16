@@ -6,6 +6,7 @@ def inner_max(a, b):
   if a == b:
     return b
 
+  # pylint: disable=unidiomatic-typecheck
   if type(a) != type(b):
     strA = str(a)
     strB = str(b)

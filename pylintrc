@@ -13,7 +13,7 @@ ignore=CVS
 
 # Add files or directories matching the regex patterns to the ignore-list. The
 # regex matches against paths and can be in Posix or Windows format.
-ignore-paths=
+ignore-paths=test/*
 
 # Files or directories matching the regex patterns are skipped. The regex
 # matches against base names, not paths.
@@ -189,7 +189,7 @@ callbacks=cb_,_cb
 allow-global-unused-variables=yes
 
 # List of names allowed to shadow builtins
-allowed-redefined-builtins=all
+allowed-redefined-builtins=
 
 # Argument names that match this expression will be ignored. Default to name
 # with leading underscore.
@@ -197,7 +197,7 @@ ignored-argument-names=_.*
 
 # List of qualified module names which can have objects that can redefine
 # builtins.
-redefining-builtins-modules=six.moves,past.builtins,future.builtins,builtins,io
+redefining-builtins-modules=six.moves,past.builtins,future.builtins,builtins,io,all,any,filter,map,range,slice,sum,ramda
 
 
 [FORMAT]

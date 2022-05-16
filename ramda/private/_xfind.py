@@ -14,10 +14,10 @@ class XFind(XfBase):
       result = getAttribute(self.xf, '@@transducer/step')(result, None)
     return self.xf.get('@@transducer/result')(result)
 
-  def step(self, result, input):
-    if self.f(input):
+  def step(self, result, _input):
+    if self.f(_input):
       self.found = True
-      result = _reduced(getAttribute(self.xf, '@@transducer/step')(result, input))
+      result = _reduced(getAttribute(self.xf, '@@transducer/step')(result, _input))
     return result
 
 

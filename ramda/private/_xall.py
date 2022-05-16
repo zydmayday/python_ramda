@@ -14,8 +14,8 @@ class XAll(XfBase):
       result = getAttribute(self.xf, '@@transducer/step')(result, True)
     return self.xf.get('@@transducer/result')(result)
 
-  def step(self, result, input):
-    if not self.f(input):
+  def step(self, result, _input):
+    if not self.f(_input):
       self.all = False
       result = _reduced(getAttribute(self.xf, '@@transducer/step')(result, False))
     return result

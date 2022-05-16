@@ -7,7 +7,7 @@ class XFilter(XfBase):
     self.xf = xf
     self.f = f
 
-  def step(self, result, input):
-    return getAttribute(self.xf, '@@transducer/step')(result, input) if self.f(input) else result
+  def step(self, result, _input):
+    return getAttribute(self.xf, '@@transducer/step')(result, _input) if self.f(_input) else result
 
 def _xfilter(f): return lambda xf: XFilter(f, xf)

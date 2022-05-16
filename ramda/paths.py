@@ -6,13 +6,13 @@ from .private._isInteger import _isInteger
 
 
 def inner_paths(pathsArray, obj):
-  def mapWrapper(paths):
+  def mapWrapper(_paths):
     val = obj
     idx = 0
-    while idx < len(paths):
+    while idx < len(_paths):
       if val is None:
         return None
-      p = paths[idx]
+      p = _paths[idx]
       val = nth(p, val) if _isInteger(p) else getAttribute(val, p)
       idx += 1
     return val

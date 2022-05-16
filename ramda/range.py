@@ -13,4 +13,5 @@ def inner_range(frm, to):
   return result
 
 
+# pylint: disable=redefined-builtin
 range = _curry2(inner_range)

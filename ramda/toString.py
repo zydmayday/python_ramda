@@ -4,12 +4,12 @@ from .private._quote import _quote
 
 
 def inner_toString(val):
-  if _isString(val):
-    return _quote(val)
   """
   TODO: dict, set, list, tuple, function, object
   TODO: regex, date if needed
   """
+  if _isString(val):
+    return _quote(val)
   return str(val)
 
 

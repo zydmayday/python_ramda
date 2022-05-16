@@ -7,5 +7,4 @@ def _clone(value, deep=True):
   """
   if deep:
     return copy.deepcopy(value)
-  else:
-    return copy.copy(value)
+  return copy.copy(value)

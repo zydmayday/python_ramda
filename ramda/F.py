@@ -1,2 +1,2 @@
-def F(*ignore):
+def F(*_):
   return False

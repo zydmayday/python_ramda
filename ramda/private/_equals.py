@@ -9,6 +9,7 @@ from ._isNumber import _isNumber
 def _equals(a, b):
   if _isNumber(a) and isnan(a) and _isNumber(b) and isnan(b):
     return True
+  # pylint: disable=unidiomatic-typecheck
   if type(a) != type(b):
     return False
   if isinstance(a, BaseException):
@@ -18,6 +19,7 @@ def _equals(a, b):
     # Array-like
     if len(a) != len(b):
       return False
+    # pylint: disable=consider-using-enumerate
     for i in range(len(a)):
       if not _equals(a[i], b[i]):
         return False

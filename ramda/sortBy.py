@@ -9,10 +9,9 @@ def inner_sortBy(fn, arr):
     bb = fn(b)
     if aa < bb:
       return -1
-    elif aa > bb:
+    if aa > bb:
       return 1
-    else:
-      return 0
+    return 0
   return sorted(arr, key=cmp_to_key(comparator))
 
 

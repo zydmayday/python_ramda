@@ -21,6 +21,5 @@ def _curryN(n, received, fn):
       combinedIdx += 1
     if left <= 0:
       return fn(*combined)
-    else:
-      return _arity(left, _curryN(n, combined, fn))
+    return _arity(left, _curryN(n, combined, fn))
   return f1

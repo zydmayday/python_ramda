@@ -7,8 +7,8 @@ class XMap(XfBase):
     self.xf = xf
     self.f = f
 
-  def step(self, result, input):
-    return getAttribute(self.xf, '@@transducer/step')(result, self.f(input))
+  def step(self, result, _input):
+    return getAttribute(self.xf, '@@transducer/step')(result, self.f(_input))
 
 
 def _xmap(f): return lambda xf: XMap(f, xf)

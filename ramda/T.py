@@ -1,2 +1,2 @@
-def T(*ignore):
+def T(*_):
   return True

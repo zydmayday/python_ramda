@@ -1,14 +1,10 @@
-from math import isnan
-
-import ramda as R
-
-from ._isNumber import _isNumber
+from ..equals import equals
+from ..filter import filter
 
 
 class _Set(set):
   def add(self, item):
-    if R.filter(R.equals(item), list(self.__iter__())):
+    if filter(equals(item), list(self.__iter__())):
       return False
-    else:
-      super().add(item)
-      return True
+    super().add(item)
+    return True

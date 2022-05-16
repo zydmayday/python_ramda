@@ -22,10 +22,10 @@ class XReduceBy(XfBase):
     self.inputs = None
     return getAttribute(self.xf, '@@transducer/result')(result)
 
-  def step(self, result, input):
-    key = self.keyFn(input)
+  def step(self, result, _input):
+    key = self.keyFn(_input)
     self.inputs[key] = getAttribute(self.inputs, key) or [key, _clone(self.valueAcc, deep=False)]
-    self.inputs[key][1] = self.valueFn(self.inputs[key][1], input)
+    self.inputs[key][1] = self.valueFn(self.inputs[key][1], _input)
     return result
 
 

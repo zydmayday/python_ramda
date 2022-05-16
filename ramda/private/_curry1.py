@@ -1,12 +1,12 @@
-import ramda as R
-
+from ..__ import __
 from ._isPlaceholder import _isPlaceholder
 
 
 def _curry1(fn):
-  def f1(a = R.__, *ignored):
+  # pylint: disable=dangerous-default-value
+  # pylint: disable=keyword-arg-before-vararg
+  def f1(a=__, *_):
     if _isPlaceholder(a):
       return f1
-    else:
-      return fn(a)
+    return fn(a)
   return f1

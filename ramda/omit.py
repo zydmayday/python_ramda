@@ -15,12 +15,11 @@ def inner_omit(names, obj):
       if key not in names:
         res[key] = obj[key]
     return res
-  else:
-    res = copy.copy(obj)
-    for key in keys(obj):
-      if key in names:
-        delattr(res, key)
-    return res
+  res = copy.copy(obj)
+  for key in keys(obj):
+    if key in names:
+      delattr(res, key)
+  return res
 
 
 omit = _curry2(inner_omit)
