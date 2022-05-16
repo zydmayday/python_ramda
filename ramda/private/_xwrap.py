@@ -6,5 +6,5 @@ def _xwrap(fn):
   return {
       '@@transducer/init': transducer_init,
       '@@transducer/result': lambda acc: acc,
-      '@@transducer/step': lambda acc, x: fn(acc, x)
+      '@@transducer/step': fn
   }

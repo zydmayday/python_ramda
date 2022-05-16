@@ -12,3 +12,21 @@ repos:
   rev: 5.5.2
   hooks:
     - id: isort
+- repo: https://github.com/hadialqattan/pycln
+  rev: v1.3.2 # Possible releases: https://github.com/hadialqattan/pycln/releases
+  hooks:
+    - id: pycln
+      args: [--config=pyproject.toml]
+- repo: local
+  hooks:
+    - id: pylint
+      name: pylint
+      entry: pylint
+      language: system
+      types: [python]
+      args:
+        [
+          "-rn", # Only display messages
+          "-sn", # Don't display the score
+          "--rcfile=pylintrc", # Link to your config file
+        ]

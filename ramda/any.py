@@ -12,4 +12,5 @@ def inner_any(fn, arr):
   return False
 
 
+# pylint: disable=redefined-builtin
 any = _curry2(_dispatchable(['any'], _xany, inner_any))

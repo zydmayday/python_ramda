@@ -1,9 +1,4 @@
-from math import isnan
-
-from .equals import equals
-from .find import find
 from .private._curry2 import _curry2
-from .private._isNumber import _isNumber
 from .private._Set import _Set
 
 

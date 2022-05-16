@@ -11,5 +11,5 @@ def inner_all(fn, arr):
     idx += 1
   return True
 
-
+# pylint: disable=redefined-builtin
 all = _curry2(_dispatchable(['all'], _xall, inner_all))

@@ -9,13 +9,12 @@ class XTake(XfBase):
     self.n = n
     self.i = 0
 
-  def step(self, result, input):
+  def step(self, result, _input):
     self.i += 1
-    ret = result if self.n == 0 else getAttribute(self.xf, '@@transducer/step')(result, input)
+    ret = result if self.n == 0 else getAttribute(self.xf, '@@transducer/step')(result, _input)
     if self.n >= 0 and self.i >= self.n:
       return _reduced(ret)
-    else:
-      return ret
+    return ret
 
 
 def _xtake(n): return lambda xf: XTake(n, xf)

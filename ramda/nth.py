@@ -5,9 +5,12 @@ from .private._isString import _isString
 def inner_nth(offset, arr):
   idx = len(arr) + offset if offset < 0 else offset
   if _isString(arr):
-    return arr[idx] if idx < len(arr) and idx >= 0 else ''
-  else:
-    return arr[idx] if idx < len(arr) and idx >= 0 else None
+    if 0 <= idx < len(arr):
+      return arr[idx]
+    return ''
+  if 0 <= idx < len(arr):
+    return arr[idx]
+  return None
 
 
 nth = _curry2(inner_nth)

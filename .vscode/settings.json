@@ -1,6 +1,12 @@
 {
-  "python.formatting.autopep8Args": [         // autopep8 の設定
+  "python.formatting.autopep8Args": [
     "--indent-size=2",
     "--ignore=E111, E114, E402, E501"
+  ],
+  "python.linting.pylintEnabled": true,
+  "python.linting.cwd": "{workspaceFolder}/ramda",
+  "python.linting.enabled": true,
+  "python.linting.pylintArgs": [
+    "--rcfile=pylintrc"
   ]
 }

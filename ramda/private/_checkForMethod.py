@@ -10,6 +10,5 @@ def _checkForMethod(methodName, fn):
     obj = arguments[-1]
     if _isArray(obj) or not _isFunction(getAttribute(obj, methodName)):
       return fn(*arguments)
-    else:
-      return getAttribute(obj, methodName)(*arguments[:-1])
+    return getAttribute(obj, methodName)(*arguments[:-1])
   return wrapper

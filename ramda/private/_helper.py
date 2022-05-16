@@ -15,17 +15,18 @@ def toNumber(a):
   Convert any input a to a number type
   if can not convert, then return nan
   """
-  if isinstance(a, float) or isinstance(a, int):
+  if isinstance(a, (int, float)):
     return a
   try:
     return int(a)
-  except:
+  except (ValueError, TypeError):
     try:
       return float(a)
-    except:
+    except (ValueError, TypeError):
       return float('nan')
 
 
+# pylint: disable=inconsistent-return-statements
 def getAttribute(v, key):
   """
   This function is mainly for retrive @@transducer/xxx property, and fantasy-land/xxx property.
@@ -69,5 +70,4 @@ def getAttribute(v, key):
 def safeLen(x):
   if _isArrayLike(x):
     return len(x)
-  else:
-    return 0
+  return 0

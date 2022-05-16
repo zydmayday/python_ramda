@@ -23,10 +23,9 @@ def inner_keys(obj):
   """
   if _has(obj, 'keys') and _isFunction(obj.keys):
     return list(obj.keys())
-  elif _has(obj, '__dict__'):
+  if _has(obj, '__dict__'):
     return list(obj.__dict__)
-  else:
-    return []
+  return []
 
 
 keys = _curry1(inner_keys)

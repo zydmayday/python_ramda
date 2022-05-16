@@ -2,6 +2,8 @@
 
 This is a repo try to copy <https://github.com/ramda/ramda> in python.
 
+[![linting: pylint](https://img.shields.io/badge/linting-pylint-yellowgreen)](https://github.com/PyCQA/pylint)
+
 ## install
 
 For whom wants to use this package.
@@ -40,6 +42,7 @@ please check below `CheckList` for more details.
 For whom wants to contribute to this repo.
 
 ```bash
+$ pip install -U pylint
 # see: https://pre-commit.com/ for more details
 $ pre-commit install # please install hooks first
 ```

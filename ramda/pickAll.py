@@ -17,15 +17,14 @@ def inner_pickAll(names, obj):
       else:
         res[name] = None
     return res
-  else:
-    res = copy.copy(obj)
-    for key in keys(obj):
-      if key not in names:
-        delattr(res, key)
-    for name in names:
-      if not hasattr(res, name):
-        setattr(res, name, None)
-    return res
+  res = copy.copy(obj)
+  for key in keys(obj):
+    if key not in names:
+      delattr(res, key)
+  for name in names:
+    if not hasattr(res, name):
+      setattr(res, name, None)
+  return res
 
 
 pickAll = _curry2(inner_pickAll)

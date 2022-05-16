@@ -1,2 +1,2 @@
-def _identity(x, *ignore):
+def _identity(x, *_):
   return x

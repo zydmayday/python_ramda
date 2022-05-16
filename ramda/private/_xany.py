@@ -14,8 +14,8 @@ class XAny(XfBase):
       result = getAttribute(self.xf, '@@transducer/step')(result, False)
     return self.xf.get('@@transducer/result')(result)
 
-  def step(self, result, input):
-    if self.f(input):
+  def step(self, result, _input):
+    if self.f(_input):
       self.any = True
       result = _reduced(getAttribute(self.xf, '@@transducer/step')(result, True))
     return result

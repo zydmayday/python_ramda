@@ -6,6 +6,7 @@ def inner_min(a, b):
   if a == b:
     return a
 
+  # pylint: disable=unidiomatic-typecheck
   if type(a) != type(b):
     strA = str(a)
     strB = str(b)

@@ -9,11 +9,10 @@ class XUniqBy(XfBase):
     self.f = f
     self._set = _Set()
 
-  def step(self, result, input):
-    if self._set.add(self.f(input)):
-      return getAttribute(self.xf, '@@transducer/step')(result, input)
-    else:
-      return result
+  def step(self, result, _input):
+    if self._set.add(self.f(_input)):
+      return getAttribute(self.xf, '@@transducer/step')(result, _input)
+    return result
 
 
 def _xuniqBy(f): return lambda xf: XUniqBy(f, xf)

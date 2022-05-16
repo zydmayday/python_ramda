@@ -1,5 +1,4 @@
-import ramda as R
-
+from ..objOf import objOf
 from ._identity import _identity
 from ._isArrayLike import _isArrayLike
 from ._isTransformer import _isTransformer
@@ -23,7 +22,7 @@ _stepCatString = {
 _stepCatDict = {
     '@@transducer/init': dict,
     # use Python 3.9 feature
-    '@@transducer/step': lambda result, input: result | (R.objOf(input[0], input[1]) if _isArrayLike(input) else input),
+    '@@transducer/step': lambda result, input: result | (objOf(input[0], input[1]) if _isArrayLike(input) else input),
     '@@transducer/result': _identity
 }
 

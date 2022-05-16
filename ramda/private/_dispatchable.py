@@ -12,11 +12,6 @@ def _dispatchable(methodNames, transducerCreator, fn):
     if not _isArray(obj):
       idx = 0
       while idx < len(methodNames):
-        """
-        There are 2 cases
-        case1: obj is an instance of some class, that instance has method with given name
-        case2: obj is a dict or an instance with get method
-        """
         method = getAttribute(obj, methodNames[idx])
         if _isFunction(method):
           return method(*arguments[:-1])

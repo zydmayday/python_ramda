@@ -8,11 +8,10 @@ class XTakeWhile(XfBase):
     self.xf = xf
     self.f = f
 
-  def step(self, result, input):
-    if self.f(input):
-      return getAttribute(self.xf, '@@transducer/step')(result, input)
-    else:
-      return _reduced(result)
+  def step(self, result, _input):
+    if self.f(_input):
+      return getAttribute(self.xf, '@@transducer/step')(result, _input)
+    return _reduced(result)
 
 
 def _xtakeWhile(f): return lambda xf: XTakeWhile(f, xf)
