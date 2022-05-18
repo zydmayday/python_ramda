@@ -2,7 +2,7 @@ import unittest
 
 import ramda as R
 
-from .helpers.Maybe import Just, Nothing
+from .helpers.Maybe import Just
 
 """
 https://github.com/ramda/ramda/blob/master/test/reject.js

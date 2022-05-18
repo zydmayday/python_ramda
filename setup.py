@@ -4,7 +4,8 @@ from setuptools import find_packages, setup
 
 # Fetches the content from README.md
 # This will be used for the "long_description" field.
-README_MD = open(join(dirname(abspath(__file__)), "README.md")).read()
+with open(join(dirname(abspath(__file__)), "README.md"), encoding='utf-8') as f:
+  README_MD = f.read()
 
 setup(
     # The name of your project that we discussed earlier.

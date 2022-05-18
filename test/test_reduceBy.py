@@ -2,7 +2,6 @@
 import unittest
 
 import ramda as R
-from ramda.private._helper import funcArgsLength
 
 """
 https://github.com/ramda/ramda/blob/master/test/reduceBy.js

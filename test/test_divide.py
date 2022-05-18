@@ -1,4 +1,3 @@
-import math
 import unittest
 
 import ramda as R
