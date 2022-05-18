@@ -1,7 +1,6 @@
 import unittest
 
 import ramda as R
-from ramda.private._isTransformer import _isTransformer
 
 """
 https://github.com/ramda/ramda/blob/master/test/groupBy.js

@@ -1,5 +1,4 @@
 import unittest
-from tkinter.messagebox import NO
 
 import ramda as R
 
