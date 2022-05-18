@@ -35,10 +35,11 @@ jobs:
         run: |
           python3 -m pip install --upgrade pip
           python3 -m pip install pylint --upgrade
+          python3 -m pip install pytest --upgrade
 
       - uses: pre-commit/action@v2.0.3
 
-      # Tests with unittest
-      - name: Test with unittest
+      # Tests with pytest
+      - name: Test with pytest
         run: |
-          python3 -m unittest
+          pytest
