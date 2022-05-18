@@ -82,6 +82,8 @@ from .take import take
 from .takeWhile import takeWhile
 from .toString import toString
 from .union import union
+from .unionWith import unionWith
 from .uniq import uniq
 from .uniqBy import uniqBy
+from .uniqWith import uniqWith
 from .useWith import useWith
