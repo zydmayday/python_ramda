@@ -482,11 +482,11 @@ Partially supported
 - [ ] unary
 - [ ] uncurryN
 - [ ] unfold
-- [ ] union
-- [ ] unionWith
+- [x] union
+- [x] unionWith
 - [x] uniq
 - [x] uniqBy
-- [ ] uniqWith
+- [x] uniqWith
 - [ ] unless
 - [ ] unnest
 - [ ] until
