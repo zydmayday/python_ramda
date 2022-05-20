@@ -493,7 +493,19 @@ Partially supported
 - [ ] unwind
 - [ ] update
 - [x] useWith
-- [ ] values
+- [x] values
+
+```python
+# works for both dict and object
+class Obj:
+  def __init__(self, v1, v2):
+    self.v1 = v1
+    self.v2 = v2
+obj = Obj(1, 2)
+R.values(obj) # [1, 2]
+R.values({'a': 1, 'b': 2}) # [1, 2]
+```
+
 - [ ] valuesIn
 - [ ] view
 - [ ] when

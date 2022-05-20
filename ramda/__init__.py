@@ -87,3 +87,4 @@ from .uniq import uniq
 from .uniqBy import uniqBy
 from .uniqWith import uniqWith
 from .useWith import useWith
+from .values import values
