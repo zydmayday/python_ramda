@@ -80,6 +80,7 @@ from .T import T
 from .tail import tail
 from .take import take
 from .takeWhile import takeWhile
+from .tap import tap
 from .toString import toString
 from .union import union
 from .unionWith import unionWith

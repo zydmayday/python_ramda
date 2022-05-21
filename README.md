@@ -457,7 +457,7 @@ R.subtract(date(1,2,3), date(1,2,3)) # float('nan)
 - [ ] takeLast
 - [ ] takeLastWhile
 - [x] takeWhile
-- [ ] tap
+- [x] tap
 - [ ] test
 - [ ] thunkify
 - [ ] times
