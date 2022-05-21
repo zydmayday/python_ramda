@@ -80,6 +80,7 @@ from .T import T
 from .tail import tail
 from .take import take
 from .takeWhile import takeWhile
+from .tap import tap
 from .toString import toString
 from .union import union
 from .unionWith import unionWith
@@ -87,3 +88,4 @@ from .uniq import uniq
 from .uniqBy import uniqBy
 from .uniqWith import uniqWith
 from .useWith import useWith
+from .values import values
