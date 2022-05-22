@@ -514,7 +514,7 @@ R.values({'a': 1, 'b': 2}) # [1, 2]
 - [ ] whereEq
 - [ ] without
 - [ ] xor
-- [ ] xprod
+- [x] xprod
 - [ ] zip
 - [ ] zipObj
 - [ ] zipWith
