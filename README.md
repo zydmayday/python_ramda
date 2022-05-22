@@ -515,6 +515,6 @@ R.values({'a': 1, 'b': 2}) # [1, 2]
 - [ ] without
 - [ ] xor
 - [x] xprod
-- [ ] zip
+- [x] zip
 - [ ] zipObj
-- [ ] zipWith
+- [x] zipWith
