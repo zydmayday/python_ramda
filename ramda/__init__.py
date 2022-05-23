@@ -90,3 +90,6 @@ from .uniqWith import uniqWith
 from .useWith import useWith
 from .values import values
 from .xprod import xprod
+# pylint: disable=redefined-builtin
+from .zip import zip
+from .zipWith import zipWith
