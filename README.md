@@ -5,6 +5,8 @@ This is a repo try to copy <https://github.com/ramda/ramda> in python.
 
 [![linting: pylint](https://img.shields.io/badge/linting-pylint-yellowgreen)](https://github.com/PyCQA/pylint)
 ![PyPI version](https://badge.fury.io/py/python-ramda.svg)
+![Python Versions](https://img.shields.io/pypi/pyversions/python-ramda.svg)
+
 ## install
 
 For whom wants to use this package.
