@@ -53,8 +53,8 @@ Checkout new branch from `main` branch directly and create PR.
 
 Functions supported now.
 
-- [x] \_\_
-- [x] add
+- [x] 0.1.0 \_\_
+- [x] 0.1.0 add
 
 ```python
 # different from ramda
@@ -63,18 +63,18 @@ R.add(date(1,2,3), date(1,2,3)) # float('nan)
 ```
 
 - [ ] addIndex
-- [x] adjust
-- [x] all
+- [x] 0.1.0 adjust
+- [x] 0.1.0 all
   - Transducer part is not fully tested.
 - [ ] allPass
-- [x] always
-- [x] And (`and` is a keyword in python)
+- [x] 0.1.0 always
+- [x] 0.1.0 And (`and` is a keyword in python)
 - [ ] andThen
-- [x] any
+- [x] 0.1.0 any
 - [ ] anyPass
 - [ ] ap
 - [ ] aperture
-- [x] append
+- [x] 0.1.0 append
 - [ ] apply
 - [ ] applySpec
 - [ ] applyTo
@@ -87,7 +87,7 @@ R.add(date(1,2,3), date(1,2,3)) # float('nan)
 - [ ] call
 - [ ] chain
 - [ ] clamp
-- [x] clone
+- [x] 0.1.0 clone
 
 **we are simply using python `copy` module**
 So with no specific reason, we suggest you to use python origin `copy` module as your first choice.
@@ -114,35 +114,35 @@ isinstance(clone, Obj) # True
 ```
 
 - [ ] collectBy
-- [x] comparator
+- [x] 0.1.0 comparator
 - [ ] complement
-- [x] compose
+- [x] 0.1.0 compose
 - [ ] composeWith
-- [x] concat
+- [x] 0.1.0 concat
 - [ ] cond
 - [ ] construct
 - [ ] constructN
 - [ ] converge
 - [ ] count
-- [x] countBy
-- [x] curry
-- [x] curryN
+- [x] 0.1.0 countBy
+- [x] 0.1.0 curry
+- [x] 0.1.0 curryN
 - [ ] dec
 - [ ] defaultTo
 - [ ] descend
-- [x] difference
-- [x] differenceWith
+- [x] 0.1.0 difference
+- [x] 0.1.0 differenceWith
 - [ ] dissoc
 - [ ] dissocPath
-- [x] divide
-- [x] drop
+- [x] 0.1.0 divide
+- [x] 0.1.0 drop
 - [ ] dropLast
 - [ ] dropLastWhile
 - [ ] dropRepeats
 - [ ] dropRepeatsWith
 - [ ] dropWhile
 - [ ] either
-- [x] empty
+- [x] 0.1.0 empty
 
 ```python
 # We don't support empty object in python
@@ -164,7 +164,7 @@ What we support for now:
 
 - [ ] endsWith
 - [ ] eqBy
-- [x] eqProps
+- [x] 0.1.0 eqProps
 
 ```python
 # works for both dict and object
@@ -177,51 +177,51 @@ R.eqProps('v', obj1, obj2) # True
 R.eqProps('v', {'v': 1}, {'v': 1}) # True
 ```
 
-- [x] equals
+- [x] 0.1.0 equals
 
 ```python
 R.equals(float('nan'), float('nan')) # True
 ```
 
 - [ ] evolve
-- [x] F
-- [x] filter
-- [x] find
+- [x] 0.1.0 F
+- [x] 0.1.0 filter
+- [x] 0.1.0 find
 - [ ] findIndex
 - [ ] findLast
 - [ ] findLastIndex
-- [x] flatten
-- [x] flip
+- [x] 0.1.0 flatten
+- [x] 0.1.0 flip
 - [ ] forEach
 - [ ] forEachObjIndexed
 - [ ] fromPairs
-- [x] groupBy
+- [x] 0.1.0 groupBy
 - [ ] groupWith
-- [x] gt
-- [x] gte
+- [x] 0.1.0 gt
+- [x] 0.1.0 gte
 - [ ] has
 - [ ] hasIn
 - [ ] hasPath
-- [x] head
+- [x] 0.1.0 head
 - [ ] identical
-- [x] identity
+- [x] 0.1.0 identity
 - [ ] ifElse
 - [ ] inc
 - [ ] includes
 - [ ] indexBy
-- [x] indexOf
+- [x] 0.1.0 indexOf
 - [ ] init
 - [ ] innerJoin
 - [ ] insert
 - [ ] insertAll
-- [x] intersection
+- [x] 0.1.0 intersection
 - [ ] intersperse
-- [x] into
+- [x] 0.1.0 into
 - [ ] invert
 - [ ] invertObj
-- [x] invoker
+- [x] 0.1.0 invoker
 - [ ] is
-- [x] isEmpty
+- [x] 0.1.0 isEmpty
 
 ```python
 class Obj:
@@ -232,9 +232,9 @@ R.isEmpty(None) # False
 ```
 
 - [ ] isNil
-- [x] join
+- [x] 0.1.0 join
 - [ ] juxt
-- [x] keys
+- [x] 0.1.0 keys
 
 ```python
 # When using R.keys(obj) and obj is a class instance, we use obj.__dict__ as keys.
@@ -249,7 +249,7 @@ R.keys(a) # ['a', 'b']
 
 - [ ] keysIn
 - [ ] last
-- [x] lastIndexOf
+- [x] 0.1.0 lastIndexOf
 - [ ] length
 - [ ] lens
 - [ ] lensIndex
@@ -257,15 +257,15 @@ R.keys(a) # ['a', 'b']
 - [ ] lensProp
 - [ ] lift
 - [ ] liftN
-- [x] lt
-- [x] lte
-- [x] map
+- [x] 0.1.0 lt
+- [x] 0.1.0 lte
+- [x] 0.1.0 map
 - [ ] mapAccum
 - [ ] mapAccumRight
 - [ ] mapObjIndexed
-- [x] match
+- [x] 0.1.0 match
 - [ ] mathMod
-- [x] Max (`max` is a keyword in python)
+- [x] 0.1.0 Max (`max` is a keyword in python)
 
 If R.Max(a, b)
 `a` and `b` are with different types,
@@ -288,7 +288,7 @@ R.Max('A', None) # None, 'A' < 'None'
 - [ ] mergeRight
 - [ ] mergeWith
 - [ ] mergeWithKey
-- [x] Min (`min` is a keyword in python)
+- [x] 0.1.0 Min (`min` is a keyword in python)
 
 If R.Min(a, b)
 `a` and `b` are with different types,
@@ -303,17 +303,17 @@ R.Min('A', None) # 'A', 'A' < 'None'
 - [ ] modifyPath
 - [ ] modulo
 - [ ] move
-- [x] multiply
+- [x] 0.1.0 multiply
 - [ ] nAry
 - [ ] negate
 - [ ] none
-- [x] not
-- [x] nth
+- [x] 0.1.0 not
+- [x] 0.1.0 nth
 - [ ] nthArg
 - [ ] o
-- [x] objOf
+- [x] 0.1.0 objOf
 - [ ] of
-- [x] omit
+- [x] 0.1.0 omit
 
 we support both `dict` type and `object` type.
 
@@ -328,8 +328,8 @@ R.omit(['v1', 'v3'], obj) # {'v2': 2}
 ```
 
 - [ ] on
-- [x] once
-- [x] or
+- [x] 0.1.0 once
+- [x] 0.1.0 or
 - [ ] otherwise
 - [ ] over
 - [ ] pair
@@ -337,13 +337,13 @@ R.omit(['v1', 'v3'], obj) # {'v2': 2}
 - [ ] partialObject
 - [ ] partialRight
 - [ ] partition
-- [x] path
+- [x] 0.1.0 path
 - [ ] pathEq
 - [ ] pathOr
-- [x] paths
+- [x] 0.1.0 paths
 - [ ] pathSatisfies
-- [x] pick
-- [x] pickAll
+- [x] 0.1.0 pick
+- [x] 0.1.0 pickAll
 
 both `pick` and `pickAll` support both `dict` and `object` type.
 
@@ -358,9 +358,9 @@ R.pickAll(['v1', 'v3'], obj) # {'v1': 1, 'v3': None}
 ```
 
 - [ ] pickBy
-- [x] pipe
+- [x] 0.1.0 pipe
 - [ ] pipeWith
-- [x] pluck
+- [x] 0.1.0 pluck
 
 ```python
 # works for both dict and object
@@ -373,9 +373,9 @@ obj2 = Obj(3, 4)
 R.pluck('v1', [obj1, obj2]) # [1, 3]
 ```
 
-- [x] prepend
-- [x] product
-- [x] project
+- [x] 0.1.0 prepend
+- [x] 0.1.0 product
+- [x] 0.1.0 project
 
 ```python
 # works for both dict and object
@@ -389,8 +389,8 @@ R.project(['v1'], [obj1, obj2]) # [{'v1': 1}, {'v1': 3}]
 ```
 
 - [ ] promap
-- [x] prop
-- [x] propEq
+- [x] 0.1.0 prop
+- [x] 0.1.0 propEq
 
 ```python
 # works for both dict and object
@@ -408,39 +408,39 @@ R.propEq(1, 'v1', {'v1': 1}) # True
 
 - [ ] propIs
 - [ ] propOr
-- [x] props
+- [x] 0.1.0 props
 - [ ] propSatisfies
-- [x] range
-- [x] reduce
-- [x] reduceBy
-- [x] reduced
-- [x] reduceRight
+- [x] 0.1.0 range
+- [x] 0.1.0 reduce
+- [x] 0.1.0 reduceBy
+- [x] 0.1.0 reduced
+- [x] 0.1.0 reduceRight
 - [ ] reduceWhile
-- [x] reject
+- [x] 0.1.0 reject
 - [ ] remove
 - [ ] repeat
 - [ ] replace
-- [x] reverse
+- [x] 0.1.0 reverse
 - [ ] scan
 - [ ] sequence
 - [ ] set
-- [x] slice
+- [x] 0.1.0 slice
 
 ```python
 R.slice(1, 3, ['a', 'b', 'c', 'd']) # ['b', 'c']
 R.slice(1, None, ['a', 'b', 'c', 'd']) # ['b', 'c', 'd']
 ```
 
-- [x] sort
-- [x] sortBy
+- [x] 0.1.0 sort
+- [x] 0.1.0 sortBy
 - [ ] sortWith
-- [x] split
+- [x] 0.1.0 split
 - [ ] splitAt
 - [ ] splitEvery
 - [ ] splitWhen
 - [ ] splitWhenever
 - [ ] startsWith
-- [x] subtract
+- [x] 0.1.0 subtract
 
 ```python
 # different from ramda
@@ -448,23 +448,23 @@ R.subtract(None, None) # float('nan)
 R.subtract(date(1,2,3), date(1,2,3)) # float('nan)
 ```
 
-- [x] sum
+- [x] 0.1.0 sum
 - [ ] symmetricDifference
 - [ ] symmetricDifferenceWith
-- [x] T
-- [x] tail
-- [x] take
+- [x] 0.1.0 T
+- [x] 0.1.0 tail
+- [x] 0.1.0 take
 - [ ] takeLast
 - [ ] takeLastWhile
-- [x] takeWhile
-- [x] tap
+- [x] 0.1.0 takeWhile
+- [x] 0.1.0 tap
 - [ ] test
 - [ ] thunkify
 - [ ] times
 - [ ] toLower
 - [ ] toPairs
 - [ ] toPairsIn
-- [x] toString
+- [x] 0.1.0 toString
 
 Partially supported
 
@@ -482,18 +482,18 @@ Partially supported
 - [ ] unary
 - [ ] uncurryN
 - [ ] unfold
-- [x] union
-- [x] unionWith
-- [x] uniq
-- [x] uniqBy
-- [x] uniqWith
+- [x] 0.1.0 union
+- [x] 0.1.0 unionWith
+- [x] 0.1.0 uniq
+- [x] 0.1.0 uniqBy
+- [x] 0.1.0 uniqWith
 - [ ] unless
 - [ ] unnest
 - [ ] until
 - [ ] unwind
 - [ ] update
-- [x] useWith
-- [x] values
+- [x] 0.1.0 useWith
+- [x] 0.1.0 values
 
 ```python
 # works for both dict and object
@@ -514,7 +514,7 @@ R.values({'a': 1, 'b': 2}) # [1, 2]
 - [ ] whereEq
 - [ ] without
 - [ ] xor
-- [x] xprod
-- [x] zip
+- [x] 0.1.0 xprod
+- [x] 0.1.0 zip
 - [ ] zipObj
-- [x] zipWith
+- [x] 0.1.0 zipWith
