@@ -1,0 +1,43 @@
+name: Code coverage
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      # Sets up python3
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+
+      # Install dependencies
+      - name: "Installs dependencies"
+        run: |
+          python3 -m pip install --upgrade pip
+          python3 -m pip install pylint --upgrade
+          python3 -m pip install pytest --upgrade
+
+      - name: Generate coverage report
+        run: |
+          pip install pytest
+          pip install pytest-cov
+          pytest --cov=ramda --cov-report=xml
+
+      - name: "Upload coverage to Codecov"
+        uses: codecov/codecov-action@v2
+        with:
+          fail_ci_if_error: true
