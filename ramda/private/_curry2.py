@@ -1,19 +1,13 @@
+from ..__ import __
 from ._curry1 import _curry1
 from ._isPlaceholder import _isPlaceholder
 
 
 def _curry2(fn):
-  def f2(*args):
-    def f_b(_b): return fn(args[0], _b)
-    if len(args) == 0:
-      return f2
-    if len(args) == 1:
-      a = args[0]
-      if _isPlaceholder(a):
-        return f2
-
-      return _curry1(f_b)
-    a, b = args[0], args[1]
+  # pylint: disable=dangerous-default-value
+  # pylint: disable=keyword-arg-before-vararg
+  def f2(a=__, b=__, *_):
+    def f_b(_b): return fn(a, _b)
     if _isPlaceholder(a) and _isPlaceholder(b):
       return f2
     if _isPlaceholder(a):

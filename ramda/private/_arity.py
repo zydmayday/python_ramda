@@ -4,7 +4,7 @@ from ..__ import __
 # pylint: disable=dangerous-default-value
 # pylint: disable=keyword-arg-before-vararg
 def _arity(n, fn):
-  def f0(): return fn()
+  def f0(*_): return fn(*_)
   def f1(a0=__, *_): return fn(a0, *_)
   def f2(a0=__, a1=__, *_): return fn(a0, a1, *_)
   def f3(a0=__, a1=__, a2=__, *_): return fn(a0, a1, a2, *_)
