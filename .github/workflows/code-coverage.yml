@@ -1,4 +1,4 @@
-name: Report code coverage
+name: Code coverage
 
 # Controls when the workflow will run
 on:
@@ -30,8 +30,6 @@ jobs:
           python3 -m pip install --upgrade pip
           python3 -m pip install pylint --upgrade
           python3 -m pip install pytest --upgrade
-
-      - uses: pre-commit/action@v2.0.3
 
       - name: Generate coverage report
         run: |
