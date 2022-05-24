@@ -1,6 +1,5 @@
 # python_ramda
 
-
 This is a repo try to copy <https://github.com/ramda/ramda> in python.
 
 [![linting: pylint](https://img.shields.io/badge/linting-pylint-yellowgreen)](https://github.com/PyCQA/pylint)
@@ -195,7 +194,7 @@ R.equals(float('nan'), float('nan')) # True
 - [ ] findLastIndex
 - [x] 0.1.2 flatten
 - [x] 0.1.2 flip
-- [ ] forEach
+- [x] forEach
 - [ ] forEachObjIndexed
 - [ ] fromPairs
 - [x] 0.1.2 groupBy
