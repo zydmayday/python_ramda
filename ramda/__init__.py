@@ -25,6 +25,7 @@ from .filter import filter
 from .find import find
 from .flatten import flatten
 from .flip import flip
+from .forEach import forEach
 from .groupBy import groupBy
 from .gt import gt
 from .gte import gte
