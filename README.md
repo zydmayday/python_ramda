@@ -190,7 +190,7 @@ R.equals(float('nan'), float('nan')) # True
 - [x] 0.1.2 F
 - [x] 0.1.2 filter
 - [x] 0.1.2 find
-- [ ] findIndex
+- [x] findIndex
 - [ ] findLast
 - [ ] findLastIndex
 - [x] 0.1.2 flatten
