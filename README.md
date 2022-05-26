@@ -304,7 +304,18 @@ R.Min('A', None) # 'A', 'A' < 'None'
 - [ ] minBy
 - [ ] modify
 - [ ] modifyPath
-- [ ] modulo
+- [x] modulo
+
+Python modulo on negative numbers has different behavior than JS.
+
+```python
+5 % -3 # -1
+```
+
+```js
+5 % -3 // 2
+```
+
 - [ ] move
 - [x] 0.1.2 multiply
 - [ ] nAry
