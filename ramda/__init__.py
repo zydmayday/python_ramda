@@ -74,6 +74,7 @@ from .reduceBy import reduceBy
 from .reduced import reduced
 from .reduceRight import reduceRight
 from .reject import reject
+from .repeat import repeat
 from .reverse import reverse
 from .slice import slice
 from .sort import sort
@@ -86,6 +87,7 @@ from .tail import tail
 from .take import take
 from .takeWhile import takeWhile
 from .tap import tap
+from .times import times
 from .toString import toString
 from .union import union
 from .unionWith import unionWith

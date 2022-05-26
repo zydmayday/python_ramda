@@ -432,7 +432,7 @@ R.propEq(1, 'v1', {'v1': 1}) # True
 - [ ] reduceWhile
 - [x] 0.1.2 reject
 - [ ] remove
-- [ ] repeat
+- [x] repeat
 - [ ] replace
 - [x] 0.1.2 reverse
 - [ ] scan
@@ -474,7 +474,7 @@ R.subtract(date(1,2,3), date(1,2,3)) # float('nan)
 - [x] 0.1.2 tap
 - [ ] test
 - [ ] thunkify
-- [ ] times
+- [x] times
 - [ ] toLower
 - [ ] toPairs
 - [ ] toPairsIn
