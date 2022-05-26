@@ -23,6 +23,9 @@ from .equals import equals
 from .F import F
 from .filter import filter
 from .find import find
+from .findIndex import findIndex
+from .findLast import findLast
+from .findLastIndex import findLastIndex
 from .flatten import flatten
 from .flip import flip
 from .forEach import forEach
