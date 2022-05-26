@@ -192,7 +192,7 @@ R.equals(float('nan'), float('nan')) # True
 - [x] 0.1.2 find
 - [x] findIndex
 - [x] findLast
-- [ ] findLastIndex
+- [x] findLastIndex
 - [x] 0.1.2 flatten
 - [x] 0.1.2 flip
 - [x] forEach
