@@ -48,6 +48,7 @@ from .map import map
 from .match import match
 from .Max import Max
 from .Min import Min
+from .modulo import modulo
 from .multiply import multiply
 from .Not import Not
 from .nth import nth
