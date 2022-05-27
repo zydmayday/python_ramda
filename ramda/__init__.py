@@ -41,6 +41,7 @@ from .invoker import invoker
 from .isEmpty import isEmpty
 from .join import join
 from .keys import keys
+from .last import last
 from .lastIndexOf import lastIndexOf
 from .lt import lt
 from .lte import lte
