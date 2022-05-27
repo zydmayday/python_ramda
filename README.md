@@ -274,7 +274,7 @@ R.keys(c) # ['c'], because c does not call super().__init__()
 ```
 
 - [ ] keysIn
-- [ ] last
+- [x] last
 - [x] 0.1.2 lastIndexOf
 - [ ] length
 - [ ] lens
