@@ -250,6 +250,29 @@ a = A()
 R.keys(a) # ['a', 'b']
 ```
 
+```python
+# keys include super class attributes
+class A:
+  def __init__(self, a):
+    self.a = a
+
+class B(A):
+  def __init__(self, a, b):
+    super().__init__(a)
+    self.b = b
+
+class C(A):
+  def __init__(self, c):
+    self.c = c
+
+a = A(1)
+b = B(2, 3)
+c = C(4)
+R.keys(a) # ['a']
+R.keys(b) # ['a', 'b']
+R.keys(c) # ['c'], because c does not call super().__init__()
+```
+
 - [ ] keysIn
 - [ ] last
 - [x] 0.1.2 lastIndexOf
@@ -523,7 +546,23 @@ R.values({'a': 1, 'b': 2}) # [1, 2]
 - [ ] valuesIn
 - [ ] view
 - [ ] when
-- [ ] where
+- [x] where
+
+spec(first param) is prefer to be a dict.
+
+method `where` supports both dict and object as second param.
+
+```python
+class Obj:
+  def __init__(self, x, y):
+    self.x = x
+    self.y = y
+
+spec = {'x': R.equals(1)}
+R.where(spec, {'x': 1, 'y': 2}) # True
+R.where(spec, Obj(1, 2)) # True
+```
+
 - [ ] whereAny
 - [ ] whereEq
 - [ ] without
