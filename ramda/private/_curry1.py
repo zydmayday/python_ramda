@@ -8,5 +8,5 @@ def _curry1(fn):
   def f1(a=__, *_):
     if _isPlaceholder(a):
       return f1
-    return fn(a, *_)
+    return fn(a)
   return f1

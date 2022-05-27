@@ -1,4 +1,5 @@
 from ._arity import _arity
+from ._helper import getArgsToUse
 from ._isPlaceholder import _isPlaceholder
 
 
@@ -20,6 +21,6 @@ def _curryN(n, received, fn):
         left -= 1
       combinedIdx += 1
     if left <= 0:
-      return fn(*combined)
+      return fn(*getArgsToUse(fn, combined))
     return _arity(left, _curryN(n, combined, fn))
   return f1

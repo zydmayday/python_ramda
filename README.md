@@ -125,7 +125,7 @@ isinstance(clone, Obj) # True
 - [ ] cond
 - [ ] construct
 - [ ] constructN
-- [ ] converge
+- [x] converge
 - [ ] count
 - [x] 0.1.2 countBy
 - [x] 0.1.2 curry

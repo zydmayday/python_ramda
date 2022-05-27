@@ -10,6 +10,7 @@ from .clone import clone
 from .comparator import comparator
 from .compose import compose
 from .concat import concat
+from .converge import converge
 from .countBy import countBy
 from .curry import curry
 from .curryN import curryN

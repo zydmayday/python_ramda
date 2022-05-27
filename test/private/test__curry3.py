@@ -43,6 +43,9 @@ class Test_Curry3(unittest.TestCase):
   def test_has_3_arity(self):
     self.assertEqual(3, funcArgsLength(g))
 
+  def test_works_even_more_args_provided(self):
+    self.assertEqual([1, 2, 3], g(1, 2, 3, 4))
+
 
 if __name__ == '__main__':
   unittest.main()

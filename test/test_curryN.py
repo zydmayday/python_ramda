@@ -135,9 +135,9 @@ class TestCurryN(unittest.TestCase):
     def f11(x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11): return [x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11]
 
     self.assertEqual(0, funcArgsLength(R.curryN(0, f11)))
-    self.assertEqual(expected, R.curryN(0, f11)(*expected))
+    self.assertEqual(expected, R.curryN(0, f11)(*expected))  # need to provide all args at once
     self.assertEqual(1, funcArgsLength(R.curryN(1, f11)))
-    self.assertEqual(expected, R.curryN(1, f11)(*expected))
+    self.assertEqual(expected, R.curryN(1, f11)(*expected))  # need to provide all args at once
     self.assertEqual(2, funcArgsLength(R.curryN(2, f11)))
     self.assertEqual(expected, R.curryN(2, f11)(1)(*expected[1:]))
     self.assertEqual(3, funcArgsLength(R.curryN(3, f11)))
@@ -156,6 +156,22 @@ class TestCurryN(unittest.TestCase):
     self.assertEqual(expected, R.curryN(9, f11)(1)(2)(3)(4)(5)(6)(7)(8)(*expected[8:]))
     self.assertEqual(10, funcArgsLength(R.curryN(10, f11)))
     self.assertEqual(expected, R.curryN(10, f11)(1)(2)(3)(4)(5)(6)(7)(8)(9)(*expected[9:]))
+
+  def test_works_even_more_args_provided(self):
+    expected = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+    def f11(x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11): return [x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11]
+
+    self.assertEqual(expected, R.curryN(0, f11)(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12))
+    self.assertEqual(expected, R.curryN(1, f11)(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12))
+    self.assertEqual(expected, R.curryN(2, f11)(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12))
+    self.assertEqual(expected, R.curryN(3, f11)(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12))
+    self.assertEqual(expected, R.curryN(4, f11)(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12))
+    self.assertEqual(expected, R.curryN(5, f11)(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12))
+    self.assertEqual(expected, R.curryN(6, f11)(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12))
+    self.assertEqual(expected, R.curryN(7, f11)(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12))
+    self.assertEqual(expected, R.curryN(8, f11)(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12))
+    self.assertEqual(expected, R.curryN(9, f11)(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12))
+    self.assertEqual(expected, R.curryN(10, f11)(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12))
 
 
 if __name__ == '__main__':
