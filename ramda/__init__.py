@@ -96,6 +96,7 @@ from .uniqBy import uniqBy
 from .uniqWith import uniqWith
 from .useWith import useWith
 from .values import values
+from .where import where
 from .xprod import xprod
 # pylint: disable=redefined-builtin
 from .zip import zip
