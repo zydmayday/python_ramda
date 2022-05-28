@@ -113,6 +113,12 @@ class TestCurry(unittest.TestCase):
     self.assertEqual([1, 2, 3, 4], g(1)(2, 3, 4))
     self.assertEqual([1, 2, 3, 4], g(1)(2)(3, 4))
 
+  def test_works_even_more_args_provided(self):
+    def f(a, b):
+      return [a, b]
+    g = R.curry(f)
+    self.assertEqual([1, 2], g(1, 2, 3))
+
 
 if __name__ == '__main__':
   unittest.main()

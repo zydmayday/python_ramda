@@ -3,14 +3,18 @@ import unittest
 
 import ramda as R
 from ramda.private._curry3 import _curry3
-from ramda.private._helper import funcArgsLength
+from ramda.private._inspect import funcArgsLength
 
 """
 https://github.com/ramda/ramda/blob/master/test/internal/_curry3.js
 """
 
+
 def f(a, b, c): return [a, b, c]
+
+
 g = _curry3(f)
+
 
 class Test_Curry3(unittest.TestCase):
   def test_supports_placeholder(self):

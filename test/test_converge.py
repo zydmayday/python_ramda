@@ -2,7 +2,7 @@
 import unittest
 
 import ramda as R
-from ramda.private._helper import funcArgsLength
+from ramda.private._inspect import funcArgsLength
 
 """
 https://github.com/ramda/ramda/blob/master/test/converge.js
@@ -33,13 +33,13 @@ class TestConverge(unittest.TestCase):
 
   def test_works_with_functions_with_different_number_of_arguments(self):
     fn = R.converge(R.multiply, [R.add, R.add(1)])
-    self.assertEqual(6, fn(1)(2)) # curried
+    self.assertEqual(6, fn(1)(2))  # curried
     self.assertEqual(6, fn(1, 2))
     self.assertEqual(6, fn(1)(R.__)(2))
     self.assertEqual(9, fn(R.__, 1)(2))
     self.assertEqual(6, fn(R.__, R.__)(1, 2))
     self.assertEqual(6, fn(1, R.__)(2))
-    self.assertEqual(6, fn(1, 2, 3)) # works even more arguments provided
+    self.assertEqual(6, fn(1, 2, 3))  # works even more arguments provided
 
 
 if __name__ == '__main__':

@@ -2,7 +2,7 @@ import unittest
 
 import ramda as R
 from ramda.private._curry1 import _curry1
-from ramda.private._helper import funcArgsLength
+from ramda.private._inspect import funcArgsLength
 
 
 def f(a): return [a]

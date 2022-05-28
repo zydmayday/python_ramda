@@ -2,7 +2,7 @@ import unittest
 
 import ramda as R
 from ramda.private._curry2 import _curry2
-from ramda.private._helper import funcArgsLength
+from ramda.private._inspect import funcArgsLength
 
 """
 https://github.com/ramda/ramda/blob/master/test/internal/_curry2.js

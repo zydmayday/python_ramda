@@ -1,7 +1,7 @@
 from .curryN import curryN
 from .Max import Max
 from .private._curry2 import _curry2
-from .private._helper import funcArgsLength, getArgsToUse
+from .private._inspect import funcArgsLength, getArgsToUse
 from .private._map import _map
 from .reduce import reduce
 

@@ -3,7 +3,7 @@ import unittest
 from random import randint
 
 import ramda as R
-from ramda.private._helper import funcArgsLength
+from ramda.private._inspect import funcArgsLength
 
 
 def source(a, b, c):

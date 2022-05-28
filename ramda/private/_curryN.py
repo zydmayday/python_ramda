@@ -1,5 +1,5 @@
 from ._arity import _arity
-from ._helper import getArgsToUse
+from ._inspect import getArgsToUse
 from ._isPlaceholder import _isPlaceholder
 
 
