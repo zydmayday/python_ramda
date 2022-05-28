@@ -236,7 +236,7 @@ R.isEmpty(None) # False
 
 - [ ] isNil
 - [x] 0.1.2 join
-- [ ] juxt
+- [x] juxt
 - [x] 0.1.2 keys
 
 ```python

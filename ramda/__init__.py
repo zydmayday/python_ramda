@@ -41,6 +41,7 @@ from .into import into
 from .invoker import invoker
 from .isEmpty import isEmpty
 from .join import join
+from .juxt import juxt
 from .keys import keys
 from .last import last
 from .lastIndexOf import lastIndexOf
