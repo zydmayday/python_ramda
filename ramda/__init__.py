@@ -59,6 +59,7 @@ from .objOf import objOf
 from .omit import omit
 from .once import once
 from .Or import Or
+from .partition import partition
 from .path import path
 from .paths import paths
 from .pick import pick

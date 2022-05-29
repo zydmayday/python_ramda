@@ -373,7 +373,7 @@ R.omit(['v1', 'v3'], obj) # {'v2': 2}
 - [ ] partial
 - [ ] partialObject
 - [ ] partialRight
-- [ ] partition
+- [x] partition
 - [x] 0.1.2 path
 - [ ] pathEq
 - [ ] pathOr

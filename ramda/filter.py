@@ -13,6 +13,7 @@ from .private._xfilter import _xfilter
 def inner_filter(pred, filterable):
   if _isArrayLike(filterable):
     return _filter(pred, filterable)
+
   def inner_reduce(acc, key):
     """
     There are 2 cases of filterable
@@ -33,3 +34,4 @@ def inner_filter(pred, filterable):
 
 # pylint: disable=redefined-builtin
 filter = _curry2(_dispatchable(['fantasy-land/filter', 'filter'], _xfilter, inner_filter))
+filter.__name__ = 'filter'

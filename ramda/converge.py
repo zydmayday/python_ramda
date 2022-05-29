@@ -14,3 +14,4 @@ def inner_converge(after, fns):
 
 
 converge = _curry2(inner_converge)
+converge.__name__ = 'converge'
