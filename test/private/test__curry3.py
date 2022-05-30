@@ -3,14 +3,18 @@ import unittest
 
 import ramda as R
 from ramda.private._curry3 import _curry3
-from ramda.private._helper import funcArgsLength
+from ramda.private._inspect import funcArgsLength
 
 """
 https://github.com/ramda/ramda/blob/master/test/internal/_curry3.js
 """
 
+
 def f(a, b, c): return [a, b, c]
+
+
 g = _curry3(f)
+
 
 class Test_Curry3(unittest.TestCase):
   def test_supports_placeholder(self):
@@ -42,6 +46,9 @@ class Test_Curry3(unittest.TestCase):
 
   def test_has_3_arity(self):
     self.assertEqual(3, funcArgsLength(g))
+
+  def test_works_even_more_args_provided(self):
+    self.assertEqual([1, 2, 3], g(1, 2, 3, 4))
 
 
 if __name__ == '__main__':

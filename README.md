@@ -125,7 +125,7 @@ isinstance(clone, Obj) # True
 - [ ] cond
 - [ ] construct
 - [ ] constructN
-- [ ] converge
+- [x] converge
 - [ ] count
 - [x] 0.1.2 countBy
 - [x] 0.1.2 curry
@@ -236,7 +236,7 @@ R.isEmpty(None) # False
 
 - [ ] isNil
 - [x] 0.1.2 join
-- [ ] juxt
+- [x] juxt
 - [x] 0.1.2 keys
 
 ```python
@@ -373,7 +373,7 @@ R.omit(['v1', 'v3'], obj) # {'v2': 2}
 - [ ] partial
 - [ ] partialObject
 - [ ] partialRight
-- [ ] partition
+- [x] partition
 - [x] 0.1.2 path
 - [ ] pathEq
 - [ ] pathOr

@@ -10,6 +10,7 @@ from .clone import clone
 from .comparator import comparator
 from .compose import compose
 from .concat import concat
+from .converge import converge
 from .countBy import countBy
 from .curry import curry
 from .curryN import curryN
@@ -40,6 +41,7 @@ from .into import into
 from .invoker import invoker
 from .isEmpty import isEmpty
 from .join import join
+from .juxt import juxt
 from .keys import keys
 from .last import last
 from .lastIndexOf import lastIndexOf
@@ -57,6 +59,7 @@ from .objOf import objOf
 from .omit import omit
 from .once import once
 from .Or import Or
+from .partition import partition
 from .path import path
 from .paths import paths
 from .pick import pick

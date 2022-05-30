@@ -8,3 +8,4 @@ def inner_isEmpty(x):
 
 
 isEmpty = _curry1(inner_isEmpty)
+isEmpty.__name__ = 'isEmpty'

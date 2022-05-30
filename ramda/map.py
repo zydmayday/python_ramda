@@ -5,7 +5,7 @@ from .keys import keys
 from .private._curry2 import _curry2
 from .private._dispatchable import _dispatchable
 from .private._has import _has
-from .private._helper import funcArgsLength
+from .private._inspect import funcArgsLength
 from .private._isFunction import _isFunction
 from .private._map import _map
 from .private._reduce import _reduce

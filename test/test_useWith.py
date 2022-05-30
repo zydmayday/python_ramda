@@ -2,7 +2,7 @@
 import unittest
 
 import ramda as R
-from ramda.private._helper import funcArgsLength
+from ramda.private._inspect import funcArgsLength
 from ramda.private._isFunction import _isFunction
 
 """
@@ -30,6 +30,7 @@ class TestUseWith(unittest.TestCase):
 
   def test_has_the_correct_arity(self):
     self.assertEqual(3, funcArgsLength(f))
+
 
 if __name__ == '__main__':
   unittest.main()

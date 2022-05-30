@@ -2,7 +2,7 @@
 import unittest
 
 import ramda as R
-from ramda.private._helper import funcArgsLength
+from ramda.private._inspect import funcArgsLength
 
 """
 https://github.com/ramda/ramda/blob/master/test/once.js
@@ -12,6 +12,7 @@ https://github.com/ramda/ramda/blob/master/test/once.js
 class TestOnce(unittest.TestCase):
   def test_returns_a_function_that_calls_the_supplied_function_only_the_first_time_called(self):
     ctr = 0
+
     def wrapper():
       nonlocal ctr
       ctr += 1

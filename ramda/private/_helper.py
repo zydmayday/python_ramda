@@ -1,13 +1,6 @@
+
 from ._has import _has
 from ._isArrayLike import _isArrayLike
-
-
-def funcArgsLength(fn):
-  """
-  Get the number of args for function fn
-  Not count *args and **kwargs
-  """
-  return fn.__code__.co_argcount
 
 
 def toNumber(a):

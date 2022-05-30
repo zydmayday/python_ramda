@@ -1,5 +1,5 @@
 from .private._arity import _arity
-from .private._helper import funcArgsLength
+from .private._inspect import funcArgsLength
 from .private._pipe import _pipe
 from .reduce import reduce
 from .tail import tail

@@ -2,7 +2,7 @@ import unittest
 
 import ramda as R
 from ramda.private._curry2 import _curry2
-from ramda.private._helper import funcArgsLength
+from ramda.private._inspect import funcArgsLength
 
 """
 https://github.com/ramda/ramda/blob/master/test/internal/_curry2.js
@@ -32,6 +32,9 @@ class Test_Curry2(unittest.TestCase):
 
   def test_has_2_arity(self):
     self.assertEqual(2, funcArgsLength(g))
+
+  def test_works_even_more_args_provided(self):
+    self.assertEqual([1, 2], g(1, 2, 3))
 
 
 if __name__ == '__main__':
