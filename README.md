@@ -125,7 +125,7 @@ isinstance(clone, Obj) # True
 - [ ] cond
 - [ ] construct
 - [ ] constructN
-- [x] converge
+- [x] 0.1.4 converge
 - [ ] count
 - [x] 0.1.2 countBy
 - [x] 0.1.2 curry
@@ -190,12 +190,12 @@ R.equals(float('nan'), float('nan')) # True
 - [x] 0.1.2 F
 - [x] 0.1.2 filter
 - [x] 0.1.2 find
-- [x] findIndex
-- [x] findLast
-- [x] findLastIndex
+- [x] 0.1.4 findIndex
+- [x] 0.1.4 findLast
+- [x] 0.1.4 findLastIndex
 - [x] 0.1.2 flatten
 - [x] 0.1.2 flip
-- [x] forEach
+- [x] 0.1.4 forEach
 - [ ] forEachObjIndexed
 - [ ] fromPairs
 - [x] 0.1.2 groupBy
@@ -236,7 +236,7 @@ R.isEmpty(None) # False
 
 - [ ] isNil
 - [x] 0.1.2 join
-- [x] juxt
+- [x] 0.1.4 juxt
 - [x] 0.1.2 keys
 
 ```python
@@ -274,7 +274,7 @@ R.keys(c) # ['c'], because c does not call super().__init__()
 ```
 
 - [ ] keysIn
-- [x] last
+- [x] 0.1.4 last
 - [x] 0.1.2 lastIndexOf
 - [ ] length
 - [ ] lens
@@ -327,7 +327,7 @@ R.Min('A', None) # 'A', 'A' < 'None'
 - [ ] minBy
 - [ ] modify
 - [ ] modifyPath
-- [x] modulo
+- [x] 0.1.4 modulo
 
 Python modulo on negative numbers has different behavior than JS.
 
@@ -373,7 +373,7 @@ R.omit(['v1', 'v3'], obj) # {'v2': 2}
 - [ ] partial
 - [ ] partialObject
 - [ ] partialRight
-- [x] partition
+- [x] 0.1.4 partition
 - [x] 0.1.2 path
 - [ ] pathEq
 - [ ] pathOr
@@ -455,7 +455,7 @@ R.propEq(1, 'v1', {'v1': 1}) # True
 - [ ] reduceWhile
 - [x] 0.1.2 reject
 - [ ] remove
-- [x] repeat
+- [x] 0.1.4 repeat
 - [ ] replace
 - [x] 0.1.2 reverse
 - [ ] scan
@@ -497,7 +497,7 @@ R.subtract(date(1,2,3), date(1,2,3)) # float('nan)
 - [x] 0.1.2 tap
 - [ ] test
 - [ ] thunkify
-- [x] times
+- [x] 0.1.4 times
 - [ ] toLower
 - [ ] toPairs
 - [ ] toPairsIn
@@ -546,7 +546,7 @@ R.values({'a': 1, 'b': 2}) # [1, 2]
 - [ ] valuesIn
 - [ ] view
 - [ ] when
-- [x] where
+- [x] 0.1.4 where
 
 spec(first param) is prefer to be a dict.
 
