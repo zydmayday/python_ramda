@@ -341,7 +341,7 @@ Python modulo on negative numbers has different behavior than JS.
 
 - [ ] move
 - [x] 0.1.2 multiply
-- [ ] nAry
+- [x] nAry
 - [ ] negate
 - [ ] none
 - [x] 0.1.2 not
