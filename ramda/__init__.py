@@ -6,6 +6,7 @@ from .always import always
 from .And import And
 from .any import any
 from .append import append
+from .binary import binary
 from .clone import clone
 from .comparator import comparator
 from .compose import compose
@@ -53,6 +54,7 @@ from .Max import Max
 from .Min import Min
 from .modulo import modulo
 from .multiply import multiply
+from .nAry import nAry
 from .Not import Not
 from .nth import nth
 from .objOf import objOf

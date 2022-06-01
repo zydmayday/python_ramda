@@ -84,7 +84,7 @@ R.add(date(1,2,3), date(1,2,3)) # float('nan)
 - [ ] ascend
 - [ ] assoc
 - [ ] assocPath
-- [ ] binary
+- [x] binary
 - [ ] bind
 - [ ] both
 - [ ] call
@@ -341,7 +341,7 @@ Python modulo on negative numbers has different behavior than JS.
 
 - [ ] move
 - [x] 0.1.2 multiply
-- [ ] nAry
+- [x] nAry
 - [ ] negate
 - [ ] none
 - [x] 0.1.2 not
