@@ -84,7 +84,7 @@ R.add(date(1,2,3), date(1,2,3)) # float('nan)
 - [ ] ascend
 - [ ] assoc
 - [ ] assocPath
-- [ ] binary
+- [x] binary
 - [ ] bind
 - [ ] both
 - [ ] call

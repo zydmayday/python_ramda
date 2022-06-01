@@ -6,6 +6,7 @@ from .always import always
 from .And import And
 from .any import any
 from .append import append
+from .binary import binary
 from .clone import clone
 from .comparator import comparator
 from .compose import compose
