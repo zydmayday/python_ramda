@@ -4,10 +4,7 @@ from .private._helper import getAttribute
 
 
 def inner_where(spec, testObj):
-  for prop in spec:
-    if _has(spec, prop) and not spec[prop](getAttribute(testObj, prop)):
-      return False
-  return True
+  return not any((_has(spec, prop) and not spec[prop](getAttribute(testObj, prop))) for prop in spec)
 
 
 where = _curry2(inner_where)

@@ -19,11 +19,7 @@ def _equals(a, b):
     # Array-like
     if len(a) != len(b):
       return False
-    # pylint: disable=consider-using-enumerate
-    for i in range(len(a)):
-      if not _equals(a[i], b[i]):
-        return False
-    return True
+    return all(_equals(a[i], b[i]) for i in range(len(a)))
   if _isFunction(getAttribute(a, 'equals')) and _isFunction(getAttribute(b, 'equals')):
     # dispatch to objects' own equals method
     return a.equals(b) and b.equals(a)
