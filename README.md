@@ -567,7 +567,10 @@ R.values(obj) # [1, 2]
 R.values({'a': 1, 'b': 2}) # [1, 2]
 ```
 
-- [ ] valuesIn
+- [x] valuesIn
+
+Use `R.keysIn` to get the keys of an object.
+
 - [ ] view
 - [ ] when
 - [x] 0.1.4 where
