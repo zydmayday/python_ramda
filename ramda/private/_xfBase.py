@@ -16,7 +16,6 @@ class XfBase:
   def result(self, result):
     return getAttribute(self.xf, '@@transducer/result')(result)
 
-  # pylint: disable=no-self-use
   def step(self, result, _input):
     raise Exception('Child class should implement this')
 

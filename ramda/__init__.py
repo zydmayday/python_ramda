@@ -44,6 +44,7 @@ from .isEmpty import isEmpty
 from .join import join
 from .juxt import juxt
 from .keys import keys
+from .keysIn import keysIn
 from .last import last
 from .lastIndexOf import lastIndexOf
 from .lt import lt

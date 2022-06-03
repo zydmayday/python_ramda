@@ -23,11 +23,10 @@ def inner_filter(pred, filterable):
     if isinstance(filterable, dict) or _has(filterable, 'get'):
       if pred(filterable.get(key)):
         acc[key] = filterable.get(key)
-    else:
+    elif not pred(getattr(filterable, key, None)):
       # This is special, because we deepcopy the original object,
       # so we delete attr from original object if not match
-      if not pred(getattr(filterable, key, None)):
-        delattr(acc, key)
+      delattr(acc, key)
     return acc
   return _reduce(inner_reduce, {} if isinstance(filterable, dict) or _has(filterable, 'get') else copy.deepcopy(filterable), keys(filterable))
 

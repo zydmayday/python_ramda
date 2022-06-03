@@ -271,9 +271,33 @@ c = C(4)
 R.keys(a) # ['a']
 R.keys(b) # ['a', 'b']
 R.keys(c) # ['c'], because c does not call super().__init__()
+
+# For normal dict
+R.keys({'a': 1, 'b': 2}) # ['a', 'b']
 ```
 
-- [ ] keysIn
+- [x] keysIn
+
+Different from `keys`, `keysIn` will return all attributes of the object, including super class attributes and class static variables.
+
+```python
+class A:
+  a_static = 1
+  def __init__(self):
+    self.a = 1
+class B(A):
+  b_static = 2
+  def __init__(self, b):
+    super().__init__()
+    self.b = b
+
+R.keysIn(A()) # ['a_static', 'a']
+R.keysIn(B(2)) # ['a_static', 'a', 'b_static', 'b']
+
+# For normal dict
+R.keysIn({'a': 1, 'b': 2}) # ['a', 'b']
+```
+
 - [x] 0.1.4 last
 - [x] 0.1.2 lastIndexOf
 - [ ] length
