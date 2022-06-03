@@ -96,6 +96,7 @@ from .takeWhile import takeWhile
 from .tap import tap
 from .times import times
 from .toString import toString
+from .unary import unary
 from .union import union
 from .unionWith import unionWith
 from .uniq import uniq
