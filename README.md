@@ -540,7 +540,7 @@ Partially supported
 - [ ] tryCatch
 - [ ] type
 - [ ] unapply
-- [ ] unary
+- [x] unary
 - [ ] uncurryN
 - [ ] unfold
 - [x] 0.1.2 union
