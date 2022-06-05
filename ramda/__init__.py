@@ -104,6 +104,7 @@ from .uniqBy import uniqBy
 from .uniqWith import uniqWith
 from .useWith import useWith
 from .values import values
+from .valuesIn import valuesIn
 from .where import where
 from .xprod import xprod
 # pylint: disable=redefined-builtin
