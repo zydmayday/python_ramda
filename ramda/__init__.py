@@ -37,6 +37,7 @@ from .gte import gte
 from .head import head
 from .identity import identity
 from .indexOf import indexOf
+from .insert import insert
 from .intersection import intersection
 from .into import into
 from .invoker import invoker

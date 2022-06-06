@@ -215,7 +215,7 @@ R.equals(float('nan'), float('nan')) # True
 - [x] 0.1.2 indexOf
 - [ ] init
 - [ ] innerJoin
-- [ ] insert
+- [x] insert
 - [ ] insertAll
 - [x] 0.1.2 intersection
 - [ ] intersperse
