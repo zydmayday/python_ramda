@@ -84,7 +84,7 @@ R.add(date(1,2,3), date(1,2,3)) # float('nan)
 - [ ] ascend
 - [ ] assoc
 - [ ] assocPath
-- [x] binary
+- [x] 0.2.0 binary
 - [ ] bind
 - [ ] both
 - [ ] call
@@ -276,7 +276,7 @@ R.keys(c) # ['c'], because c does not call super().__init__()
 R.keys({'a': 1, 'b': 2}) # ['a', 'b']
 ```
 
-- [x] keysIn
+- [x] 0.2.0 keysIn
 
 Different from `keys`, `keysIn` will return all attributes of the object, including super class attributes and class static variables.
 
@@ -365,7 +365,7 @@ Python modulo on negative numbers has different behavior than JS.
 
 - [ ] move
 - [x] 0.1.2 multiply
-- [x] nAry
+- [x] 0.2.0 nAry
 - [ ] negate
 - [ ] none
 - [x] 0.1.2 not
@@ -540,7 +540,7 @@ Partially supported
 - [ ] tryCatch
 - [ ] type
 - [ ] unapply
-- [x] unary
+- [x] 0.2.0 unary
 - [ ] uncurryN
 - [ ] unfold
 - [x] 0.1.2 union
@@ -567,7 +567,7 @@ R.values(obj) # [1, 2]
 R.values({'a': 1, 'b': 2}) # [1, 2]
 ```
 
-- [x] valuesIn
+- [x] 0.2.0 valuesIn
 
 Use `R.keysIn` to get the keys of an object.
 
