@@ -82,6 +82,7 @@ from .reduceBy import reduceBy
 from .reduced import reduced
 from .reduceRight import reduceRight
 from .reject import reject
+from .remove import remove
 from .repeat import repeat
 from .reverse import reverse
 from .slice import slice
