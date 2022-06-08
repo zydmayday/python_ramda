@@ -215,7 +215,7 @@ R.equals(float('nan'), float('nan')) # True
 - [x] 0.1.2 indexOf
 - [ ] init
 - [ ] innerJoin
-- [x] insert
+- [x] 0.2.2 insert
 - [ ] insertAll
 - [x] 0.1.2 intersection
 - [ ] intersperse
@@ -478,7 +478,7 @@ R.propEq(1, 'v1', {'v1': 1}) # True
 - [x] 0.1.2 reduceRight
 - [ ] reduceWhile
 - [x] 0.1.2 reject
-- [x] remove
+- [x] 0.2.2 remove
 - [x] 0.1.4 repeat
 - [ ] replace
 - [x] 0.1.2 reverse
