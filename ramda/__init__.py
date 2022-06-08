@@ -5,6 +5,7 @@ from .all import all
 from .always import always
 from .And import And
 from .any import any
+from .ap import ap
 from .append import append
 from .binary import binary
 from .clone import clone
