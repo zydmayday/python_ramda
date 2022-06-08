@@ -27,11 +27,9 @@ class TestPropForDict(unittest.TestCase):
     self.assertEqual(propResult, pathResult)
 
   def test_shows_the_same_behaviour_as_path_for_a_None_property(self):
-    # TODO: fix getAttribute
-    # propResult = R.prop(None, fred)
-    # pathResult = R.path([None], fred)
-    # self.assertEqual(propResult, pathResult)
-    pass
+    propResult = R.prop(None, fred)
+    pathResult = R.path([None], fred)
+    self.assertEqual(propResult, pathResult)
 
   def test_shows_the_same_behaviour_as_path_for_a_valid_property_and_object(self):
     propResult = R.prop('age', fred)
@@ -59,11 +57,9 @@ class TestPropForObject(unittest.TestCase):
     self.assertEqual(propResult, pathResult)
 
   def test_shows_the_same_behaviour_as_path_for_a_None_property(self):
-    # TODO: fix getAttribute
-    # propResult = R.prop(None, fredObj)
-    # pathResult = R.path([None], fredObj)
-    # self.assertEqual(propResult, pathResult)
-    pass
+    propResult = R.prop(None, fredObj)
+    pathResult = R.path([None], fredObj)
+    self.assertEqual(propResult, pathResult)
 
   def test_shows_the_same_behaviour_as_path_for_a_valid_property_and_object(self):
     propResult = R.prop('age', fredObj)

@@ -21,20 +21,28 @@ class TestInto(unittest.TestCase):
   def test_transduces_into_arrays(self):
     self.assertEqual([2, 3, 4, 5], R.into([], R.map(add(1)), [1, 2, 3, 4]))
     self.assertEqual([1, 3], R.into([], R.filter(isOdd), [1, 2, 3, 4]))
-    # TODO: take
+    self.assertEqual([2, 3], R.into([], R.compose(R.map(add(1)), R.take(2)), [1, 2, 3, 4]))
 
   def test_transduces_into_strings(self):
     self.assertEqual('2345', R.into('', R.map(add(1)), [1, 2, 3, 4]))
     self.assertEqual('13', R.into('', R.filter(isOdd), [1, 2, 3, 4]))
-    # TODO: take
+    self.assertEqual('23', R.into('', R.compose(R.map(add(1)), R.take(2)), [1, 2, 3, 4]))
 
   def test_transduces_into_dicts(self):
     self.assertEqual({'a': 1, 'b': 2}, R.into({}, R.identity, [['a', 1], ['b', 2]]))
     self.assertEqual({'a': 1, 'b': 2, 'c': 3}, R.into({}, R.identity, [{'a': 1}, {'b': 2, 'c': 3}]))
 
   def test_dispatches_to_objects_that_implement_reduce(self):
-    pass
-    # TODO: we do not support object currently
+    class Obj:
+      def __init__(self, x):
+        self.x = x
+
+      def reduce(self, f, acc):
+        return 'override'
+
+    obj = Obj([1, 2, 3])
+    self.assertEqual('override', R.into([], R.map(add(1)), obj))
+    self.assertEqual('override', R.into([], R.filter(isOdd), obj))
 
   def test_allows_custom_transformer(self):
     intoSum = R.into(addXf)
