@@ -2,6 +2,7 @@
 import unittest
 
 import ramda as R
+from ramda.private._inspect import funcArgsLength
 
 """
 https://github.com/ramda/ramda/blob/master/test/juxt.js
@@ -42,8 +43,8 @@ class TestJuxt(unittest.TestCase):
     self.assertEqual([5, 6], R.juxt([R.add, R.multiply])(2, 3))
 
   def test_retains_the_highest_arity(self):
-    # TODO: nAry
-    pass
+    f = R.juxt([R.nAry(1, R.T), R.nAry(3, R.T), R.nAry(2, R.T)])
+    self.assertEqual(3, funcArgsLength(f))
 
   def test_returns_a_curried_function(self):
     self.assertEqual([6, 5], R.juxt([R.multiply, R.add])(2)(3))
