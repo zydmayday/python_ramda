@@ -1,5 +1,6 @@
 
 import unittest
+from test.helpers.Id import Id
 
 import ramda as R
 
@@ -28,6 +29,12 @@ class TestAp(unittest.TestCase):
     obj = {'ap': lambda n: 'called ap with ' + str(n)}
     self.assertEqual(obj['ap'](10), R.ap(obj, 10))
 
+  def test_works_with_fantasy_land_ap(self):
+    applyX = Id(10)
+    applyF = {'value': lambda x: x * 2}
+    res = R.ap(applyF, applyX)
+    self.assertEqual(20, res['value'])
+    self.assertEqual('ramda/Id', res['@@type'])
 
 if __name__ == '__main__':
   unittest.main()
