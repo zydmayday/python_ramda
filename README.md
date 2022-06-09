@@ -328,6 +328,11 @@ R.length(obj) # 3
 # dict with length property
 R.length({'a': 1, 'length': 99}) # 99, R.length will use length property instead
 
+# return function arguments length
+def f(a, b, c):
+  return a + b + c
+R.length(f) # 3
+
 # Any failed cases, return nan instead
 R.length(None) # float('nan')
 R.length(1) # float('nan')
