@@ -300,7 +300,47 @@ R.keysIn({'a': 1, 'b': 2}) # ['a', 'b']
 
 - [x] 0.1.4 last
 - [x] 0.1.2 lastIndexOf
-- [ ] length
+- [x] length
+
+The behavior of `length` is different from `ramda`.
+
+```python
+# Array
+R.length([1, 2, 3]) # 3
+# String
+R.length('abc') # 3
+# Dict
+R.length({'a': 1, 'b': 2}) # 2
+# Set
+R.length({1, 2, 3}) # 3
+# Tuple
+R.length((1, 2, 3)) # 3
+# Notice: Also works for any other iterable object
+
+# Some special cases
+# object with length() method
+class Obj:
+  def length(self):
+    return 3
+obj = Obj()
+R.length(obj) # 3
+
+# dict with length property
+R.length({'a': 1, 'length': 99}) # 99, R.length will use length property instead
+
+# return function arguments length
+def f(a, b, c):
+  return a + b + c
+R.length(f) # 3
+
+# Any failed cases, return nan instead
+R.length(None) # float('nan')
+R.length(1) # float('nan')
+class ObjWithoutLength:
+  pass
+R.length(ObjWithoutLength()) # float('nan')
+```
+
 - [ ] lens
 - [ ] lensIndex
 - [ ] lensPath

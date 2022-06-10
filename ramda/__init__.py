@@ -49,6 +49,7 @@ from .keys import keys
 from .keysIn import keysIn
 from .last import last
 from .lastIndexOf import lastIndexOf
+from .length import length
 from .lt import lt
 from .lte import lte
 from .map import map
