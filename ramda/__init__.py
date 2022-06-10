@@ -54,6 +54,7 @@ from .lt import lt
 from .lte import lte
 from .map import map
 from .match import match
+from .mathMod import mathMod
 from .Max import Max
 from .Min import Min
 from .modulo import modulo
