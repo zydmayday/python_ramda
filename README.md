@@ -354,7 +354,7 @@ R.length(ObjWithoutLength()) # float('nan')
 - [ ] mapAccumRight
 - [ ] mapObjIndexed
 - [x] 0.1.2 match
-- [ ] mathMod
+- [x] mathMod
 - [x] 0.1.2 Max (`max` is a keyword in python)
 
 If R.Max(a, b)
