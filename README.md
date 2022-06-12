@@ -197,7 +197,7 @@ R.equals(float('nan'), float('nan')) # True
 - [x] 0.1.2 flip
 - [x] 0.1.4 forEach
 - [ ] forEachObjIndexed
-- [ ] fromPairs
+- [x] fromPairs
 - [x] 0.1.2 groupBy
 - [ ] groupWith
 - [x] 0.1.2 gt
