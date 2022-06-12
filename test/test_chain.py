@@ -71,6 +71,20 @@ class TestChain(unittest.TestCase):
     id = R.chain(add1, Id(10))
     self.assertEqual([11], id)
 
+  def test_forcedReduced(self):
+    def reducedStep(acc, x):
+      if x > 4:
+        return R.reduced(acc + x)
+      return acc + x
+    reducedListXf = {
+        '@@transducer/init': lambda: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+        '@@transducer/step': reducedStep,
+        '@@transducer/result': lambda x: x
+    }
+    times2ReducedListXf = R.chain(times2, reducedListXf)
+    self.assertEqual((1 + 2 + 3) * 2, R.reduce(times2ReducedListXf, 0, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
+    self.assertEqual((1 + 2) * 2, R.reduce(times2ReducedListXf, 0, [1, 2]))
+
 
 if __name__ == '__main__':
   unittest.main()
