@@ -33,6 +33,9 @@ class TestChain(unittest.TestCase):
   def test_maps_a_function_into_a_shallow_flat_result(self):
     self.assertEqual([2, 4, 6, 8], intoArray(R.chain(times2), [1, 2, 3, 4]))
 
+  def test_XFlatCat_if_input_is_not_arrayLike(self):
+    self.assertEqual([2, 4, 6, 8], intoArray(R.chain(R.multiply(2)), [1, 2, 3, 4]))
+
   def test_interprets_r_as_a_monad(self):
     def h(r): return r * 2
     def f(a): return lambda r: r + a
@@ -55,6 +58,9 @@ class TestChain(unittest.TestCase):
 
   def test_dispatches_to_transformer_objects(self):
     self.assertEqual(True, _isTransformer(R.chain(add1, listXf)))
+
+  def test_xFlatCat_if_input_not_arrayLike(self):
+    add1ListXf = R.chain(add1, listXf)
 
   def test_composes(self):
     mdouble = R.chain(times2)
