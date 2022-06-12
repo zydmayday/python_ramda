@@ -8,6 +8,7 @@ from .any import any
 from .ap import ap
 from .append import append
 from .binary import binary
+from .chain import chain
 from .clone import clone
 from .comparator import comparator
 from .compose import compose
