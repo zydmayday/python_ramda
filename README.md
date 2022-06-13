@@ -88,7 +88,7 @@ R.add(date(1,2,3), date(1,2,3)) # float('nan)
 - [ ] bind
 - [ ] both
 - [ ] call
-- [ ] chain
+- [x] chain
 - [ ] clamp
 - [x] 0.1.2 clone
 
