@@ -44,6 +44,7 @@ from .insert import insert
 from .intersection import intersection
 from .into import into
 from .invoker import invoker
+from .Is import Is
 from .isEmpty import isEmpty
 from .join import join
 from .juxt import juxt
