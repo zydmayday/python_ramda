@@ -66,6 +66,7 @@ from .nAry import nAry
 from .Not import Not
 from .nth import nth
 from .objOf import objOf
+from .of import of
 from .omit import omit
 from .once import once
 from .Or import Or

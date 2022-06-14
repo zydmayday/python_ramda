@@ -440,7 +440,7 @@ Python modulo on negative numbers has different behavior than JS.
 - [ ] nthArg
 - [ ] o
 - [x] 0.1.2 objOf
-- [ ] of
+- [x] of
 - [x] 0.1.2 omit
 
 we support both `dict` type and `object` type.

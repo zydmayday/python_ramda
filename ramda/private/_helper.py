@@ -39,9 +39,16 @@ def getAttribute(v, key):
     t = T()
     init_fn = getAttribute(t, '@@transducer/init')
 
-  method case:
+  method case 1:
     class Mapper:
       def map(fn):
+        return fn
+    m = Mapper()
+    map_fn = getAttribute(m, 'map')
+
+  method case 2:
+    class Mapper:
+      def map(self, fn):
         return fn
     m = Mapper()
     map_fn = getAttribute(m, 'map')
@@ -54,10 +61,15 @@ def getAttribute(v, key):
     return getattr(v, key, None)
   if _has(v, 'get'):
     try:
-      return v.get(key, None)
+      # Case that get is (key, default) -> value signature
+      return v.get(key, default=None)
     except TypeError:
-      # in case v has get method but with different signature
-      return None
+      try:
+        # Case that get is a instance method with (self, key, default) -> value signature
+        return v.get(v, key, default=None)
+      except TypeError:
+        # Unknown signature
+        return None
 
 
 def safeLen(x):
