@@ -223,7 +223,34 @@ R.equals(float('nan'), float('nan')) # True
 - [ ] invert
 - [ ] invertObj
 - [x] 0.1.2 invoker
-- [ ] is
+- [x] is
+
+This is a language specific feature.
+So we check all python built-in types as many as we can.
+
+```python
+R.Is(int, 1) # True
+R.Is(float, 1.0) # True
+R.Is(str, '1') # True
+R.Is(list, [1,2,3]) # True
+R.Is(dict, {'a': 1}) # True
+R.Is(set, {1,2,3}) # True
+R.Is(tuple, (1,2,3)) # True
+R.Is(None, None) # True
+R.Is(bool, True) # True
+R.Is(bool, False) # True
+
+# For user-defined object
+class Parent:
+  pass
+class Child(Parent):
+  pass
+R.Is(Parent, Parent()) # True
+R.Is(Parent, Child()) # True
+R.Is(Child, Child()) # True
+R.Is(Child, Parent()) # False
+```
+
 - [x] 0.1.2 isEmpty
 
 ```python
@@ -413,7 +440,7 @@ Python modulo on negative numbers has different behavior than JS.
 - [ ] nthArg
 - [ ] o
 - [x] 0.1.2 objOf
-- [ ] of
+- [x] of
 - [x] 0.1.2 omit
 
 we support both `dict` type and `object` type.

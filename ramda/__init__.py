@@ -44,6 +44,7 @@ from .insert import insert
 from .intersection import intersection
 from .into import into
 from .invoker import invoker
+from .Is import Is
 from .isEmpty import isEmpty
 from .join import join
 from .juxt import juxt
@@ -65,6 +66,7 @@ from .nAry import nAry
 from .Not import Not
 from .nth import nth
 from .objOf import objOf
+from .of import of
 from .omit import omit
 from .once import once
 from .Or import Or
