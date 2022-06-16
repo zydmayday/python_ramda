@@ -223,7 +223,7 @@ R.equals(float('nan'), float('nan')) # True
 - [ ] invert
 - [ ] invertObj
 - [x] 0.1.2 invoker
-- [x] is
+- [x] Is (`is` is a keyword in python)
 
 This is a language specific feature.
 So we check all python built-in types as many as we can.
