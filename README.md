@@ -616,7 +616,7 @@ Partially supported
 - [x] 0.1.2 uniqBy
 - [x] 0.1.2 uniqWith
 - [ ] unless
-- [ ] unnest
+- [x] unnest
 - [ ] until
 - [ ] unwind
 - [ ] update

@@ -111,6 +111,7 @@ from .unionWith import unionWith
 from .uniq import uniq
 from .uniqBy import uniqBy
 from .uniqWith import uniqWith
+from .unnest import unnest
 from .useWith import useWith
 from .values import values
 from .valuesIn import valuesIn
