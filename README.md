@@ -663,5 +663,8 @@ R.where(spec, Obj(1, 2)) # True
 - [ ] xor
 - [x] 0.1.2 xprod
 - [x] 0.1.2 zip
-- [ ] zipObj
+- [x] zipObj
+
+It will return a dict.
+
 - [x] 0.1.2 zipWith

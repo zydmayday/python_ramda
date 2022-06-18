@@ -119,4 +119,5 @@ from .where import where
 from .xprod import xprod
 # pylint: disable=redefined-builtin
 from .zip import zip
+from .zipObj import zipObj
 from .zipWith import zipWith
