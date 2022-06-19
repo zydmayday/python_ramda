@@ -75,7 +75,7 @@ R.add(date(1,2,3), date(1,2,3)) # float('nan)
 - [ ] andThen
 - [x] 0.1.2 any
 - [ ] anyPass
-- [x] ap
+- [x] 0.3.0 ap
 - [ ] aperture
 - [x] 0.1.2 append
 - [ ] apply
@@ -88,7 +88,7 @@ R.add(date(1,2,3), date(1,2,3)) # float('nan)
 - [ ] bind
 - [ ] both
 - [ ] call
-- [x] chain
+- [x] 0.3.0 chain
 - [ ] clamp
 - [x] 0.1.2 clone
 
@@ -197,7 +197,7 @@ R.equals(float('nan'), float('nan')) # True
 - [x] 0.1.2 flip
 - [x] 0.1.4 forEach
 - [ ] forEachObjIndexed
-- [x] fromPairs
+- [x] 0.3.0 fromPairs
 - [x] 0.1.2 groupBy
 - [ ] groupWith
 - [x] 0.1.2 gt
@@ -223,7 +223,7 @@ R.equals(float('nan'), float('nan')) # True
 - [ ] invert
 - [ ] invertObj
 - [x] 0.1.2 invoker
-- [x] Is (`is` is a keyword in python)
+- [x] 0.3.0 Is (`is` is a keyword in python)
 
 This is a language specific feature.
 So we check all python built-in types as many as we can.
@@ -327,7 +327,7 @@ R.keysIn({'a': 1, 'b': 2}) # ['a', 'b']
 
 - [x] 0.1.4 last
 - [x] 0.1.2 lastIndexOf
-- [x] length
+- [x] 0.3.0 length
 
 The behavior of `length` is different from `ramda`.
 
@@ -381,7 +381,7 @@ R.length(ObjWithoutLength()) # float('nan')
 - [ ] mapAccumRight
 - [ ] mapObjIndexed
 - [x] 0.1.2 match
-- [x] mathMod
+- [x] 0.3.0 mathMod
 - [x] 0.1.2 Max (`max` is a keyword in python)
 
 If R.Max(a, b)
@@ -440,7 +440,7 @@ Python modulo on negative numbers has different behavior than JS.
 - [ ] nthArg
 - [ ] o
 - [x] 0.1.2 objOf
-- [x] of
+- [x] 0.3.0 of
 - [x] 0.1.2 omit
 
 we support both `dict` type and `object` type.
@@ -616,7 +616,7 @@ Partially supported
 - [x] 0.1.2 uniqBy
 - [x] 0.1.2 uniqWith
 - [ ] unless
-- [x] unnest
+- [x] 0.3.0 unnest
 - [ ] until
 - [ ] unwind
 - [ ] update
@@ -663,7 +663,7 @@ R.where(spec, Obj(1, 2)) # True
 - [ ] xor
 - [x] 0.1.2 xprod
 - [x] 0.1.2 zip
-- [x] zipObj
+- [x] 0.3.0 zipObj
 
 It will return a dict.
 
