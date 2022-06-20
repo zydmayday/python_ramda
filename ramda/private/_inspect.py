@@ -1,6 +1,7 @@
 
 from inspect import getfullargspec
 
+from ._has import _has
 from ._isPlaceholder import _isPlaceholder
 
 
@@ -9,6 +10,8 @@ def funcArgsLength(fn):
   Get the number of args for function fn
   Not count *args and **kwargs
   """
+  if not _has(fn, '__code__'):
+    return 0
   return fn.__code__.co_argcount
 
 

@@ -123,8 +123,8 @@ isinstance(clone, Obj) # True
 - [ ] composeWith
 - [x] 0.1.2 concat
 - [ ] cond
-- [ ] construct
-- [ ] constructN
+- [x] construct
+- [x] constructN
 - [x] 0.1.4 converge
 - [ ] count
 - [x] 0.1.2 countBy
