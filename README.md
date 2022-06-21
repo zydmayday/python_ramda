@@ -590,7 +590,26 @@ R.subtract(date(1,2,3), date(1,2,3)) # float('nan)
 - [ ] thunkify
 - [x] 0.1.4 times
 - [ ] toLower
-- [ ] toPairs
+- [x] toPairs
+
+```python
+R.toPairs({'a': 1, 'b': 2}) # [['a', 1], ['b', 2]]
+
+class A:
+  v1 = 'not included'
+  def __init__(self, v2):
+    self.v2 = v2
+
+class B(A):
+  v3 = 'not included'
+  def __init__(self, v2, v4):
+    super().__init__(v2) # this is required
+    self.v4 = v4
+
+b = B('v2', 'v4')
+R.toPairs(b) # [['v2', 'v2'], ['v4', 'v4']]
+```
+
 - [ ] toPairsIn
 - [x] 0.1.2 toString
 

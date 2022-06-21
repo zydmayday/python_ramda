@@ -106,6 +106,7 @@ from .take import take
 from .takeWhile import takeWhile
 from .tap import tap
 from .times import times
+from .toPairs import toPairs
 from .toString import toString
 from .unary import unary
 from .union import union
