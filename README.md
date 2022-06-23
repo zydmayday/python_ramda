@@ -123,8 +123,8 @@ isinstance(clone, Obj) # True
 - [ ] composeWith
 - [x] 0.1.2 concat
 - [ ] cond
-- [x] construct
-- [x] constructN
+- [x] 0.4.0 construct
+- [x] 0.4.0 constructN
 - [x] 0.1.4 converge
 - [ ] count
 - [x] 0.1.2 countBy
@@ -590,7 +590,7 @@ R.subtract(date(1,2,3), date(1,2,3)) # float('nan)
 - [ ] thunkify
 - [x] 0.1.4 times
 - [ ] toLower
-- [x] toPairs
+- [x] 0.4.0 toPairs
 
 ```python
 R.toPairs({'a': 1, 'b': 2}) # [['a', 1], ['b', 2]]
@@ -612,7 +612,7 @@ b = B('v2', 'v4')
 R.toPairs(b) # [['v2', 'v2'], ['v4', 'v4']]
 ```
 
-- [x] toPairsIn
+- [x] 0.4.0 toPairsIn
 
 ```python
 R.toPairsIn({'a': 1, 'b': 2}) # [['a', 1], ['b', 2]]
