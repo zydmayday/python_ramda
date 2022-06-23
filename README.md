@@ -427,7 +427,7 @@ Python modulo on negative numbers has different behavior than JS.
 ```
 
 ```js
-5 % -3 // 2
+5 % -3; // 2
 ```
 
 - [ ] move
@@ -600,6 +600,8 @@ class A:
   def __init__(self, v2):
     self.v2 = v2
 
+R.toPairs(A(1)) # [['v2', 1]]
+
 class B(A):
   v3 = 'not included'
   def __init__(self, v2, v4):
@@ -610,7 +612,27 @@ b = B('v2', 'v4')
 R.toPairs(b) # [['v2', 'v2'], ['v4', 'v4']]
 ```
 
-- [ ] toPairsIn
+- [x] toPairsIn
+
+```python
+R.toPairsIn({'a': 1, 'b': 2}) # [['a', 1], ['b', 2]]
+
+class A:
+  v1 = 'included'
+  def __init__(self, v2):
+    self.v2 = v2
+
+R.toPairsIn(A('v2')) # [['v1', 'included'], ['v2', 'v2']]
+
+class B(A):
+  v3 = 'included too'
+  def __init__(self, v2, v4):
+    super().__init__(v2) # this is required
+    self.v4 = v4
+
+R.toPairsIn(B('v2', 'v4')) # [['v3', 'included too'], ['v1', 'included'], ['v2', 'v2'], ['v4', 'v4']]
+```
+
 - [x] 0.1.2 toString
 
 Partially supported
