@@ -7,9 +7,6 @@ from ._xReduce import _xReduce
 
 
 class XPreservingReduced(XfBase):
-  def __init__(self, xf):
-    self.xf = xf
-
   def step(self, result, _input):
     ret = getAttribute(self.xf, '@@transducer/step')(result, _input)
     if getAttribute(ret, '@@transducer/reduced'):
@@ -19,7 +16,8 @@ class XPreservingReduced(XfBase):
 
 class XFlatCat(XfBase):
   def __init__(self, xf):
-    self.xf = XPreservingReduced(xf)
+    super().__init__(XPreservingReduced(xf))
+
 
   def step(self, result, _input):
     if not _isArrayLike(_input):

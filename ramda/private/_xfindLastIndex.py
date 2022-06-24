@@ -4,7 +4,7 @@ from ._xfBase import XfBase
 
 class XFindLastIndex(XfBase):
   def __init__(self, f, xf):
-    self.xf = xf
+    super().__init__(xf)
     self.f = f
     self.idx = -1
     self.lastIdx = -1

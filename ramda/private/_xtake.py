@@ -5,7 +5,7 @@ from ._xfBase import XfBase
 
 class XTake(XfBase):
   def __init__(self, n, xf):
-    self.xf = xf
+    super().__init__(xf)
     self.n = n
     self.i = 0
 

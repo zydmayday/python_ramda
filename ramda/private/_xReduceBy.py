@@ -6,10 +6,10 @@ from ._xfBase import XfBase
 
 class XReduceBy(XfBase):
   def __init__(self, valueFn, valueAcc, keyFn, xf):
+    super().__init__(xf)
     self.valueFn = valueFn
     self.valueAcc = valueAcc
     self.keyFn = keyFn
-    self.xf = xf
     self.inputs = {}
 
   def result(self, result):

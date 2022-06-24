@@ -21,8 +21,7 @@ _stepCatString = {
 
 _stepCatDict = {
     '@@transducer/init': dict,
-    # use Python 3.9 feature
-    '@@transducer/step': lambda result, input: result | (objOf(input[0], input[1]) if _isArrayLike(input) else input),
+    '@@transducer/step': lambda result, input: {**result, **(objOf(input[0], input[1]) if _isArrayLike(input) else input)},
     '@@transducer/result': _identity
 }
 

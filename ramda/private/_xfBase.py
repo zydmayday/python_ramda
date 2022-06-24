@@ -7,7 +7,7 @@ class XfBase:
   For extracting the common part to deal with transducer related logic.
   """
 
-  def _init_(self, xf):
+  def __init__(self, xf):
     self.xf = xf
 
   def init(self):
@@ -17,7 +17,7 @@ class XfBase:
     return getAttribute(self.xf, '@@transducer/result')(result)
 
   def step(self, result, _input):
-    raise Exception('Child class should implement this')
+    pass
 
   def get(self, name, default=None):
     if name == '@@transducer/init':
