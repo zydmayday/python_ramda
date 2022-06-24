@@ -21,7 +21,7 @@ setup(
     # eg: 1.0.0, 1.0.1, 3.0.2, 5.0-beta, etc.
     # You CANNOT upload two versions of your package with the same version number
     # This field is REQUIRED
-    version="0.4.0",
+    version="0.4.1",
 
     # The packages that constitute your project.
     # For my project, I have only one - "pydash".
@@ -67,7 +67,12 @@ setup(
     classifiers=[
         "License :: OSI Approved :: MIT License",
         "Intended Audience :: Developers",
-        "Programming Language :: Python :: 3.9"
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10"
     ],
 
     # Keywords are tags that identify your project and help searching for it
