@@ -5,7 +5,7 @@ from ._xfBase import XfBase
 
 class XUniqWith(XfBase):
   def __init__(self, pred, xf):
-    self.xf = xf
+    super().__init__(xf)
     self.pred = pred
     self.items = []
 

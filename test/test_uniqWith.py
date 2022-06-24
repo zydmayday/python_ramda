@@ -3,6 +3,8 @@ import unittest
 
 import ramda as R
 
+from .helpers.listXf import listXfPushData
+
 """
 https://github.com/ramda/ramda/blob/master/test/uniqWith.js
 """
@@ -37,6 +39,11 @@ class TestUniqWith(unittest.TestCase):
     expected = [1, 2]
     # TODO: eqBy
     # TODO: transduce
+
+  def test_uniqWith_xf(self):
+    uniqWithXf = R.uniqWith(lambda x, y: x % 2 == y % 2, listXfPushData)
+    res = R.reduce(uniqWithXf, [], [1, 2, 3, 4, 5])
+    self.assertEqual([1, 2], res)
 
 
 if __name__ == '__main__':

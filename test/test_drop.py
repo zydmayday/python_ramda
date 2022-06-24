@@ -2,6 +2,8 @@ import unittest
 
 import ramda as R
 
+from .helpers.listXf import listXfPushData
+
 """
 https://github.com/ramda/ramda/blob/master/test/drop.js
 """
@@ -28,6 +30,11 @@ class TestDrop(unittest.TestCase):
     self.assertEqual('a', R.drop(4, 'Ramda'))
     self.assertEqual('', R.drop(5, 'Ramda'))
     self.assertEqual('', R.drop(6, 'Ramda'))
+
+  def test_drop_xf(self):
+    dropXf = R.drop(2, listXfPushData)
+    res = R.reduce(dropXf, [], [1, 2, 3, 4, 5])
+    self.assertEqual([3, 4, 5], res)
 
 
 if __name__ == '__main__':

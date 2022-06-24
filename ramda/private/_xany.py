@@ -5,7 +5,7 @@ from ._xfBase import XfBase
 
 class XAny(XfBase):
   def __init__(self, f, xf):
-    self.xf = xf
+    super().__init__(xf)
     self.f = f
     self.any = False
 
