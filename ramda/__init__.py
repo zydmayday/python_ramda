@@ -13,6 +13,7 @@ from .clone import clone
 from .comparator import comparator
 from .compose import compose
 from .concat import concat
+from .cond import cond
 from .construct import construct
 from .constructN import constructN
 from .converge import converge
