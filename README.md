@@ -122,7 +122,38 @@ isinstance(clone, Obj) # True
 - [x] 0.1.2 compose
 - [ ] composeWith
 - [x] 0.1.2 concat
-- [ ] cond
+- [x] cond
+
+Please notice the number of given arguments should match functions.
+Otherwise Python will complain about the mis-matching arguments.
+
+For example:
+
+```python
+fn = R.cond([
+  [lambda a: a == 1, lambda a: f'a == {a}'],
+  [lambda a, b: a == b, lambda a, b: f'{a} == {b}']
+])
+fn(1) # a == 1
+fn(2, 2) # 2 == 2
+
+fn(2) # Throw error, because b is not provided for prediction, failed when (lambda a, b: a == b)(2), missing argument b
+# to solve above issue, you should try your best to provide enough arguments
+
+fn(1, 2) # Throw error, because (lambda(a: f'a == {a}'))(1, 2) has extra arguments 2
+# To solve above issue, always use sencond function with enough arguments
+# Try create cond like below.
+fn = R.cond([
+  [lambda a: a == 1, lambda a, _: f'a == {a}'], # ignore b
+  [lambda a, b: a == b, lambda a, b: f'{a} == {b}']
+])
+
+fn = R.cond([
+  [lambda a: a == 1, lambda a, *args: f'a == {a}'], # ignore any arguments
+  [lambda a, b: a == b, lambda a, b: f'{a} == {b}']
+])
+```
+
 - [x] 0.4.0 construct
 - [x] 0.4.0 constructN
 - [x] 0.1.4 converge
