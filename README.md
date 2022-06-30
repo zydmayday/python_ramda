@@ -162,7 +162,7 @@ fn = R.cond([
 - [x] 0.1.2 curry
 - [x] 0.1.2 curryN
 - [ ] dec
-- [ ] defaultTo
+- [x] defaultTo
 - [ ] descend
 - [x] 0.1.2 difference
 - [x] 0.1.2 differenceWith

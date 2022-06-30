@@ -20,6 +20,7 @@ from .converge import converge
 from .countBy import countBy
 from .curry import curry
 from .curryN import curryN
+from .defaultTo import defaultTo
 from .difference import difference
 from .differenceWith import differenceWith
 from .divide import divide
