@@ -675,7 +675,7 @@ Partially supported
 - [ ] transduce
 - [ ] transpose
 - [ ] traverse
-- [ ] trim
+- [x] trim
 - [ ] tryCatch
 - [ ] type
 - [ ] unapply
