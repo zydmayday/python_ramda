@@ -566,7 +566,7 @@ R.propEq(1, 'v1', {'v1': 1}) # True
 ```
 
 - [ ] propIs
-- [ ] propOr
+- [x] propOr
 - [x] 0.1.2 props
 - [ ] propSatisfies
 - [x] 0.1.2 range
