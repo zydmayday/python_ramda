@@ -34,8 +34,7 @@ class TestLastIndexOf(unittest.TestCase):
     self.assertEqual(-1, R.lastIndexOf('x', []))
 
   def test_has_R_equals_semantics(self):
-    # TODO: ignore neg-zero and pos-zero check for now, due to simlicity
-    # self.assertEqual(-1, R.lastIndexOf(0, [-0]))
+    self.assertEqual(-1, R.lastIndexOf(0.0, [-0.0]))
     self.assertEqual(0, R.lastIndexOf(float('nan'), [float('nan')]))
     self.assertEqual(0, R.lastIndexOf(Just([42]), [Just([42])]))
 

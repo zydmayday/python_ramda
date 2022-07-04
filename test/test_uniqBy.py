@@ -20,8 +20,7 @@ class TestUniqBy(unittest.TestCase):
     self.assertEqual([], R.uniqBy(R.identity, []))
 
   def test_has_R_equals_semantics(self):
-    # TODO: ignore neg-zero and pos-zero check for now, due to simlicity
-    # self.assertEqual(2, len(R.uniqBy([0], [-0])))
+    self.assertEqual(2, len(R.uniqBy(R.identity, [0.0, -0.0])))
     self.assertEqual(1, len(R.uniqBy(R.identity, [float('nan'), float('nan')])))
     self.assertEqual(1, len(R.uniqBy(R.identity, [Just([1, 2, 3]), Just([1, 2, 3])])))
 

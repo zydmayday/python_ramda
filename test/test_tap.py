@@ -46,7 +46,6 @@ class TestTap(unittest.TestCase):
     appendToSideEffect = appendToList(sideEffect)
 
     res = R.tap(appendToSideEffect, listXf)
-    print(res)
     self.assertEqual(appendToSideEffect, res.f)
     self.assertEqual(listXf, res.xf)
 

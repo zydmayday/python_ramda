@@ -15,7 +15,8 @@ dict2 = {'name': 'Fred', 'age': 12, 'hair': 'brown'}
 
 class TestPropEq(unittest.TestCase):
   def test_has_R_equals_semantics(self):
-    # TODO: handle minus zero
+    self.assertEqual(False, R.propEq(0.0, 'value', {'value': -0.0}))
+    self.assertEqual(False, R.propEq(-0.0, 'value', {'value': 0.0}))
     self.assertEqual(True, R.propEq(float('nan'), 'value', {'value': float('nan')}))
     self.assertEqual(True, R.propEq(Just([42]), 'value', {'value': Just([42])}))
 

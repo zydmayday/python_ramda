@@ -13,7 +13,6 @@ def inner_uniqBy(fn, arr):
     item = arr[idx]
     appliedItem = fn(item)
     if _set.add(appliedItem):
-      print(appliedItem, _set)
       result.append(item)
     idx += 1
   return result

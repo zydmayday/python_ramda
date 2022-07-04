@@ -18,7 +18,9 @@ class TestToString(unittest.TestCase):
 
   def test_returns_the_string_representation_of_a_number_primitive(self):
     self.assertEqual('0', R.toString(0))
-    # TODO: -0
+    self.assertEqual('0', R.toString(-0))
+    self.assertEqual('0.0', R.toString(0.0))
+    self.assertEqual('-0.0', R.toString(-0.0))
     self.assertEqual('1.23', R.toString(1.23))
     self.assertEqual('-1.23', R.toString(-1.23))
     self.assertEqual('1e+23', R.toString(1e+23))

@@ -12,7 +12,6 @@ https://github.com/ramda/ramda/blob/master/test/constructN.js
 
 class Circle:
   def __init__(self, r, *args):
-    print(args)
     self.r = r
     self.colors = list(args)
 

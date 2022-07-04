@@ -193,10 +193,6 @@ class TestEquals(unittest.TestCase):
     self.assertEqual(False, R.equals(Point(1, 2), ColorPoint(1, 2, 'red')))
     self.assertEqual(False, R.equals(ColorPoint(1, 2, 'red'), Point(1, 2)))
 
-  def test_clone(self):
-    pass
-    #TODO: clone
-
   def test_nan(self):
     self.assertEqual(True, R.equals(float('nan'), float('nan')))
 
