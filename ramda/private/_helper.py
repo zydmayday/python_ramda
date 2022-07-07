@@ -1,4 +1,6 @@
 
+import math
+
 from ._has import _has
 from ._isArrayLike import _isArrayLike
 
@@ -76,3 +78,7 @@ def safeLen(x):
   if _isArrayLike(x):
     return len(x)
   return 0
+
+
+def isNegativeFloatZero(n):
+  return n == 0 and math.atan2(0.0, 0.0) != math.atan2(0.0, n)

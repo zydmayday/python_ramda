@@ -24,8 +24,7 @@ class TestDifference(unittest.TestCase):
     self.assertEqual([1, 2], R.difference(M2, N2))
 
   def test_has_R_equals_semantics(self):
-    # TODO: ignore neg-zero and pos-zero check for now, due to simlicity
-    # self.assertEqual(1, len(R.difference([0], [-0])))
+    self.assertEqual(1, len(R.difference([0.0], [-0.0])))
     self.assertEqual(0, len(R.difference([float('nan')], [float('nan')])))
     self.assertEqual(0, len(R.difference([Just([42])], [Just([42])])))
 

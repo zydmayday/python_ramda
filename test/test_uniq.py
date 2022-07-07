@@ -20,8 +20,8 @@ class TestUniq(unittest.TestCase):
     self.assertEqual([], R.uniq([]))
 
   def test_has_R_equals_semantics(self):
-    # TODO: ignore neg-zero and pos-zero check for now, due to simlicity
-    # self.assertEqual(2, len(R.uniq([0], [-0])))
+    self.assertEqual(1, len(R.uniq([-0.0, -0.0])))
+    self.assertEqual(2, len(R.uniq([0.0, -0.0])))
     self.assertEqual(1, len(R.uniq([float('nan'), float('nan')])))
     # self.assertEqual(1, len(R.uniq([[1], [1]]))) # python only support hashable obj
     self.assertEqual(1, len(R.uniq([Just([42]), Just([42])])))

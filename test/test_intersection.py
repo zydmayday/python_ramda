@@ -28,7 +28,8 @@ class TestIntersection(unittest.TestCase):
     self.assertEqual([3, 4], R.intersection(M, N2))
 
   def test_has_R_equals_semantics(self):
-    # TODO: ignore neg-zero and pos-zero check for now, due to simplicity
+    self.assertEqual(0, len(R.intersection([0.0], [-0.0])))
+    self.assertEqual(0, len(R.intersection([-0.0], [0.0])))
     self.assertEqual(1, len(R.intersection([float('nan')], [float('nan')])))
     self.assertEqual(1, len(R.intersection([Just([42])], [Just([42])])))
 
