@@ -292,7 +292,11 @@ R.isEmpty(Obj()) # False
 R.isEmpty(None) # False
 ```
 
-- [ ] isNil
+- [x] isNil
+
+We keep the same method name as ramda,
+this is for checking if the given value is None or not.
+
 - [x] 0.1.2 join
 - [x] 0.1.4 juxt
 - [x] 0.1.2 keys
