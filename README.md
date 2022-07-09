@@ -122,7 +122,7 @@ isinstance(clone, Obj) # True
 - [x] 0.1.2 compose
 - [ ] composeWith
 - [x] 0.1.2 concat
-- [x] cond
+- [x] 0.6.0 cond
 
 Please notice the number of given arguments should match functions.
 Otherwise Python will complain about the mis-matching arguments.
@@ -162,7 +162,7 @@ fn = R.cond([
 - [x] 0.1.2 curry
 - [x] 0.1.2 curryN
 - [ ] dec
-- [x] defaultTo
+- [x] 0.6.0 defaultTo
 - [ ] descend
 - [x] 0.1.2 difference
 - [x] 0.1.2 differenceWith
@@ -566,7 +566,7 @@ R.propEq(1, 'v1', {'v1': 1}) # True
 ```
 
 - [ ] propIs
-- [x] propOr
+- [x] 0.6.0 propOr
 - [x] 0.1.2 props
 - [ ] propSatisfies
 - [x] 0.1.2 range
@@ -675,7 +675,7 @@ Partially supported
 - [ ] transduce
 - [ ] transpose
 - [ ] traverse
-- [x] trim
+- [x] 0.6.0 trim
 - [ ] tryCatch
 - [ ] type
 - [ ] unapply
