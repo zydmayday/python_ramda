@@ -50,6 +50,7 @@ from .into import into
 from .invoker import invoker
 from .Is import Is
 from .isEmpty import isEmpty
+from .isNil import isNil
 from .join import join
 from .juxt import juxt
 from .keys import keys
