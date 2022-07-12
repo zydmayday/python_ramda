@@ -235,7 +235,43 @@ R.equals(float('nan'), float('nan')) # True
 - [x] 0.1.2 gte
 - [ ] has
 - [ ] hasIn
-- [ ] hasPath
+- [x] hasPath
+
+Support both dict and object.
+
+```python
+class Obj:
+  def __init__(self, v):
+    self.v = v
+obj = Obj(1)
+
+R.hasPath(['v'], obj) # True
+R.hasPath(['v', 'child'], obj) # False
+
+R.hasPath(['v'], {'v': 1}) # True
+R.hasPath(['v', 'child'], {'v': 1}) # False
+
+# Also support static variable
+class Obj:
+  v = 1
+obj = Obj()
+R.hasPath(['v'], obj) # True
+
+# Also support inherited variable
+class Parent:
+  def __init__(self, a):
+    self.a = a
+class Child(Parent):
+  def __init__(self, a,b):
+    super().__init__(a)
+    self.b = b
+child = Child(1, 2)
+R.hasPath(['a'], child) # True
+R.hasPath(['b'], child) # True
+```
+
+````
+
 - [x] 0.1.2 head
 - [ ] identical
 - [x] 0.1.2 identity
@@ -280,7 +316,7 @@ R.Is(Parent, Parent()) # True
 R.Is(Parent, Child()) # True
 R.Is(Child, Child()) # True
 R.Is(Child, Parent()) # False
-```
+````
 
 - [x] 0.1.2 isEmpty
 
