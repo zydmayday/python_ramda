@@ -58,6 +58,7 @@ from .keysIn import keysIn
 from .last import last
 from .lastIndexOf import lastIndexOf
 from .length import length
+from .liftN import liftN
 from .lt import lt
 from .lte import lte
 from .map import map

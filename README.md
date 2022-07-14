@@ -408,7 +408,7 @@ R.length(ObjWithoutLength()) # float('nan')
 - [ ] lensPath
 - [ ] lensProp
 - [ ] lift
-- [ ] liftN
+- [x] liftN
 - [x] 0.1.2 lt
 - [x] 0.1.2 lte
 - [x] 0.1.2 map
