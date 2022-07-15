@@ -7,6 +7,7 @@ from .And import And
 from .any import any
 from .ap import ap
 from .append import append
+from .apply import apply
 from .binary import binary
 from .chain import chain
 from .clone import clone

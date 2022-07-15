@@ -78,7 +78,7 @@ R.add(date(1,2,3), date(1,2,3)) # float('nan)
 - [x] 0.3.0 ap
 - [ ] aperture
 - [x] 0.1.2 append
-- [ ] apply
+- [x] apply
 - [ ] applySpec
 - [ ] applyTo
 - [ ] ascend
