@@ -234,7 +234,20 @@ R.equals(float('nan'), float('nan')) # True
 - [x] 0.1.2 gt
 - [x] 0.1.2 gte
 - [ ] has
-- [ ] hasIn
+- [x] hasIn
+
+works for both dict and object
+
+```python
+class Obj:
+  def __init__(self, v):
+    self.v = v
+
+obj1 = Obj(1)
+R.hasIn('v', obj1) # True
+R.hasIn('v', {'v': 1}) # True
+```
+
 - [x] hasPath
 
 Support both dict and object.
@@ -269,8 +282,6 @@ child = Child(1, 2)
 R.hasPath(['a'], child) # True
 R.hasPath(['b'], child) # True
 ```
-
-````
 
 - [x] 0.1.2 head
 - [ ] identical
