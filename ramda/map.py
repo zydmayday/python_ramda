@@ -6,6 +6,7 @@ from .private._curry2 import _curry2
 from .private._dispatchable import _dispatchable
 from .private._has import _has
 from .private._inspect import funcArgsLength
+from .private._isArrayLike import _isArrayLike
 from .private._isFunction import _isFunction
 from .private._map import _map
 from .private._reduce import _reduce
@@ -29,7 +30,7 @@ def inner_map(fn, functor):
     raise Exception('Can not work with None')
   if _isFunction(functor):
     return curryN(funcArgsLength(functor), lambda *arguments: fn(functor(*arguments)))
-  if isinstance(functor, (list, tuple)):
+  if _isArrayLike(functor):
     return _map(fn, functor)
   return _reduce(inner_reduce, {} if isinstance(functor, dict) or _has(functor, 'get') else copy.deepcopy(functor), keys(functor))
 

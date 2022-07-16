@@ -4,6 +4,7 @@ import math
 from ._has import _has
 from ._isArrayLike import _isArrayLike
 from ._isInteger import _isInteger
+from ._isNumber import _isNumber
 
 
 def toNumber(a):
@@ -11,7 +12,7 @@ def toNumber(a):
   Convert any input a to a number type
   if can not convert, then return nan
   """
-  if isinstance(a, (int, float)):
+  if _isNumber(a):
     return a
   try:
     return int(a)
