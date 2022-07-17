@@ -42,6 +42,7 @@ from .fromPairs import fromPairs
 from .groupBy import groupBy
 from .gt import gt
 from .gte import gte
+from .hasPath import hasPath
 from .head import head
 from .identity import identity
 from .indexOf import indexOf

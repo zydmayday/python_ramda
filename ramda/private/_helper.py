@@ -3,6 +3,7 @@ import math
 
 from ._has import _has
 from ._isArrayLike import _isArrayLike
+from ._isInteger import _isInteger
 
 
 def toNumber(a):
@@ -58,6 +59,8 @@ def getAttribute(v, key):
   return: function got from key, otherwise None
   """
   if isinstance(v, dict) and key in v:
+    return v[key]
+  if _isArrayLike(v) and _isInteger(key):
     return v[key]
   if _has(v, key):
     return getattr(v, key, None)
