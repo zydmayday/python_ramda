@@ -45,6 +45,11 @@ class TestKeys(unittest.TestCase):
     self.assertEqual([], R.keys([]))
     self.assertEqual([], R.keys({}))
 
+  def test_works_with_methods_properties(self):
+    self.assertEqual(['foo'], R.keys({'foo': lambda x: x}))
+
+    # keys does not work with methods in object
+
 
 if __name__ == '__main__':
   unittest.main()
