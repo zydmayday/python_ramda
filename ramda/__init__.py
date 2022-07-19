@@ -60,6 +60,7 @@ from .keysIn import keysIn
 from .last import last
 from .lastIndexOf import lastIndexOf
 from .length import length
+from .lift import lift
 from .liftN import liftN
 from .lt import lt
 from .lte import lte
