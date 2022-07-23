@@ -1,6 +1,7 @@
 from ..objOf import objOf
 from ._identity import _identity
 from ._isArrayLike import _isArrayLike
+from ._isString import _isString
 from ._isTransformer import _isTransformer
 
 
@@ -33,7 +34,7 @@ def _stepCat(obj):
     return obj
   if _isArrayLike(obj):
     return _stepCatArray
-  if isinstance(obj, str):
+  if _isString(obj):
     return _stepCatString
   if isinstance(obj, dict):
     return _stepCatDict
