@@ -101,6 +101,7 @@ from .reduceRight import reduceRight
 from .reject import reject
 from .remove import remove
 from .repeat import repeat
+from .replace import replace
 from .reverse import reverse
 from .slice import slice
 from .sort import sort
