@@ -8,6 +8,7 @@ from .any import any
 from .ap import ap
 from .append import append
 from .apply import apply
+from .assocPath import assocPath
 from .binary import binary
 from .chain import chain
 from .clone import clone

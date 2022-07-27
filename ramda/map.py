@@ -1,7 +1,6 @@
-import copy
-
 from .curryN import curryN
 from .keys import keys
+from .private._clone import _clone
 from .private._curry2 import _curry2
 from .private._dispatchable import _dispatchable
 from .private._has import _has
@@ -32,7 +31,7 @@ def inner_map(fn, functor):
     return curryN(funcArgsLength(functor), lambda *arguments: fn(functor(*arguments)))
   if _isArrayLike(functor):
     return _map(fn, functor)
-  return _reduce(inner_reduce, {} if isinstance(functor, dict) or _has(functor, 'get') else copy.deepcopy(functor), keys(functor))
+  return _reduce(inner_reduce, {} if isinstance(functor, dict) or _has(functor, 'get') else _clone(functor), keys(functor))
 
 
 # pylint: disable=redefined-builtin

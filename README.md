@@ -83,7 +83,10 @@ R.add(date(1,2,3), date(1,2,3)) # float('nan)
 - [ ] applyTo
 - [ ] ascend
 - [ ] assoc
-- [ ] assocPath
+- [x] assocPath
+
+Currently, we only support list and dict type.
+
 - [x] 0.2.0 binary
 - [ ] bind
 - [ ] both
