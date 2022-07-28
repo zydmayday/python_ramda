@@ -81,6 +81,7 @@ from .once import once
 from .Or import Or
 from .partition import partition
 from .path import path
+from .pathEq import pathEq
 from .paths import paths
 from .pick import pick
 from .pickAll import pickAll
