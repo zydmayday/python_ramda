@@ -46,6 +46,10 @@ class Test_HasOwn(unittest.TestCase):
     self.assertEqual(False, _hasOwn(obj, 'foo'))
     self.assertEqual(False, _hasOwn(obj, 'bar'))
 
+  def test_if_key_is_none(self):
+    self.assertEqual(True, _hasOwn({None: False}, None))
+    self.assertEqual(False, _hasOwn({'None': True}, None))
+
 
 if __name__ == '__main__':
   unittest.main()
