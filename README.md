@@ -233,13 +233,19 @@ R.equals(float('nan'), float('nan')) # True
 - [ ] groupWith
 - [x] 0.1.2 gt
 - [x] 0.1.2 gte
-- [ ] has
+- [x] has
+
+Similar to `hasPath`.
+
 - [ ] hasIn
 - [x] hasPath
 
 Support both dict and object.
 
 ```python
+
+R.hasPath(['a', 'b'], {'a': {'b': 42}}) # True
+
 class Obj:
   def __init__(self, v):
     self.v = v
@@ -251,11 +257,11 @@ R.hasPath(['v', 'child'], obj) # False
 R.hasPath(['v'], {'v': 1}) # True
 R.hasPath(['v', 'child'], {'v': 1}) # False
 
-# Also support static variable
+# Does not include static variable
 class Obj:
   v = 1
 obj = Obj()
-R.hasPath(['v'], obj) # True
+R.hasPath(['v'], obj) # False
 
 # Also support inherited variable
 class Parent:
@@ -269,8 +275,6 @@ child = Child(1, 2)
 R.hasPath(['a'], child) # True
 R.hasPath(['b'], child) # True
 ```
-
-````
 
 - [x] 0.1.2 head
 - [ ] identical
@@ -337,6 +341,8 @@ this is for checking if the given value is None or not.
 - [x] 0.1.4 juxt
 - [x] 0.1.2 keys
 
+For object, `keys` does not return object's methods.
+
 ```python
 # When using R.keys(obj) and obj is a class instance, we use obj.__dict__ as keys.
 class A:
@@ -375,6 +381,8 @@ R.keys({'a': 1, 'b': 2}) # ['a', 'b']
 ```
 
 - [x] 0.2.0 keysIn
+
+For object, `keysIn` does not return object's methods.
 
 Different from `keys`, `keysIn` will return all attributes of the object, including super class attributes and class static variables.
 

@@ -85,7 +85,7 @@ class TestHasPathForObject(unittest.TestCase):
     class A:
       static_a = 'static a'
     a = A()
-    self.assertEqual(True, R.hasPath(['static_a'], a))
+    self.assertEqual(False, R.hasPath(['static_a'], a))
 
   def test_inherited_variables(self):
     class Parent:
