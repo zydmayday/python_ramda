@@ -43,8 +43,8 @@ from .groupBy import groupBy
 from .gt import gt
 from .gte import gte
 from .has import has
-from .hasPath import hasPath
 from .hasIn import hasIn
+from .hasPath import hasPath
 from .head import head
 from .identity import identity
 from .indexOf import indexOf
