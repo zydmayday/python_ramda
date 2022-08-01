@@ -78,7 +78,7 @@ R.add(date(1,2,3), date(1,2,3)) # float('nan)
 - [x] 0.3.0 ap
 - [ ] aperture
 - [x] 0.1.2 append
-- [x] apply
+- [x] 0.7.0 apply
 - [ ] applySpec
 - [ ] applyTo
 - [ ] ascend
@@ -233,11 +233,11 @@ R.equals(float('nan'), float('nan')) # True
 - [ ] groupWith
 - [x] 0.1.2 gt
 - [x] 0.1.2 gte
-- [x] has
+- [x] 0.7.0 has
 
 Similar to `hasPath`.
 
-- [x] hasIn
+- [x] 0.7.0 hasIn
 
 works for both dict and object
 
@@ -463,8 +463,8 @@ R.length(ObjWithoutLength()) # float('nan')
 - [ ] lensIndex
 - [ ] lensPath
 - [ ] lensProp
-- [x] lift
-- [x] liftN
+- [x] 0.7.0 lift
+- [x] 0.7.0 liftN
 - [x] 0.1.2 lt
 - [x] 0.1.2 lte
 - [x] 0.1.2 map
@@ -557,7 +557,7 @@ R.omit(['v1', 'v3'], obj) # {'v2': 2}
 - [ ] partialRight
 - [x] 0.1.4 partition
 - [x] 0.1.2 path
-- [x] pathEq
+- [x] 0.7.0 pathEq
 - [ ] pathOr
 - [x] 0.1.2 paths
 - [ ] pathSatisfies
@@ -638,7 +638,7 @@ R.propEq(1, 'v1', {'v1': 1}) # True
 - [x] 0.1.2 reject
 - [x] 0.2.2 remove
 - [x] 0.1.4 repeat
-- [x] replace
+- [x] 0.7.0 replace
 - [x] 0.1.2 reverse
 - [ ] scan
 - [ ] sequence
