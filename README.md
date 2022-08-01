@@ -237,9 +237,21 @@ R.equals(float('nan'), float('nan')) # True
 
 Similar to `hasPath`.
 
-- [ ] hasIn
-- [x] hasPath
+- [x] hasIn
 
+works for both dict and object
+
+```python
+class Obj:
+  def __init__(self, v):
+    self.v = v
+
+obj1 = Obj(1)
+R.hasIn('v', obj1) # True
+R.hasIn('v', {'v': 1}) # True
+```
+
+- [x] hasPath
 Support both dict and object.
 
 ```python
