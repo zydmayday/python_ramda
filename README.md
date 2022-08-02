@@ -291,7 +291,7 @@ R.hasPath(['b'], child) # True
 - [x] 0.1.2 head
 - [ ] identical
 - [x] 0.1.2 identity
-- [ ] ifElse
+- [x] ifElse
 - [ ] inc
 - [ ] includes
 - [ ] indexBy

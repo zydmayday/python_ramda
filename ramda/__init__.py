@@ -47,6 +47,7 @@ from .hasIn import hasIn
 from .hasPath import hasPath
 from .head import head
 from .identity import identity
+from .ifElse import ifElse
 from .indexOf import indexOf
 from .insert import insert
 from .intersection import intersection
