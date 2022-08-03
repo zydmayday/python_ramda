@@ -16,12 +16,8 @@ setup(
     name="python_ramda",
 
     # The version of your project.
-    # Usually, it would be in the form of:
-    # major.minor.patch
-    # eg: 1.0.0, 1.0.1, 3.0.2, 5.0-beta, etc.
-    # You CANNOT upload two versions of your package with the same version number
     # This field is REQUIRED
-    version="0.6.0",
+    version="0.7.0",
 
     # The packages that constitute your project.
     # For my project, I have only one - "pydash".
