@@ -38,8 +38,16 @@ class TestAssocPath(unittest.TestCase):
   def test_replaces_None_with_a_new_object(self):
     self.assertEqual({'foo': {'bar': {'baz': 42}}}, R.assocPath(['foo', 'bar', 'baz'], 42, {'foo': None}))
 
+  def test_assoc_with_numeric_index(self):
+    self.assertEqual(['a'], R.assocPath([0], 'a', []))
+    self.assertEqual([['a']], R.assocPath([0, 0], 'a', []))
+    self.assertEqual([[None, 'a']], R.assocPath([0, 1], 'a', []))
+
+    self.assertEqual({0: 'a'}, R.assocPath([0], 'a', {}))
+    self.assertEqual({0: ['a']}, R.assocPath([0, 0], 'a', {}))
+
   def test_throws_exception_if_3rd_argument_is_not_array_nor_object(self):
-    with self.assertRaises(Exception):
+    with self.assertRaises(Exception, msg='We only support dict or array for assoc'):
       R.assocPath([1, 2, 3], 42, 'str')
 
 
