@@ -38,6 +38,10 @@ class TestAssocPath(unittest.TestCase):
   def test_replaces_None_with_a_new_object(self):
     self.assertEqual({'foo': {'bar': {'baz': 42}}}, R.assocPath(['foo', 'bar', 'baz'], 42, {'foo': None}))
 
+  def test_throws_exception_if_3rd_argument_is_not_array_nor_object(self):
+    with self.assertRaises(Exception):
+      R.assocPath([1, 2, 3], 42, 'str')
+
 
 if __name__ == '__main__':
   unittest.main()
