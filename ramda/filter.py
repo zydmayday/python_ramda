@@ -1,6 +1,5 @@
-import copy
-
 from .keys import keys
+from .private._clone import _clone
 from .private._curry2 import _curry2
 from .private._dispatchable import _dispatchable
 from .private._filter import _filter
@@ -28,7 +27,7 @@ def inner_filter(pred, filterable):
       # so we delete attr from original object if not match
       delattr(acc, key)
     return acc
-  return _reduce(inner_reduce, {} if isinstance(filterable, dict) or _has(filterable, 'get') else copy.deepcopy(filterable), keys(filterable))
+  return _reduce(inner_reduce, {} if isinstance(filterable, dict) or _has(filterable, 'get') else _clone(filterable), keys(filterable))
 
 
 # pylint: disable=redefined-builtin
