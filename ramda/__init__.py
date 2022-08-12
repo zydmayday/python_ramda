@@ -65,6 +65,8 @@ from .keysIn import keysIn
 from .last import last
 from .lastIndexOf import lastIndexOf
 from .length import length
+from .lens import lens
+from .lensPath import lensPath
 from .lift import lift
 from .liftN import liftN
 from .lt import lt
@@ -135,6 +137,7 @@ from .unnest import unnest
 from .useWith import useWith
 from .values import values
 from .valuesIn import valuesIn
+from .view import view
 from .where import where
 from .xprod import xprod
 # pylint: disable=redefined-builtin
