@@ -50,6 +50,7 @@ from .hasPath import hasPath
 from .head import head
 from .identity import identity
 from .ifElse import ifElse
+from .inc import inc
 from .indexOf import indexOf
 from .insert import insert
 from .intersection import intersection
@@ -86,6 +87,7 @@ from .of import of
 from .omit import omit
 from .once import once
 from .Or import Or
+from .over import over
 from .partition import partition
 from .path import path
 from .pathEq import pathEq
@@ -111,6 +113,8 @@ from .remove import remove
 from .repeat import repeat
 from .replace import replace
 from .reverse import reverse
+# pylint: disable=redefined-builtin
+from .set import set
 from .slice import slice
 from .sort import sort
 from .sortBy import sortBy
