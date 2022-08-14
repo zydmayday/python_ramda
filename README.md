@@ -298,7 +298,7 @@ R.hasPath(['b'], child) # True
 - [ ] identical
 - [x] 0.1.2 identity
 - [x] ifElse
-- [ ] inc
+- [x] inc
 - [ ] includes
 - [ ] indexBy
 - [x] 0.1.2 indexOf
@@ -465,10 +465,10 @@ class ObjWithoutLength:
 R.length(ObjWithoutLength()) # float('nan')
 ```
 
-- [ ] lens
+- [x] lens
 - [ ] lensIndex
-- [ ] lensPath
-- [ ] lensProp
+- [x] lensPath
+- [x] lensProp
 - [x] 0.7.0 lift
 - [x] 0.7.0 liftN
 - [x] 0.1.2 lt
@@ -556,7 +556,7 @@ R.omit(['v1', 'v3'], obj) # {'v2': 2}
 - [x] 0.1.2 once
 - [x] 0.1.2 or
 - [ ] otherwise
-- [ ] over
+- [x] over
 - [ ] pair
 - [ ] partial
 - [ ] partialObject
@@ -648,7 +648,7 @@ R.propEq(1, 'v1', {'v1': 1}) # True
 - [x] 0.1.2 reverse
 - [ ] scan
 - [ ] sequence
-- [ ] set
+- [x] set
 - [x] 0.1.2 slice
 
 ```python
@@ -776,7 +776,7 @@ R.values({'a': 1, 'b': 2}) # [1, 2]
 
 Use `R.keysIn` to get the keys of an object.
 
-- [ ] view
+- [x] view
 - [ ] when
 - [x] 0.1.4 where
 

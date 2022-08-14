@@ -68,6 +68,7 @@ from .lastIndexOf import lastIndexOf
 from .length import length
 from .lens import lens
 from .lensPath import lensPath
+from .lensProp import lensProp
 from .lift import lift
 from .liftN import liftN
 from .lt import lt
