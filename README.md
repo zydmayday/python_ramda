@@ -466,7 +466,7 @@ R.length(ObjWithoutLength()) # float('nan')
 ```
 
 - [x] lens
-- [ ] lensIndex
+- [x] lensIndex
 - [x] lensPath
 - [x] lensProp
 - [x] 0.7.0 lift
@@ -757,7 +757,7 @@ Partially supported
 - [x] 0.3.0 unnest
 - [ ] until
 - [ ] unwind
-- [ ] update
+- [x] update
 - [x] 0.1.2 useWith
 - [x] 0.1.2 values
 

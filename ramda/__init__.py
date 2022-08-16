@@ -67,6 +67,7 @@ from .last import last
 from .lastIndexOf import lastIndexOf
 from .length import length
 from .lens import lens
+from .lensIndex import lensIndex
 from .lensPath import lensPath
 from .lensProp import lensProp
 from .lift import lift
@@ -139,6 +140,7 @@ from .uniq import uniq
 from .uniqBy import uniqBy
 from .uniqWith import uniqWith
 from .unnest import unnest
+from .update import update
 from .useWith import useWith
 from .values import values
 from .valuesIn import valuesIn
