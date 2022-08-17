@@ -24,7 +24,13 @@ class TestLens(unittest.TestCase):
     self.assertEqual('joker', R.view(dogLens, alice))
 
   def test_may_be_applied_to_a_lens_created_by_lensProp(self):
-    pass
+    self.assertEqual('Alice Jones', R.view(nameLens, alice))
+
+    self.assertEqual({
+        'name': 'ALICE JONES',
+        'address': ['22 Walnut St', 'San Francisco', 'CA'],
+        'pets': {'dog': 'joker', 'cat': 'batman'}
+    }, R.over(nameLens, R.toUpper, alice))
 
 
 if __name__ == '__main__':

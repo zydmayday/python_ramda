@@ -132,6 +132,7 @@ from .times import times
 from .toPairs import toPairs
 from .toPairsIn import toPairsIn
 from .toString import toString
+from .toUpper import toUpper
 from .trim import trim
 from .unary import unary
 from .union import union

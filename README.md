@@ -737,7 +737,7 @@ Partially supported
 1. String type, supported
 1. for others, just use str(x) instead
 
-- [ ] toUpper
+- [x] toUpper
 - [ ] transduce
 - [ ] transpose
 - [ ] traverse
