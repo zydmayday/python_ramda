@@ -50,6 +50,7 @@ from .hasPath import hasPath
 from .head import head
 from .identity import identity
 from .ifElse import ifElse
+from .inc import inc
 from .indexOf import indexOf
 from .insert import insert
 from .intersection import intersection
@@ -65,6 +66,10 @@ from .keysIn import keysIn
 from .last import last
 from .lastIndexOf import lastIndexOf
 from .length import length
+from .lens import lens
+from .lensIndex import lensIndex
+from .lensPath import lensPath
+from .lensProp import lensProp
 from .lift import lift
 from .liftN import liftN
 from .lt import lt
@@ -84,6 +89,7 @@ from .of import of
 from .omit import omit
 from .once import once
 from .Or import Or
+from .over import over
 from .partition import partition
 from .path import path
 from .pathEq import pathEq
@@ -109,6 +115,8 @@ from .remove import remove
 from .repeat import repeat
 from .replace import replace
 from .reverse import reverse
+# pylint: disable=redefined-builtin
+from .set import set
 from .slice import slice
 from .sort import sort
 from .sortBy import sortBy
@@ -124,6 +132,7 @@ from .times import times
 from .toPairs import toPairs
 from .toPairsIn import toPairsIn
 from .toString import toString
+from .toUpper import toUpper
 from .trim import trim
 from .unary import unary
 from .union import union
@@ -132,9 +141,11 @@ from .uniq import uniq
 from .uniqBy import uniqBy
 from .uniqWith import uniqWith
 from .unnest import unnest
+from .update import update
 from .useWith import useWith
 from .values import values
 from .valuesIn import valuesIn
+from .view import view
 from .where import where
 from .xprod import xprod
 # pylint: disable=redefined-builtin
