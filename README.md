@@ -512,7 +512,7 @@ we will compare with str(a) and str(b).
 R.Min('A', None) # 'A', 'A' < 'None'
 ```
 
-- [ ] minBy
+- [x] minBy
 - [ ] modify
 - [ ] modifyPath
 - [x] 0.1.4 modulo

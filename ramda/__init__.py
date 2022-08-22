@@ -79,6 +79,7 @@ from .match import match
 from .mathMod import mathMod
 from .Max import Max
 from .Min import Min
+from .minBy import minBy
 from .modulo import modulo
 from .multiply import multiply
 from .nAry import nAry
