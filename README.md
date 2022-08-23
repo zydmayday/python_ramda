@@ -489,7 +489,7 @@ we will compare with str(a) and str(b).
 R.Max('A', None) # None, 'A' < 'None'
 ```
 
-- [ ] maxBy
+- [x] maxBy
 - [ ] mean
 - [ ] median
 - [ ] memoizeWith
