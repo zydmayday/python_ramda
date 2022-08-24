@@ -78,6 +78,7 @@ from .map import map
 from .match import match
 from .mathMod import mathMod
 from .Max import Max
+from .maxBy import maxBy
 from .Min import Min
 from .modulo import modulo
 from .multiply import multiply
