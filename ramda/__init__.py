@@ -96,6 +96,7 @@ from .pathEq import pathEq
 from .paths import paths
 from .pick import pick
 from .pickAll import pickAll
+from .pickBy import pickBy
 from .pipe import pipe
 from .pluck import pluck
 from .prepend import prepend

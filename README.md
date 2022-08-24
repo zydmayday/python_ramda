@@ -582,7 +582,7 @@ R.pick(['v1'], obj) # {'v1': 1}
 R.pickAll(['v1', 'v3'], obj) # {'v1': 1, 'v3': None}
 ```
 
-- [ ] pickBy
+- [x] pickBy
 - [x] 0.1.2 pipe
 - [ ] pipeWith
 - [x] 0.1.2 pluck
