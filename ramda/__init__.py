@@ -80,6 +80,7 @@ from .mathMod import mathMod
 from .Max import Max
 from .maxBy import maxBy
 from .Min import Min
+from .minBy import minBy
 from .modulo import modulo
 from .multiply import multiply
 from .nAry import nAry
