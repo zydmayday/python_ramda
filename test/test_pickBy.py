@@ -30,6 +30,11 @@ class TestPickBy(unittest.TestCase):
       return key == 'd' and val == 4
     self.assertEqual({'d': 4}, R.pickBy(pred, obj))
 
+  def test_first_method_has_2_param(self):
+    def pred(val, key):
+      return key == 'd' and val == 4
+    self.assertEqual({'d': 4}, R.pickBy(pred, obj))
+
 
 if __name__ == '__main__':
   unittest.main()
