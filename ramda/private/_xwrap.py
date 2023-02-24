@@ -1,5 +1,5 @@
 def transducer_init():
-  raise Exception('init not implemented on XWrap')
+  raise ValueError('init not implemented on XWrap')
 
 
 def _xwrap(fn):

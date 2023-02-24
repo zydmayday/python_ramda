@@ -12,4 +12,4 @@ def _assoc(prop, val, obj):
   # We have 2 cases, dict or object
   if isinstance(obj, dict):
     return {**obj, prop: val}
-  raise Exception('We only support dict or array for assoc')
+  raise ValueError('We only support dict or array for assoc')

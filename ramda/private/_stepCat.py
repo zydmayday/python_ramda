@@ -38,4 +38,4 @@ def _stepCat(obj):
     return _stepCatString
   if isinstance(obj, dict):
     return _stepCatDict
-  raise Exception(f'Cannot create transformer for {obj}')
+  raise ValueError(f'Cannot create transformer for {obj}')

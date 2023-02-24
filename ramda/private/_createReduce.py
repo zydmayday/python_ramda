@@ -17,5 +17,5 @@ def _createReduce(arrayReduce, methodReduce, iterableReduce):
       return iterableReduce(xf, acc, arr)
     if _isFunction(getattr(arr, 'reduce', None)):
       return methodReduce(xf, acc, arr, 'reduce')
-    raise Exception('reduce: list must be array or iterable')
+    raise ValueError('reduce: list must be array or iterable')
   return _reduce

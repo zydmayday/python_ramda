@@ -18,4 +18,4 @@ def _arity(n, fn):
   m = {0: f0, 1: f1, 2: f2, 3: f3, 4: f4, 5: f5, 6: f6, 7: f7, 8: f8, 9: f9, 10: f10}
   if n in m:
     return m[n]
-  raise Exception('First argument to _arity must be a non-negative integer no greater than ten')
+  raise ValueError('First argument to _arity must be a non-negative integer no greater than ten')
