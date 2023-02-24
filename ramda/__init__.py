@@ -137,6 +137,7 @@ from .toPairsIn import toPairsIn
 from .toString import toString
 from .toUpper import toUpper
 from .trim import trim
+from .unapply import unapply
 from .unary import unary
 from .union import union
 from .unionWith import unionWith

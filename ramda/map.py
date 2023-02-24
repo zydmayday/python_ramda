@@ -26,7 +26,7 @@ def inner_map(fn, functor):
     return acc
 
   if functor is None:
-    raise Exception('Can not work with None')
+    raise ValueError('Can not work with None')
   if _isFunction(functor):
     return curryN(funcArgsLength(functor), lambda *arguments: fn(functor(*arguments)))
   if _isArrayLike(functor):
