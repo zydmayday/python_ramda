@@ -82,11 +82,11 @@ R.add(date(1,2,3), date(1,2,3)) # float('nan)
 - [ ] applySpec
 - [ ] applyTo
 - [ ] ascend
-- [x] assoc
+- [x] 0.8.0 assoc
 
 Currently, we only support list and dict type.
 
-- [x] assocPath
+- [x] 0.8.0 assocPath
 
 Currently, we only support list and dict type.
 
@@ -297,7 +297,7 @@ R.hasPath(['b'], child) # True
 - [x] 0.1.2 head
 - [ ] identical
 - [x] 0.1.2 identity
-- [x] ifElse
+- [x] 0.8.0 ifElse
 - [x] inc
 - [ ] includes
 - [ ] indexBy
@@ -465,7 +465,7 @@ class ObjWithoutLength:
 R.length(ObjWithoutLength()) # float('nan')
 ```
 
-- [x] lens
+- [x] 0.8.0 lens
 - [x] lensIndex
 - [x] lensPath
 - [x] lensProp
@@ -489,7 +489,7 @@ we will compare with str(a) and str(b).
 R.Max('A', None) # None, 'A' < 'None'
 ```
 
-- [x] maxBy
+- [x] 0.8.0 maxBy
 - [ ] mean
 - [ ] median
 - [ ] memoizeWith
@@ -512,7 +512,7 @@ we will compare with str(a) and str(b).
 R.Min('A', None) # 'A', 'A' < 'None'
 ```
 
-- [x] minBy
+- [x] 0.8.0 minBy
 - [ ] modify
 - [ ] modifyPath
 - [x] 0.1.4 modulo
@@ -582,7 +582,7 @@ R.pick(['v1'], obj) # {'v1': 1}
 R.pickAll(['v1', 'v3'], obj) # {'v1': 1, 'v3': None}
 ```
 
-- [x] pickBy
+- [x] 0.8.0 pickBy
 - [x] 0.1.2 pipe
 - [ ] pipeWith
 - [x] 0.1.2 pluck
@@ -744,7 +744,7 @@ Partially supported
 - [x] 0.6.0 trim
 - [ ] tryCatch
 - [ ] type
-- [ ] unapply
+- [x] 0.8.0 unapply
 - [x] 0.2.0 unary
 - [ ] uncurryN
 - [ ] unfold

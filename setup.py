@@ -17,7 +17,7 @@ setup(
 
     # The version of your project.
     # This field is REQUIRED
-    version="0.7.0",
+    version="0.8.0",
 
     # The packages that constitute your project.
     # For my project, I have only one - "pydash".
