@@ -9,6 +9,7 @@ def inner_find(fn, arr):
     if fn(arr[idx]):
       return arr[idx]
     idx += 1
+  return None
 
 
 find = _curry2(_dispatchable(['find'], _xfind, inner_find))
