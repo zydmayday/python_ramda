@@ -19,6 +19,7 @@ def inner_cond(pairs):
       if pred(*argsToUse):
         return pairs[idx][1](*args)
       idx += 1
+    return None
   return _arity(arity, wrapper)
 
 
