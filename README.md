@@ -9,6 +9,7 @@ This is a repo try to copy <https://github.com/ramda/ramda> in python.
 ![PyPI version](https://badge.fury.io/py/python-ramda.svg)
 ![Python Versions](https://img.shields.io/pypi/pyversions/python-ramda.svg)
 [![codecov](https://codecov.io/gh/zydmayday/python_ramda/branch/main/graph/badge.svg?token=2AHXPONAYV)](https://codecov.io/gh/zydmayday/python_ramda)
+[![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
 
 ## install
 
